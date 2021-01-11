@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment1</title>
+</head>
+<body>
+	<form >
+    <label for="fname">First name:</label>
+    <input required="true" type="text" id="fname" name="fname"><br><br>
+
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+
+    <label for="email">Email :</label>
+    <input required="true" type="email" id='email' name='email'><br><br>
+
+    <label for="city">Choose a city:</label>
+	<select id="city" required="true" placeholder="Select">
+	  <option value="delhi">Delhi</option>
+	  <option value="mumbai">Mumbai</option>
+	  <option value="chennai">Chennai</option>
+	  <option value="bangalore">Bangalore</option>
+	</select><br><br>
+
+    <p>Select your gender:</p>
+    <input type="radio" id="male" name="gender" value="male" required="true">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female" >
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other" >
+    <label for="other">Other</label><br><br>
+
+    <input type="submit" value="Submit" id="submit">
+    </form>
+
+    <div id='show'></div>
+	<script type="text/javascript" src = "assign1script.js"></script>
+</body>
+</html>
