@@ -1,6 +1,7 @@
 package com.example.au.couchbasedemo.controller;
 
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,6 +54,17 @@ public class BlogController {
     @DeleteMapping("/blogs/{id}")
     public void deleteById(@PathVariable String id) {
         blogRepository.deleteById(id);
+    }
+    
+    @GetMapping("/blogs")
+    public List<Blogs> getBlogByTag(String tag) { 
+        List<Blogs> responseBlogs = (List<Blogs>) blogRepository.findAll();
+        List<Blogs> respinseBlogsWithGivenTag =  new ArrayList<Blogs>();
+        for (Blogs blog : responseBlogs) {
+        	if(blog.getTags().contains(tag))
+        		respinseBlogsWithGivenTag.add(blog);
+        }
+        return respinseBlogsWithGivenTag;
     }
     
 	/*

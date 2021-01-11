@@ -22,6 +22,7 @@ public class Employee {
 	private String pincode;
 	
 	public Employee(String empId, String empName, String address, String pincode) {
+		super();
 		this.empId = empId;
 		this.empName = empName;
 		this.address = address;

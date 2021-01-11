@@ -40,8 +40,8 @@ public class EmployeeController {
     }
     
     @GetMapping("/employees/address/{address}/pincode/{pincode}")
-    public List<Employee> getEmployeeUsingLocationandPincode(@PathVariable String address, @PathVariable String pincode)
-    {
-    	return employeeRepository.findEmployeeUsingAddressandPincode(address, pincode);
+    public List<Employee> getEmployeeByAddressAndPincode(@PathVariable String address, @PathVariable String pincode) {
+        return employeeRepository.findByAddressAndPincode(address, pincode);
+        
     }
 }
