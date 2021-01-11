@@ -1,0 +1,11 @@
+- when primary index is dropped and secondary index is crated we can no longer run the query "select * from couchbasedemo".
+
+- but "select * from couchbasedemo where pincode = '200001'" is possible with index of pincode field.
+
+- Primary index create index on all the feilds of json.
+
+- So it allow to search within all doucuments in table.
+
+- whereas indexs allow to search within only one specific feild or key of json because it keep track of only one feild.
+
+- so primary index, keep track of all the feilds in json documents whereas normal indexs only keep track of only one field, it is only possible to search in only that much scope.
