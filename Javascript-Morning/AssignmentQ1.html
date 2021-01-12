@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  /* background: #fec107; */
+  background: -webkit-linear-gradient(left, #009FFF, #73accf, #ec2F4B);
+
+  padding: 0 10px;
+}
+.wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: transparent;
+  margin: 20px auto;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+  padding: 30px;
+}
+
+.wrapper .title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-shadow: 0 0 3px #FF0000;
+
+  /* color: #60007e; */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper .form{
+  width: 100%;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   text-shadow: 0 0 3px #FF0000;
+
+   /* color: #757575; */
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  background-color: #ffe0e0;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #fec107;
+}
+
+.wrapper .form .inputfield p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper .form .inputfield .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper .form .inputfield .check .checkmark{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fec107;
+  display: block;
+  position: relative;
+}
+.wrapper .form .inputfield .check .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+  background: #fec107;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #4e8094;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #43719c;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  .wrapper .form .inputfield{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms{
+    flex-direction: row;
+  }
+}
+    </style>
+    <script>
+        function sConsole(event) 
+        {
+            event.preventDefault();
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var phone = document.getElementById("phone").value;
+            var year = document.getElementById("year").value;
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("password").value;
+            var address = document.getElementById("address").value;
+            var postal = document.getElementById("postal").value;
+
+
+            var ele = document.getElementsByName('gender'); 
+                
+                for(i = 0; i < ele.length; i++) { 
+                    if(ele[i].checked) 
+                        var gender = (ele[i].value)
+                }
+            var obj = {Fist_name:fname  ,Last_name:lname,Phone_No:phone,yearOfPassing:year,Email_id:email,password:pass,Address:address,PostalNo:postal,Gender:gender}
+            
+            // Converting JS object to JSON string
+            var json = JSON.stringify(obj);
+            console.log(json);
+        }
+        
+    </script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="title">
+      Registration Form
+    </div>
+    <form action="" id="form" onsubmit="sConsole(event)">
+        <div class="form">
+            <div class="inputfield">
+                <label>First Name</label>
+                <input type="text" class="input" name="name" id="fname">
+            </div>  
+                <div class="inputfield">
+                <label>Last Name</label>
+                <input type="text" class="input" name="lname" id="lname">
+            </div>  
+            <div class="inputfield">
+                <label>Phone Number</label>
+                <input type="text" class="input" name="phone" id="phone">
+            </div> 
+            
+                <div class="inputfield">
+                <label>Year</label>
+                <div class="custom_select">
+                    <select id="year">
+                    <option value="">Select</option>
+                    <option value="first" >First</option>
+                    <option value="second">Second</option>
+                    <option value="pre final">Pre Final</option>
+                    <option value="final">Final</option>
+
+                    </select>
+                </div>
+            </div> 
+                <div class="inputfield">
+                <label>Email Address</label>
+                <input type="email"   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30" required class="input" name="email" id="email">
+            </div>
+            <div class="inputfield">
+                <label>Password</label>
+                <input type="password"  class="input" name="password" id="password">
+            </div>  
+            
+            <div class="inputfield">
+                <label>Address</label>
+                <textarea class="textarea" id="address"></textarea>
+            </div> 
+            <div class="inputfield">
+                <label>Postal Code</label>
+                <input type="text" class="input" id="postal">
+            </div> 
+            <div class="inputfield" style="padding-block: 2%;">
+                <label>Gender</label>
+                    <input type="radio" value="Male" name="gender" checked > Male     &nbsp;&nbsp;&nbsp; 
+                    <input type="radio" value="Female" name="gender"> Female   &nbsp;&nbsp;&nbsp;
+                    <input type="radio" value="Other" name="gender"> Other &nbsp;&nbsp;
+            </div>
+                
+                    <div class="inputfield">
+                <input type="submit" value="Register" class="btn">
+            </div>
+            </div>
+        </div>	
+    </form>
+</body>
+</html>
