@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+            .containers
+            {
+                width:auto;
+                height:auto;
+                background-color: grey;
+                text-align: center;
+                margin:20px;
+            }
+            
+        </style>
+        <script>
+            function reset() {
+                for(var i=1;i<=20;i++){
+                    var curr=document.getElementById("b"+i)
+                    curr.className="";
+                    curr.style="";
+                    curr.className="containers"
+                }
+            }
+            function but1() {
+                reset();
+                for(var i=2;i<=20;i+=2) document.getElementById("b"+i).style.backgroundColor="pink";
+            }
+            function but2()  {
+            reset();
+            for(var i=1;i<=20;i++)  {
+                if(i%5 == 0)    document.getElementById("b"+i).style.backgroundColor="green";
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="containers" id="b1">1</div>
+        <div class="containers" id="b2">2</div>
+        <div class="containers" id="b3">3</div>
+        <div class="containers" id="b4">4</div>
+        <div class="containers" id="b5">5</div>
+        <div class="containers" id="b6">6</div>
+        <div class="containers" id="b7">7</div>
+        <div class="containers" id="b8">8</div>
+        <div class="containers" id="b9">9</div>
+        <div class="containers" id="b10">10</div>
+        <div class="containers" id="b11">11</div>
+        <div class="containers" id="b12">12</div>
+        <div class="containers" id="b13">13</div>
+        <div class="containers" id="b14">14</div>
+        <div class="containers" id="b15">15</div>
+        <div class="containers" id="b16">16</div>
+        <div class="containers" id="b17">17</div>
+        <div class="containers" id="b18">18</div>
+        <div class="containers" id="b19">19</div>
+        <div class="containers" id="b20">20</div>
+
+        <button type="button" onclick=but1()>EVEN</button>
+        <button type="button" onclick=but2()>MultipleOf5</button>
+        <button type="button" onclick=reset()>RESET</button>
+
+    </body>
+</html>
+
+
