@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.box{
+    background: white;
+    font-size: 95px;
+    text-align: center;
+    flex-grow: 1;
+    padding: 2.4%;
+    width: 6.5%;
+    
+}
+table{
+    position: absolute;
+    left: 26%;
+    border-spacing: 25px;
+}
+button{
+    font-size: x-large;
+}
