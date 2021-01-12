@@ -1,0 +1,241 @@
+//Created by Satyam Pandey
+
+2.
+CREATE TABLE "StudentBasicInformation" (
+  StudentRollNo integer PRIMARY KEY ,
+  StudentName varchar(255) ,
+  StudentSurname varchar(255) ,
+  StudentAddress varchar(255) ,
+  StudentPhoneNumber varchar(100),
+  StudentAge integer NULL,
+  StudentEmail varchar(255) 
+);
+
+INSERT INTO StudentBasicInformation (StudentRollNo,StudentName,StudentSurname,StudentAddress,StudentPhoneNumber,StudentAge,StudentEmail) VALUES (1,'Nissim','Morales','Ap #130-3923 Eu Street','(917) 592-8875',20,'a.scelerisque@Duis.edu'),
+(2,'Isaiah','Decker','1597 Eu Avenue','(816) 542-4642',22,'vitae@mifringillami.co.uk'),
+(3,'Yolanda','Dalton','Ap #300-1287 Auctor Rd.','(122) 250-8070',20,'parturient.montes@nonlaciniaat.co.uk'),
+(4,'Garth','Lamb','5149 Eu Road','(756) 586-6413',18,'inceptos@anteblanditviverra.org'),
+(5,'Chadwick','Odom','Ap #398-3667 Nisl. Road','(166) 129-3075',19,'amet@adipiscing.com'),
+(6,'Jaime','Smith','Ap #951-5903 Dolor Rd.','(907) 113-6524',21,'augue.porttitor.interdum@consectetuermaurisid.com'),
+(7,'Hiram','Garza','447-6769 Duis Road','(616) 923-7339',23,'enim@hendreritDonecporttitor.org'),
+(8,'Deirdre','Harmon','8832 Integer Road','(804) 336-6627',18,'Phasellus.libero.mauris@nostraper.com'),
+(9,'Malachi','Wright','Ap #392-9116 Luctus Avenue','(404) 595-3634',21,'pharetra@egestas.org'),
+(10,'Gwendolyn','Schwartz','8884 Nisi Street','(332) 937-8629',23,'Praesent@sociis.edu');
+select * from StudentBasicInformation
+
+CREATE TABLE StudentAdmissionPaymentDetails (
+  StudentRollNo references StudentBasicInformation(StudentRollNo) not null,
+  AmountPaid integer,
+  AmountBalance integer,
+  AmountPaymentDate date,
+  AmountPaymentMode text,
+  AmountPaymentComments text default NULL,
+  AmountFeesPaid boolean
+);
+
+INSERT INTO StudentAdmissionPaymentDetails (StudentRollNo,AmountPaid,AmountBalance,AmountPaymentDate,AmountPaymentMode,AmountPaymentComments,AmountFeesPaid) VALUES (1,54401,38835,'2020-03-27 21:00:23','Online','Nunc pulvinar','Y'),
+(2,63679,10897,'2020-07-10 12:45:17','Online','pellentesque.','Y'),
+(3,84092,36050,'2020-05-25 19:08:25','Online','nunc.','Y'),
+(4,120639,47694,'2020-04-16 09:48:45','Online','varius','Y'),
+(5,61597,12395,'2020-02-01 11:47:09','Online','nulla magna,','N'),
+(6,75447,17238,'2020-12-22 02:22:37','Online','scelerisque, lorem','N'),
+(7,11722,30616,'2020-02-07 19:45:28','Online','adipiscing non,','Y'),
+(8,48599,22122,'2020-07-15 14:30:18','Online','Curabitur ut','Y'),
+(9,126098,27169,'2020-11-14 18:19:22','Online','Nunc ac','N'),
+(10,116187,44464,'2020-12-04 23:50:06','Online','Nam ac','Y');
+
+CREATE TABLE StudentSubjectInformation (
+  StudentRollNo references StudentBasicInformation(StudentRollNo) not null,
+  SubjectOpted TEXT default NULL,
+  SubjectTotalMarks integer ,
+  SubjectObtainedMarks integer ,
+  StudentMarksPercentage integer ,
+  SubjectId integer NULL
+);
+INSERT INTO StudentSubjectInformation (StudentRollNo,SubjectOpted,SubjectTotalMarks,SubjectObtainedMarks,StudentMarksPercentage,SubjectId) VALUES (1,'urna.',100,66,0,24),
+(2,'Ut',100,77,0,18),
+(3,'felis,',100,72,0,17),
+(4,'non',100,79,0,23),
+(5,'ipsum',100,64,0,22),
+(6,'pretium',100,99,0,25),
+(7,'vulputate',100,70,0,19),
+(8,'hendrerit',100,60,0,19),
+(9,'tincidunt',100,96,0,19),
+(10,'Donec',100,68,0,19);
+
+select * from StudentSubjectInformation
+
+CREATE TABLE SubjectScholarshipInformation (
+  StudentRollNo integer int references StudentBasicInformation(StudentRollNo) not null,
+  ScholarshipName TEXT ,
+  ScholarshipDescription TEXT default NULL,
+  ScholarshipAmount integer ,
+  ScholarshipCategory varchar(255) ,
+  ScholarshipDate date,
+  ScholarshipPreviouslyAvailed boolean
+);
+INSERT INTO SubjectScholarshipInformation (StudentRollNo,ScholarshipName,ScholarshipDescription,ScholarshipAmount,ScholarshipCategory,ScholarshipDate,ScholarshipPreviouslyAvailed) VALUES (1,'magna','lectus',6169,'A','2021-04-03','N'),
+(2,'dis','Suspendisse tristique',3386,'C','2021-06-27','N'),
+(3,'nec','et,',4749,'B','2020-03-16','Y'),
+(4,'eu','convallis dolor.',3024,'B','2020-01-23','Y'),
+(5,'molestie','vitae risus.',6213,'A','2022-01-04','N'),
+(6,'imperdiet,','sed leo.',6566,'B','2020-10-04','Y'),
+(7,'natoque','ac metus',3976,'C','2020-05-28','Y'),
+(8,'rutrum,','at augue',6871,'B','2021-05-09','Y'),
+(9,'semper','est. Mauris',4863,'C','2021-03-12','N'),
+(10,'Suspendisse','nisl. Quisque',5536,'A','2020-06-26','N');
+
+select * from SubjectScholarshipInformation
+
+5.
+UPDATE studentbasicinformation  
+SET studentaddress = 'New wales' where studentrollno = 1;
+UPDATE studentbasicinformation  
+SET studentaddress = 'New wales' where studentrollno = 2;
+UPDATE studentbasicinformation  
+SET studentaddress = 'Badarpur' where studentrollno = 3;
+  UPDATE studentbasicinformation  
+SET studentaddress = 'Manali' where studentrollno = 4;
+UPDATE studentbasicinformation  
+SET studentaddress = 'Bangalore' where studentrollno = 5;
+
+
+7. select * from SubjectScholarshipInformation
+where ScholarshipAmount > 5000
+
+8.
+select * from SubjectScholarshipInformation
+where ScholarshipAvailed= false
+
+9.
+create or replace procedure CalculatePercentage()
+language plpgsql    
+as $$
+begin
+UPDATE 
+    StudentSubjectInformation
+SET 
+    StudentMarksPercentage = ROUND(subjectobtainedmarks * 100.0 / subjecttotalmarks, 1);
+COMMIT;
+end;
+$$;
+
+CALL CalculatePercentage()
+
+10.
+create or replace procedure decideCategory()
+language plpgsql    
+as $$
+begin
+	update subjectscholarshipinformation
+	set scholarshipcategory = 'Diamond'
+	where studentrollno in (select ssl.studentrollno from studentsubjectinformation ss
+						   inner join subjectscholarshipinformation ssl 
+						   on ss.studentrollno=ssl.studentrollno
+						   where ss.studentmarkspercentage>=60 and ss.studentmarkspercentage<70);
+
+	update subjectscholarshipinformation
+	set scholarshipcategory = 'CROWN'
+	where studentrollno in (select ssl.studentrollno from studentsubjectinformation ss
+						   inner join subjectscholarshipinformation ssl 
+						   on ss.studentrollno=ssl.studentrollno
+						   where ss.studentmarkspercentage>=70 and ss.studentmarkspercentage<90);
+	
+	update subjectscholarshipinformation
+	set scholarshipcategory = 'ACE'
+	where studentrollno in (select ssl.studentrollno from studentsubjectinformation ss
+						   inner join subjectscholarshipinformation ssl 
+						   on ss.studentrollno=ssl.studentrollno
+						   where ss.studentmarkspercentage>=90);
+
+end;
+$$;
+
+call decideCategory()
+
+
+
+11.
+CREATE OR REPLACE VIEW Balance AS
+SELECT studentadmissionpaymentdetails.amountbalance, studentadmissionpaymentdetails.studentrollno , studentbasicinformation.studentname, studentbasicinformation.studentsurname,
+studentbasicinformation.studentaddress, studentbasicinformation.studentphonenumber,studentbasicinformation.studentage,studentbasicinformation.studentemail
+FROM studentadmissionpaymentdetails FULL outer join studentbasicinformation  
+ON studentadmissionpaymentdetails.studentrollno = studentbasicinformation.studentrollno;
+
+select * from balance;
+
+12.
+select si.StudentRollNo,si.StudentName,si.StudentSurname,si.StudentAddress,si.StudentPhoneNumber,si.StudentAge,si.StudentEmail
+from studentbasicinformation si inner join SubjectScholarshipInformation ss
+on si.StudentRollNo=ss.StudentRollNo
+where ss.ScholarshipAvailed= false;
+
+13. drop procedure balanceamount;
+create procedure balanceamount (IN rollno int)
+	language plpgsql
+	as $$
+	declare amount int;
+	begin 
+		select amountbalance into amount 
+		from StudentAdmissionPaymentDetails where studentrollno= rollno;
+		raise notice 'balance amount to be paid : %',amount ;
+	end; $$
+	
+	call balanceamount(1);
+
+
+14.
+select t.StudentRollNo,si.StudentName,t.StudentMarksPercentage
+from studentbasicinformation si
+inner join ( 
+    SELECT studentrollno,StudentMarksPercentage,
+           row_number() over (order by StudentMarksPercentage desc) as rn
+    FROM StudentSubjectInformation
+)t
+on si.StudentRollNo=t.StudentRollNo
+WHERE t.rn <= 5
+
+15.
+select * from studentbasicinformation left join studentscholarshipinformation 
+on studentbasicinformation.studentrollno = studentscholarshipinformation.studentrollno
+order by studentbasicinformation.studentrollno desc;
+	
+select * from studentbasicinformation right join studentscholarshipinformation 
+on studentbasicinformation.studentrollno = studentscholarshipinformation.studentrollno;
+
+
+select * from studentbasicinformation full join studentsubjectinformation 
+on studentbasicinformation.studentrollno = studentsubjectinformation.studentrollno
+order by studentbasicinformation.studentrollno desc;
+
+17.
+select scholarshipcategory,count(scholarshipcategory) from subjectscholarshipinformation
+group by scholarshipcategory
+order by count(scholarshipcategory) desc
+
+select scholarshipcategory MaximumUsedScholarshipCategory,count(scholarshipcategory) from subjectscholarshipinformation
+group by scholarshipcategory
+order by count(scholarshipcategory) desc
+limit 1
+
+18.
+select si.StudentRollNo,si.StudentName,si.StudentSurname 
+from studentbasicinformation si
+inner join studentsubjectinformation ss on 
+si.studentrollno=ss.studentrollno
+where studentmarkspercentage=(select studentmarkspercentage from subjectscholarshipinformation ssl
+	inner join studentsubjectinformation ss
+	on ssl.studentrollno=ss.studentrollno
+	order by studentmarkspercentage desc,scholarshipamount desc
+	limit 1)
+
+19.
+select si.StudentRollNo,si.StudentName,si.StudentSurname,ss.studentmarkspercentage 
+from studentbasicinformation si
+inner join studentsubjectinformation ss on 
+si.studentrollno=ss.studentrollno
+where studentmarkspercentage=(select studentmarkspercentage from subjectscholarshipinformation ssl
+	inner join studentsubjectinformation ss
+	on ssl.studentrollno=ss.studentrollno
+	order by studentmarkspercentage desc,scholarshipamount desc
+	limit 1)
