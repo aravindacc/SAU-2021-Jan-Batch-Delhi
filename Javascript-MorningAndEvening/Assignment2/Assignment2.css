@@ -1,0 +1,40 @@
+body{
+    font-size: x-large;
+}
+
+.wrapper * {
+    margin: 20px; 
+    font-size: x-large;
+    font-family: monospace;
+}
+input[type=text], input[type=email] {
+    width: 100%;
+    padding: 10px;
+    display: inline-block;
+    border: none;
+    background: skyblue;
+    }
+input[type=submit], input[type=radio], select{
+    cursor: pointer;
+}
+    
+form
+{
+    border-radius: 2px;
+    background: white;
+    max-width: 500px;
+}
+
+.btn
+{
+      padding: 15px 32px;
+      text-align: center;
+      width: 500px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      background-color: white;
+      color: black;
+      border: 2px solid #4CAF50;
+      margin: 10px;
+}
