@@ -1,0 +1,62 @@
+<html>   
+   <head>
+       
+       
+<title>Highlight</title>
+       
+<style>
+     .container.even > :nth-child(2n) {
+  background-color: red;
+}
+.container.multiple > :nth-child(5n) {
+  background-color: red;
+}
+</style>
+       
+</head>
+    <body>
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+  <div>13</div>
+  <div>14</div>
+  <div>15</div>
+  <div>16</div>
+  <div>17</div>
+  <div>18</div>
+  <div>19</div>
+  <div>20</div>
+</div>
+<div>
+  <button onclick="reset()">Clear</button>
+  <button onclick="highlightEven()">Even</button>
+  <button onclick="highlightMultipleOf5()">Multiple of 5</button>
+        </div>
+        <script>
+let container = document.querySelector(".container");
+function reset() {
+  container.classList.remove("multiple");
+  container.classList.remove("even");
+}
+
+function highlightEven() {
+  container.classList.remove("multiple");
+  container.classList.add("even");
+}
+
+function highlightMultipleOf5() {
+  container.classList.add("multiple");
+  container.classList.remove("even");
+}</script>
+    </body>
+</html>

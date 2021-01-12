@@ -1,0 +1,139 @@
+<html>   
+   <head>
+      <title>Form Validation</title>      
+     <script type = "text/javascript">
+ 
+      function validate() {
+        var gen="";
+         if(document.getElementById("Fname").value == "") {
+            alert( "Please provide your Forename!" );
+            document.myForm.Sname.focus() ;
+            return false;
+         }
+          if(document.getElementById("Sname").value == "" ) {
+            alert( "Please provide your Surname!" );
+            document.myForm.Fname.focus() ;
+            return false;
+         }
+         if( document.getElementById("EMail").value == "" ) {
+            alert( "Please provide your Email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+         if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(document.getElementById("EMail").value)==false)
+         {
+            alert( "Please provide your Email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+         if( document.getElementById("Country").value == "-1" ) {
+            alert( "Please provide your country!" );
+            return false;
+         }
+          if( document.getElementById("Male").checked == false &&document.getElementById("Female").checked == false  ) {
+            alert( "Please provide your Gender!" );
+            return false;
+         }
+          if( document.getElementById("Male").checked == true )gen="Male";
+          else gen="Female";
+          document.getElementById("fname").value= document.getElementById("Fname").value;
+          document.getElementById("sname").value= document.getElementById("Sname").value;
+          document.getElementById("email").value= document.getElementById("EMail").value;
+          document.getElementById("gender").value= gen;
+          document.getElementById("country").value= document.getElementById("Country").value;
+         return( true );
+      }
+</script>      
+   </head>
+   
+   <body>
+       
+       <h3>Enter Details</h3>
+      <form name = "myForm" >
+         <table cellspacing = "2" cellpadding = "2" border = "1">
+            
+            <tr>
+               <td align = "right">ForeName</td>
+               <td><input type = "text" id = "Fname" /></td>
+            </tr>
+             
+             <tr>
+               <td align = "right">SurName</td>
+               <td><input type = "text" id = "Sname" /></td>
+            </tr>
+            
+            <tr>
+               <td align = "right">EMail</td>
+               <td><input type = "text" id = "EMail" /></td>
+            </tr>
+            
+             <tr>
+               <td align = "right">Gender</td>
+               <td><input type="radio" id="Male" name="Gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="Female" name="Gender" value="Female">
+                    <label for="female">Female</label><br></td>
+                 
+            </tr>
+            
+            <tr>
+               <td align = "right">Country</td>
+               <td>
+                  <select id = "Country">
+                     <option value = "-1" selected>[choose yours]</option>
+                     <option value = "USA">USA</option>
+                     <option value = "UK">UK</option>
+                     <option value = "India">INDIA</option>
+                  </select>
+               </td>
+            </tr>
+            
+            <tr>
+               <td align = "right"></td>
+               <td><input type = "button" value = "Submit" Onclick = " return validate()" /></td>
+            </tr>
+            
+         </table>
+      </form>    
+       
+       <br><hr>
+       <h3>Details</h3>
+       
+                <table cellspacing = "2" cellpadding = "2"  style="border: 3px solid Tomato;width: 80%;">
+            
+            <tr>
+               <td align = "Center">ForeName</td>
+               <td ><input type = "text" id="fname" style="border: 3px solid #555;width: 100%;padding: 12px 6px;margin: 8px 0;box-sizing: border-box"/></td>
+            </tr>
+             
+             <tr>
+               <td align = "center">SurName</td>
+               <td ><input type = "text" id="sname" style="border: 3px solid #555;width: 100%;padding: 12px 6px;margin: 8px 0;box-sizing: border-box"/></td>
+            </tr>
+            
+            <tr>
+               <td align = "center">EMail</td>
+               <td><input type = "text" id="email" style="border: 3px solid #555;width: 100%;padding: 12px 6px;margin: 8px 0;box-sizing: border-box"/></td>
+            </tr>
+            
+             <tr>
+               <td align = "center">Gender</td>
+               <td><input type = "text" id="gender" style="border: 3px solid #555;width: 100%;padding: 12px 6px;margin: 8px 0;box-sizing: border-box"/></td>
+            </tr>
+            
+            <tr>
+               <td align = "center">Country</td>
+               <td><input type = "text" id="country" style="border: 3px solid #555;width: 100%;padding: 12px 6px;margin: 8px 0;box-sizing: border-box"/>
+               </td>
+            </tr>
+            
+         </table>
+       
+       
+       
+       
+   </body>
+    
+    
+    
+</html>
