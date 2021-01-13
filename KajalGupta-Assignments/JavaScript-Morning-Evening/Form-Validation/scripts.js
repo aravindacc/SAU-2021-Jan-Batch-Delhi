@@ -1,42 +1,50 @@
-function validateForm(){
+window.onload = function(){ 
+
+    output = {};
+    document.getElementById("submit").onclick = function(event){
+    
+    event.preventDefault();
+
+    output.firstName = document.getElementById("fname").value;
+     
+    output.lastName = document.getElementById("lname").value;
+
+    output.city = document.getElementById("city").value;
 
     emailID = document.getElementById("email").value;
+    output.email = emailID;
+
     atpos = emailID.indexOf("@");
     dotpos = emailID.lastIndexOf(".");
 
-    gender = document.getElementsByName("gender").value;
-    city = document.getElementById("city").value;
+    if(document.getElementsByName("gender")[1].checked)
+        output.gender = document.getElementsByName("gender")[1].value;
+    else if(document.getElementsByName("gender")[0].checked)
+        output.gender = document.getElementsByName("gender")[0].value;
+    else 
+        output.gender = "";
+    
 
-    checkCity = document.getElementById("city");
-    checkCity = checkCity.options[checkCity.selectedIndex].value;
-
-    fname = document.getElementById("fname").value;
-    lname = document.getElementById("lname").value;
-
-    if(fname=="")
+    if(output.firstName=="")
         alert("First name field is required");
         
-    else if(lname=="")
+    else if(output.lastname=="")
         alert("Last name field is required");
     
-    else if(!document.getElementsByName("gender")[1].checked && !document.getElementsByName("gender")[0].checked)
+    else if(output.gender=="")
         alert("Gender is required field");
     
     else if(atpos < 1 || ( dotpos - atpos < 2 ))
         alert("Invalid email ID");
 
-    else if(checkCity==0)
+    else if(output.city=="")
         alert("Please select a city");
 
     else
     {
-        var output = {
-        "first-name":fname,
-        "last-name":lname,
-        "gender":gender,
-        "city":city,
-        "email":emailID
-        }
+        output = JSON.stringify(output);
         console.log(output);
     }
-}
+
+};
+};
