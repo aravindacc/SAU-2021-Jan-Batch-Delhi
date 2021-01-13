@@ -1,0 +1,25 @@
+Q1 b. Object based
+Q2 a. 1
+Q3 d. immediate if
+Q4 a. code 1
+Q5 b. block that combines a number of statements into a single compound statement
+Q6 d. ignores the statement
+Q7 c. Declaration statements
+Q8 a. ===
+Q9 d. the value 0 to 9 is displayed in the console
+Q10 c. 8
+Q11 c. 8
+Q12 b. 0
+Q13 b. The local Variable
+Q14 d. function/method
+Q15 a. Mutable variable
+Q16 d. 0x and 0X
+Q17 c. Displays infinity
+Q18 c. Division by zero
+Q19 b. toFixed()
+Q20 c. substr()
+Q21 d. true
+Q22 c. 4050
+Q23 d. stand-alone expression
+Q24 d. in
+Q25 a. ?

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>Exercise 2</h1>
+<style>
+.center {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.center>div{
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+div {
+  background-color: lightblue;
+}
+div.groove {border-style: groove;
+    border-radius: 20px;}
+</style>
+</head>
+<body>
+<span class="center">
+<div class="groove">1</div><br>
+<div class="groove">2</div><br>
+<div class="groove">3</div><br>
+<div class="groove">4</div><br>
+<div class="groove">5</div><br>
+<div class="groove">6</div><br>
+<div class="groove">7</div><br>
+<div class="groove">8</div><br>
+<div class="groove">9</div><br>
+<div class="groove">10</div><br>
+<div class="groove">11</div><br>
+<div class="groove">12</div><br>
+<div class="groove">13</div><br>
+<div class="groove">14</div><br>
+<div class="groove">15</div><br>
+<div class="groove">16</div><br>
+<div class="groove">17</div><br>
+<div class="groove">18</div><br>
+<div class="groove">19</div><br>
+<div class="groove">20</div><br>
+</span>
+<br>
+<button onclick="myFunction()">Even</button> &nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick= "myfun()">Multiple of 5</button> &nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick= "myReset()">Reset</button>
+
+
+
+<script>
+function myFunction() {
+  var a = document.getElementsByTagName("DIV");
+  var j;
+  for (j = 0; j < a.length; j++) {
+    a[j].style.backgroundColor = "lightblue";
+  }
+  var x = document.getElementsByTagName("DIV");
+  var i;
+  for (i = 1; i < x.length; i+=2) {
+    x[i].style.backgroundColor = "red";
+  }
+}
+function myfun() {
+  var a = document.getElementsByTagName("DIV");
+  var j;
+  for (j = 0; j < a.length; j++) {
+    a[j].style.backgroundColor = "lightblue";
+  }
+  var x = document.getElementsByTagName("DIV");
+  var i;
+  for (i = 4; i < x.length; i+=5) {
+    x[i].style.backgroundColor = "blue";
+  }
+ }
+ function myReset() {
+  var x = document.getElementsByTagName("DIV");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.backgroundColor = "lightblue";
+  }
+}
+</script>
+
+</body>
+</html>
