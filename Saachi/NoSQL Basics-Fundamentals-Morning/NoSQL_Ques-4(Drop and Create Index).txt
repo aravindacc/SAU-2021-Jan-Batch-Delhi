@@ -1,0 +1,6 @@
+Command for Dropping primary index-
+Drop index CricketMatchDetails.idx_primary_cmd;
+
+
+Command for creating index on given field-
+CREATE INDEX playerName_index ON CricketMatchDetails(playerName) USING GSI;
