@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User-Form-Validation</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <p>Author: Satyam Pandey</p>
+    <form >
+      <b>First Name :</b>
+      <input required="true" type="text" id="fname" name="fname" /><br><br>
+
+      <b>Last Name :</b>
+      <input type="text" id="lname" name="lname" /><br><br>
+
+      <b>Email :</b>
+      <input required="true" type="email" id="email" name="email" /><br><br>
+
+      <b>City :</b>
+      <select id="city" required="true" placeholder="Select">
+        <option value="" selected disabled hidden>Choose here</option>
+        <option value="delhi">Delhi</option>
+        <option value="mumbai">Agra</option>
+        <option value="chennai">Pune</option>
+        <option value="bangalore">Chandigarh</option></select
+      ><br><br>
+
+      <b>Select your gender:</b><br>
+      <input type="radio" id="male" name="gender" value="male" required="true" />
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label><br>
+      <br><br>
+
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+
+    <div id="showOutput"></div>
+    <script src="Ass1_scripts.js"></script>
+  </body>
+</html>
