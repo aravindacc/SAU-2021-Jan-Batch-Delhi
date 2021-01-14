@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Assign 1</title>
+       <style>
+           .cont{
+            margin: auto;
+            width: 50%;
+            border: 20px ;
+            border-color: black;
+            padding: 20px;
+           }
+       </style>
+
+    </head>
+    <body>
+        <div class="cont" name="div1">
+            
+                <form action="#" name="form1" onsubmit="return validation()">
+                    <div class="from-group">
+                        <label>Username:</label><br>
+                        <input type="text" name="user" size="40"  id="user" autocomplete="off">
+                        <br><span id="username"></span>
+                    </div>
+                            <br>
+                    <div class="from-group">
+                        <label>Password:</label><br>
+                        <input type="text" name="user" size="40"  id="pass" autocomplete="off">
+                        <br><span id="passwords"></span>
+                    </div>
+                            <br>
+                    <div class="from-group">
+                        <label>Confirm Password:</label><br>
+                        <input type="text" name="conpass" size="40"  id="conpass" autocomplete="off">
+                        <br><span id="confrmpass"></span>
+                    </div>
+                            <br>
+                    <div class="from-group">
+                        <label>Mobile No:</label><br>
+                        <input type="text" name="mobile" size="40"  id="mobileNumber" autocomplete="off">
+                        <br><span id="mobileno"></span>
+                    </div>
+                            <br>
+                    <div class="from-group">
+                        <label>Email:</label><br>
+                        <input type="text" name="email" size="40"  id="emails" autocomplete="off">
+                        <br><span id="emailids"></span>
+                    </div>
+                          <br>
+                    <div name="div2">
+                        <label>Gender:</label><br>
+                        <input type="radio" name="gender" value="male" id="men"> Male<br>
+                        <input type="radio" name="gender" value="female" id="fem"> Female<br>
+                        <input type="radio" name="gender" value="other" id="oth"> Other<br><br>
+                         <br><span id="gend"></span>
+                    </div>
+                    <br>
+                    
+                    <div class="countr">
+                            Choose your country:
+                            <select id="items">
+                              <option value="0">Select</option>
+                              <option value="1">India</option>
+                              <option value="2">Germany</option>
+                              <option value="3">Paris</option>
+                              <option value="4">Africa</option>
+                             </select><b><span class="formc"></span></b>
+                             <br><span id="listt"></span>
+                    </div><br>
+                    
+
+                    <input type="submit" name="submit" style="background-color: green;" value="submit">
+
+                    
+                </form>
+            
+        </div>
+
+
+
+        <script type="text/javascript">
+                function validation(){
+                    var user = document.getElementById('user').value;
+                    var pass = document.getElementById('pass').value;
+                    var confirmpass = document.getElementById('conpass').value;
+                    var mobileNumber = document.getElementById('mobileNumber').value;
+                    var emails = document.getElementById('emails').value;
+                    var gen1 = document.getElementById('men').value;
+                    var gen2 = document.getElementById('fem').value;
+                    var gen3 = document.getElementById('oth').value;
+
+
+                    if(user == ""){
+                        document.getElementById('username').innerHTML =" ** please fill the username";
+                        return false;
+                    }
+                    if((user.length <= 2) || (user.length > 25)){
+                        document.getElementById('username').innerHTML =" ** user length must be between 3 to 25";
+                        return false;
+                    }
+
+                    
+
+
+
+
+
+
+
+
+                    if(pass == ""){
+                        document.getElementById('passwords').innerHTML =" ** please fill the password";
+                        return false;
+                    
+                    }
+
+                    if((pass.length <= 8) || (pass.length > 25)){
+                        document.getElementById('passwords').innerHTML =" ** password length must be 8 to 25";
+                        return false;
+                    }
+                    if(pass != confirmpass){
+                        document.getElementById('confrmpass').innerHTML =" ** Passwords are not matching";
+                        return false;
+                    }
+
+
+
+
+
+
+
+                    if(confirmpass ==  ""){
+                        document.getElementById('confrmpass').innerHTML =" ** please fill the confirm password";
+                        return false;
+                    }
+
+                    if(mobileNumber == ""){
+                        document.getElementById('mobileno').innerHTML =" ** please fill the mobile number";
+                        return false;
+                    }
+                    if(isNaN(mobileNumber)){
+                        document.getElementById('mobileno').innerHTML =" ** Enter a valid number";
+                        return false;
+                    }
+                    if(mobileNumber.length != 10){
+                        document.getElementById('mobileno').innerHTML =" ** Enter a valid 10 digit number";
+                        return false;
+                    }
+
+
+
+
+
+                    if(emails == ""){
+                        document.getElementById('emailids').innerHTML =" ** please fill the email";
+                        return false;
+                    }
+                    if(emails.indexOf('@')<=0){
+                        document.getElementById('emailids').innerHTML =" ** please enter valid email";
+                        return false;
+                    }
+                    if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
+                        document.getElementById('emailids').innerHTML =" ** please enter valid email";
+                        return false;
+                    }
+                    var e=document.getElementById("items");
+                    var strUser = e.options[e.selectedIndex].value;
+                            //if you need text to be compared then use
+                            var strUser1 = e.options[e.selectedIndex].text;
+                            if(strUser==0) //for text use if(strUser1=="Select")
+                                {
+                                    document.getElementById('listt').innerHTML =" ** please select a country";
+                        return false;
+                                    }
+}
+        
+        </script>
+
+    </body>
+</html>
