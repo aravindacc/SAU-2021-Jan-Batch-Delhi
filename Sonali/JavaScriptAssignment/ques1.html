@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="ques1.js"></script>
+        <title>JS ASSIGNMNENT</title>
+       
+        <style>
+            label{
+                font-size:20px;
+                font-weight: 500;
+            }
+            button{
+                width: 500px;
+                height: 70px;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            span{
+                color:red;
+                font-size: 20px;
+                padding-left: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="userform" onsubmit="return submitAndValidateForm()">
+            <label for="uname">User name:</label><br>
+            <input type="text" id="uname" name="uname" > <span id="uspan"></span><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" > <span id="emailspan"></span> <br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" /><span id="passwordspan"></span><br><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" > <span id="agespan"></span><br><br>
+
+            <label for="gender">Gender :</label><span id="genderspan"></span><br>
+            <input type="radio" id="male" name="gender" value="male" >
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female" >
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other" >
+            <label for="other">Other</label><br><br>
+
+            <label for="subject">Subject :</label><span id="subjectspan"></span><br>
+            <input type="checkbox" id="subject1" name="subject" value="Mathematics" >
+            <label for="subject1"> Mathematics </label><br>
+            <input type="checkbox" id="subject2" name="subject" value="Computer" >
+            <label for="subject2"> Computer Science </label><br>
+            <input type="checkbox" id="subject3" name="subject" value="Physics" >
+            <label for="subject3">Physics</label><br><br>
+         
+            
+            <select name="category" id="category"> 
+                <option value="-1">Select category</option>
+                <option value="News">News</option>
+                <option value="Sport">Sport</option>
+                <option value="World">World</option>
+                <option value="Music">Music</option>
+            </select> <span id="categoryspan"></span>
+            <br><br>
+           <button type="submit" >SUBMIT FORM</button>
+
+        </form>
+
+    </body>
+</html>
