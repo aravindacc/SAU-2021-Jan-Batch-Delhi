@@ -1,0 +1,17 @@
+
+.division{
+    background: rgb(247, 244, 244);
+    font-size: 30px;
+    text-align: center;
+    padding: 1.4%;
+    width: 5.5%;
+    border-style: double;
+    
+    
+}
+
+
+button{
+    font-size: x-large;
+    background: -moz-element();
+}
