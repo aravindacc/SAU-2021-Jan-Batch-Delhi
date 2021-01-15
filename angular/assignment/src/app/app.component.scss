@@ -1,0 +1,36 @@
+.gridRow
+{
+  display:grid;
+  grid-row-gap: 20px;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+
+}
+.gridColumn
+{
+  display:grid;
+  grid-column-gap: 20px;
+  grid-row-gap:30px;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+
+
+button
+{
+  padding: 15px;
+  background-color: transparent;
+  color:teal;
+  border:1px solid teal;
+  border-radius: 10px;
+}
+
+button:hover
+{
+
+  padding: 15px;
+  background-color: teal;
+  color:black;
+  border-radius: 10px;
+}
+

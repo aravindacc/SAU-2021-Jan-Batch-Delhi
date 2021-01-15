@@ -13,7 +13,7 @@
         var genderElement=document.getElementsByName("gender");
         var gender;
 
-        console.log(genderElement.length)
+        //console.log(genderElement.length)
         for(let i=0 ; i< genderElement.length;i++)
         {
             if(genderElement[i].checked)
@@ -86,6 +86,7 @@
 </script>
 <body>
         <div class="flex">
+	    <h1>Details Form:</h1>
             <div class="form-group">
                 <input tye="text" id="firstName"  class=" my-2 form-control" placeholder="First Name">
                 <span style="display:none;font-size: small;color: red;" id="firstNameHint">  First Name is required</span>

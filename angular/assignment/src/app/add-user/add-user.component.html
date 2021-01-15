@@ -1,0 +1,14 @@
+<div class="gridColumn">
+  <input type="text" [formControl]="name" placeholder="Name" >
+  <input type="text" [formControl]="id" placeholder="ID">
+  <input type="number" [formControl]="age" placeholder="Age">
+  <input type="date" (change)="updateAge()" [formControl]="dob" placeholder="DOB">
+  <button (click)="addUserFromService()"> Add User </button>
+  <div *ngIf='showAdded' >
+     <p >Added User With Details :</p>
+      <pre>
+        {{newUser | json}}
+      </pre>
+  </div>
+</div>
+
