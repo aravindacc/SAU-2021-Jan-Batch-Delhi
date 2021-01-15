@@ -2,52 +2,56 @@
 <html>
     <head>
         <title> Assign 1</title>
-       <style>
-           .cont{
-            margin: auto;
-            width: 50%;
-            border: 20px ;
-            border-color: black;
-            padding: 20px;
-           }
-       </style>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        
+      
 
     </head>
     <body>
-        <div class="cont" name="div1">
+        <div class="container" name="div1">
+            <h1 class="text-success text-center">Enter Your Details</h1>
+            <div class="col-lg-8 m-auto d-block">
             
-                <form action="#" name="form1" onsubmit="return validation()">
-                    <div class="from-group">
+                <form action="#" name="form1" onsubmit="return validation()"  class="bg-light">
+                    <div class="form-group">
                         <label>Username:</label><br>
-                        <input type="text" name="user" size="40"  id="user" autocomplete="off">
+                        <input type="text" name="user"  class="form-control" id="user" autocomplete="off">
                         <br><span id="username"></span>
                     </div>
                             <br>
-                    <div class="from-group">
+                    <div class="form-group">
                         <label>Password:</label><br>
-                        <input type="text" name="user" size="40"  id="pass" autocomplete="off">
+                        <input type="text" name="user" size="40"  id="pass" class="form-control" autocomplete="off">
                         <br><span id="passwords"></span>
                     </div>
                             <br>
-                    <div class="from-group">
+                    <div class="form-group">
                         <label>Confirm Password:</label><br>
-                        <input type="text" name="conpass" size="40"  id="conpass" autocomplete="off">
+                        <input type="text" name="conpass" size="40" class="form-control" id="conpass" autocomplete="off">
                         <br><span id="confrmpass"></span>
                     </div>
                             <br>
-                    <div class="from-group">
+                    <div class="form-group">
                         <label>Mobile No:</label><br>
-                        <input type="text" name="mobile" size="40"  id="mobileNumber" autocomplete="off">
+                        <input type="text" name="mobile" size="40" class="form-control" id="mobileNumber" autocomplete="off">
                         <br><span id="mobileno"></span>
                     </div>
                             <br>
-                    <div class="from-group">
+                    <div class="form-group">
                         <label>Email:</label><br>
-                        <input type="text" name="email" size="40"  id="emails" autocomplete="off">
+                        <input type="text" name="email" size="40" class="form-control" id="emails" autocomplete="off">
                         <br><span id="emailids"></span>
                     </div>
                           <br>
-                    <div name="div2">
+                    <div name="div2" class="form-group">
                         <label>Gender:</label><br>
                         <input type="radio" name="gender" value="male" id="men"> Male<br>
                         <input type="radio" name="gender" value="female" id="fem"> Female<br>
@@ -69,10 +73,10 @@
                     </div><br>
                     
 
-                    <input type="submit" name="submit" style="background-color: green;" value="submit">
+                    <input type="submit" name="submit" style="background-color: green;" value="submit" class="btn btn-success">
 
                     
-                </form>
+                </form></div>
             
         </div>
 
@@ -136,7 +140,7 @@
 
                     if(mobileNumber == ""){
                         document.getElementById('mobileno').innerHTML =" ** please fill the mobile number";
-                        return false;
+                       return false;
                     }
                     if(isNaN(mobileNumber)){
                         document.getElementById('mobileno').innerHTML =" ** Enter a valid number";
@@ -165,9 +169,8 @@
                     }
                     var e=document.getElementById("items");
                     var strUser = e.options[e.selectedIndex].value;
-                            //if you need text to be compared then use
                             var strUser1 = e.options[e.selectedIndex].text;
-                            if(strUser==0) //for text use if(strUser1=="Select")
+                            if(strUser==0) 
                                 {
                                     document.getElementById('listt').innerHTML =" ** please select a country";
                         return false;
