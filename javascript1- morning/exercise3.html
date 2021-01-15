@@ -12,7 +12,7 @@
         var age=document.getElementById('age').value;
         var genderElement=document.getElementsByName("gender");
         var gender;
-
+	var shouldPrint=true;
         //console.log(genderElement.length)
         for(let i=0 ; i< genderElement.length;i++)
         {
@@ -24,6 +24,7 @@
         
         if(firstName.length==0)
         {
+		shouldPrint=false;
            document.getElementById("firstNameHint").style.display="block";
         }else{
             document.getElementById("firstNameHint").style.display="none";
@@ -32,6 +33,7 @@
 
         if(lastName.length==0)
         {
+		shouldPrint=false;
             document.getElementById("lastNameHint").style.display="block";
         }else{
             document.getElementById("lastNameHint").style.display="none";
@@ -39,14 +41,17 @@
 
         if(email.length==0)
         {
+		shouldPrint=false;
             document.getElementById("emailHint").style.display="block";
         }else{
+
             document.getElementById("emailHint").style.display="none";
 
             var reg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
             if (reg.test(email) == false) 
             {
+		shouldPrint=false;
                 document.getElementById("validEmailIdHint").style.display="block";
             }
             else
@@ -59,6 +64,7 @@
 
 
         if(!parseInt(age))        {
+		shouldPrint=false;
            document.getElementById("ageHint").style.display="block";
         }else{
             document.getElementById("ageHint").style.display="none";
@@ -67,6 +73,7 @@
 
         if(gender==undefined)
         {
+		shouldPrint=false;
             document.getElementById("genderHint").style.display="block";
         }else{
             document.getElementById("genderHint").style.display="none";
@@ -81,7 +88,8 @@
             "age":age,
             "email":email
         }
-        console.log(result);
+	if(shouldPrint)
+	{console.log(result);}
     }
 </script>
 <body>
