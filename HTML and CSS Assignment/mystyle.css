@@ -1,0 +1,121 @@
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+
+body {
+  text-align: justify;
+  background: #001628;
+  color: #777;
+  padding: 4em;
+  line-height: 1.15;
+}
+
+.container {
+    padding: 1em;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  font-size: 12px;
+  color: #004d40;
+  text-align: center;
+}
+b {
+  font-weight: bold;  
+}
+
+nav {
+   padding: 1em; 
+  background: #a7ffeb;
+  grid-area: nav;
+    font-size: 36px;
+  font-family: Arial;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+main {
+    padding: 1em;
+    font-size: 120%;
+    text-align: justify;
+  background: #EAEAEA;
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#sidebar {
+    padding: 1em;
+    font-size: 120%;
+    text-align: justify;
+  background: #18ffff;
+  grid-area: sidebar;
+  font-family: Arial;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content1 {
+    font-size: 150%;
+    font-family: monotype corsiva, Helvetica, sans-serif;
+    padding: 1em;
+    text-align: justify;
+  background: #E1FDFC;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content2 {
+    padding: 1em;
+    font-size: 120%;
+    text-align: justify;
+  background: #E1FDFC;
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content3 {
+    font-family: monotype corsiva, Helvetica, cursive;
+    padding: 1em;
+    font-size: 150%;
+    text-align: justify;
+  background: #E1FDFC;
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1em;
+    text-align: justify;
+  background: #EAEAEA;
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}
