@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>JavaScript Form Validation Assignment</title>
+      <link rel="stylesheet" href="formstyle.css" type="">
+      <link rel="shortcut icon" href="contact.ico" type="image/x-icon"> 
+      <script type ="text/javascript" src="validateForm.js"></script>
+   </head>
+   <body>
+        <div class="container"> 
+            <form id="contact" name="myForm">
+                <h2>Fill out the form for further communication!</h2><br>
+                Name: <input type = "text" name = "name" id="name" maxlength="25" size="25" />
+                <br>
+                Contact Number: <input type="tel" name="phone_number" id="phone_number">
+                <br>
+                E-mail:    <input type = "text" name = "email" id = "email" />
+                <br>
+                Do you know the following tech stack or skills?
+                Check all that apply:<br>
+                <input type = "checkbox" name = "subject" value =  "C++"> C++ <br>
+               <input type = "checkbox" name = "subject" value = "JAVA">JAVA<br>
+                <input type = "checkbox" name = "subject" value = "HTML">HTML<br>
+                <input type = "checkbox" name = "subject" value = "CSS/Bootstrap/Flexbox">CSS/Bootstrap/Flexbox <br>
+                <input type = "checkbox" name = "subject" value = "Angular">Angular <br>
+                <input type = "checkbox" name = "subject" value = "React JS">React JS <br>
+                How do we recognise you?<br>
+                <input type = "radio" name = "work" value = "Student">Student <br>
+                <input type = "radio" name = "work" value = "Teacher">Teacher <br>
+                <input type = "radio" name = "work" value = "Industry Professional">Industry Professional <br>
+                Your current location:
+                <select name = "location" id = "location" value="select" size="1">
+                    <option value="" selected="selected">Select One</option>
+                    <option value = "Delhi">Delhi</option>
+                    <option value = "Gurgaon">Gurgaon</option>
+                    <option value = "Chennai">Chennai</option>
+                    <option value = "Mumbai">Mumbai</option>
+                    <option value = "Hyderabad" >Hyderabd</option>
+                    <option value = "Noida">Noida</option>
+                </select>
+                <br><br>
+                <input type="submit" value="Submit" onclick="validate()">
+                <br>
+                
+                <h4>We will reach back to you shortly!<h4>
+            </form>
+        </div>
+   </body>
+	
+</html>
