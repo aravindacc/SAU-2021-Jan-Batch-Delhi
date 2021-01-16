@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.delete-button{
+  display: none;
+  position: relative;
+  float: right;
+ 
+}
+
+.duplicate-button{
+  display: none;
+  position: relative;
+  float: right;
+  margin-right: 3%;
+  
+}
+
+.task-row:hover .delete-button {
+  display: inline-block;
+}
+
+.task-row:hover .duplicate-button {
+  display: inline-block;
+}
+
+.my-container{
+  width: 50%;
+  position:absolute;
+  left: 25%;
+}
