@@ -11,7 +11,7 @@ export class AddUserComponent implements OnInit {
 
 
   name=new FormControl('',[Validators.min(3),Validators.required]);
-  id=new FormControl('',Validators.required);
+  empid=new FormControl('',Validators.required);
   age=new FormControl('',[Validators.required]);
   dob=new FormControl([Validators.required]);
   newUser:any;
@@ -30,14 +30,14 @@ export class AddUserComponent implements OnInit {
       this.newUser=
       {
         name:this.name.value,
-        id:this.id.value,
+        empid:this.empid.value,
         age:this.age.value,
         dob:this.dob.value
       }
 
       this.userService.addData(this.newUser);
       this.name.setValue('');
-      this.id.setValue('');
+      this.empid.setValue('');
       this.age.setValue('');
       this.showAdded =true;
     }
@@ -62,7 +62,7 @@ export class AddUserComponent implements OnInit {
 
   isValid():boolean
   {
-    return this.name.valid && this.age.valid && this.id.valid ;
+    return this.name.valid && this.age.valid && this.empid.valid ;
   }
 
 }

@@ -21,7 +21,7 @@ export class ShowDetailsComponent implements OnInit {
 
 
   name=new FormControl('',[Validators.required,Validators.minLength(3)]);
-  id=new FormControl('',[Validators.required]);
+  empid=new FormControl('',[Validators.required]);
   age=new FormControl('',[Validators.required]);
   dob=new FormControl(['',Validators.required]);
 
@@ -31,7 +31,7 @@ export class ShowDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.name.setValue(this.details.name);
-    this.id.setValue(this.details.id);
+    this.empid.setValue(this.details.empid);
     this.age.setValue(this.details.age);
     this.dob.setValue(this.details.dob);
 
@@ -42,13 +42,14 @@ export class ShowDetailsComponent implements OnInit {
   {
     this.updateDetails={
       name:this.name.value,
-      id:this.id.value,
+      empid:this.empid.value,
       age:this.age.value,
       dob:this.dob.value
     }
     if(this.isValid())
     {
       this.userService.updateUser(this.details,this.updateDetails);
+      this.updated.emit(false);
     }
     else{
       alert("give Valid Details");
@@ -58,7 +59,7 @@ export class ShowDetailsComponent implements OnInit {
 
   isValid() :boolean
   {
-    return  this.name.valid && this.id.valid && this.age.valid;
+    return  this.name.valid && this.empid.valid && this.age.valid;
   }
 
 }

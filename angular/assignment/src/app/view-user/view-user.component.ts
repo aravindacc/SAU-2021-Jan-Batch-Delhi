@@ -20,7 +20,7 @@ export class ViewUserComponent implements OnInit {
   getData()
   {
     this.userService.sendData();
-    this.userService.obs.subscribe(response =>{
+     this.userService.obs.subscribe(response =>{
       this.userList=response;
     })
   }
