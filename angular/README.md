@@ -33,14 +33,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
-#API
-
-##setup 
+# API
+	JSON server API to do CRUD operations
+## setup 
 run 
 ->      `npm i --g json-server` 
 ->	`npm i --g axios`
 
-##start the server 
+## start the server 
 Go to the directory with users.json
 run :  `cd json-server-api`
 Then start the server

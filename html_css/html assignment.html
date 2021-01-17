@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Newspaper </title>
+    <style>
+        pre
+        {
+            overflow-x: auto;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;word-wrap:break-word;
+        }
+
+        .subHeadingsItalic
+        {
+            text-align: center;
+            font-style: italic;
+            font-family: "Lucida HandWriting", "Courier New", cursive;
+            word-wrap: break-word;
+            padding:10px 0px;
+        }
+
+        .subHeadings
+        {
+            text-align: center;
+            word-wrap: break-word;
+            padding:10px 0px;
+            font-weight:bold;
+        }
+
+        @media only screen and (min-width: 100px)  {
+            body{
+                background-color: teal;
+            }
+            .grid{
+            display:grid;
+            grid-template-columns: 1fr;
+            }
+           
+            
+            .box1
+            {
+                overflow: hidden;
+                padding:0 10px 0px 10px;
+                border-right:0px;
+            }
+            .box2
+            {
+                overflow: hidden;
+            padding:0 10px 0px 10px;
+                border-right:0px;
+            }
+            .box3
+            {
+                overflow: hidden;
+            padding:0 10px 0px 10px;
+            
+                border-right:0px;
+            }
+            
+            hr{
+            border:0;border-top:3px solid black;
+            width:100%
+        }
+            }
+            
+            @media screen and (min-width: 1100px) {
+            
+        
+            .grid{
+                display:grid;
+                grid-template-columns: 20% 20% 20% 20% 20% ;
+                grid-column-gap: 10px;
+                }
+    
+                
+    
+            .box1
+            {
+                grid-column-start:1;
+                grid-column-end:3 ;
+                overflow: hidden;
+                padding:0 10px 0px 10px;
+                border-right: 1px solid black;
+            }
+    
+            .box2
+            {
+                overflow:hidden;
+                padding:0 10px 0px 10px;
+                border-right: 1px solid black;
+            }
+            .box3
+            {
+                overflow:hidden;
+                padding:0 10px 0px 10px;
+            }
+            
+            
+            hr{
+                border:0;border-top:3px solid black;
+                width:50%
+            }
+        }
+
+    </style>
+</head>
+<body style="margin: 20px 100px;background-color:rgb(243, 222, 200)">
+    <div style="display:flex;flex-direction: row;border-top: 0.1em solid black;border-bottom:0.1em solid black">
+        <p style="flex:50%;text-align:left;font-weight: bold;">Lorem Ipsum</p>
+        <p style="flex:50%;text-align:right;font-weight: bold;" >22 jan,2021</p>
+    </div>
+    <h1 style=" font-size:8vw; margin:10px 0px; text-align: center;"> Old World News </h1>
+    <hr>
+    <h2 style=" padding:10px 0px; font-size: 3.5vw; text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+    <div class="grid" >
+        <div class="box1">
+            <div style="display: flex; justify-content: center;"><img src="ex.jpg" style=" margin-bottom: 10px; box-shadow:10px 15px black;"></div>
+            <pre >To avoid long jams on roads, a large number of farmers plan to move to Delhi borders as early as January 20 to participate in the “tractor parade” planned for Republic Day.
+
+Farm outfit leaders estimate the participation of almost one lakh tractors from Haryana alone, with as many as 7,000 villages despatching several vehicles. The number of protesters at Delhi borders has been increasing over the past few days, with more tractors from Punjab and Haryana joining every day.
+
+“The number of those moving to Delhi borders daily has doubled now, ahead of the ‘tractor parade’,” said Suresh Koth, a farmer leader from Hisar, who has been camping at Singhu border for 50 days.
+            </pre>
+        </div>
+        <div class="box2">
+            <hr>
+            <div>
+                <p class="subHeadingsItalic" style=" font-weight: bold; font-size: large;">Vim Ex nil Audire Ree</p>
+            </div>
+            <hr >
+            <div>
+                <p class="subHeadingsItalic" style="font-size: medium;">At Solet timeam his,ut pro mundi facete phaderum</p>
+            </div>
+            <hr>
+            <pre style="font-weight:bold ;">By Mca Ex Quis mumquam</pre>
+            <pre> When it comes to subscriptions, it’s quite common to have a shared ID for streaming services and e-commerce platforms. But if you share ‘news epaper’, PDF files or any digital clipping of a newspaper online in India it may land you in serious trouble. So, before you share an epaper online from any prominent print media house, remember that you are violating the Copyright Act, 1957 and Trade Marks Act, 1999. And if you think of starting a WhatsApp group service where you will simply distribute PDF copies of Indian newspapers then note that this may attract legal troubles for you.
+As per the law, “The unlawful and unauthorized circulation/distribution of newspaper and the contents thereof constitutes infringement of Copyright under Section 51(b)(ii) of the Copyright Act, 1957 and the same is liable to be injuncted under Section 55 of the Copyright Act.” So, even sharing a PDF snippet of a newspaper online may be illegal.</pre>
+        </div>
+        <div class="box2">
+            <hr>
+            <div>
+                <p class="subHeadings" style="font-size: xx-large;">ET VIM ELIT OMNIUMAL GRACEO</p>
+            </div>
+            <hr>
+            <div>
+                <p class="subHeadings" style="font-size: medium;">QUEM DELICATISSIMI IUSU</p>
+            </div>
+            <div class="subHeadings" style="border:2px solid black;font-style: italic;">
+                Meis Decitas urbanitas
+            </div>
+            <pre style="font-weight:bold ;">By Sed omnis disputando</pre>
+            <pre>
+Neena Gupta, who spent a lot of time at her home in Mukteshwar, Uttarakhand, during the past few months, recently got back into work mode. The actress in an interview with Radio Mirchi speaks about how reading newspapers is a part of her daily routine, and something that she never misses out on. “ Jab aap akhbaar padhte hain na, sirf news hi nahin padhte. Uske ilava bhi aap bahut saari cheezein dekhte hain, toh ek gyaanvardhan hota hai, har cheez ke prati,” she says. Talking about what she reads first when she opens the newspaper, she shares, “ Main sabse pehle page 3 padhti hoon... it’s related to my profession, lekin main doosri news bhi padhti hoon.”
+            </pre>
+        </div>
+        <div class="box3">
+            <div style="color:white;text-align:center ;font-size:200%;background-color:black; font-weight: bold;padding:20px;margin:20px">
+                1914 AM EU OFFI SING
+            </div>
+            <hr>
+            <pre>Even when she has a hectic schedule ahead of her, she ensures that she catches up on news through the papers. She says, “Even if I don’t manage to read all of it, main headlines toh padh leti hoon. Even if one does that, you get to know so much about what’s happening in the country and the world. Also, if you read an English newspaper, your language skills will improve and the same holds true for Hindi, too. So, this is one tradition, which is very good and has several benefits.” The actress has inculcated the habit in her daughter, designer Masaba Gupta, too. Neena says, “ Maine Masaba ko bhi bola hai ki tumhein padhna chahiye. So, she also reads the newspaper, maybe not as much as I do, but I always encourage her.”
+            </pre>
+        </div>
+    </div>
+
+</body>
+</html>
