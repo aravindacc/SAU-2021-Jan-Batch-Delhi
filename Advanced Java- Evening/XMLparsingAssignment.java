@@ -23,18 +23,18 @@ public class XMLparsingAssignment {
 	public static boolean isSameNIPRnumber(Element csr1Element, Element csr2Element)
 	{
 		return (
-				csr1Element.getAttribute("NIPR_Number").equals(csr2Element.getAttribute("NIPR_Number"))
-				);
+			csr1Element.getAttribute("NIPR_Number").equals(csr2Element.getAttribute("NIPR_Number"))
+			);
 	}
 	
 	public static boolean isSameLicenseDetails(Element detail1Element, Element detail2Element)
 	{
 		
 		return (
-				(detail1Element.getAttribute("Date_Status_Effective").equals(detail2Element.getAttribute("Date_Status_Effective")))
-                && (detail1Element.getAttribute("State_Code").equals(detail2Element.getAttribute("State_Code")))
-                && (detail1Element.getAttribute("License_Number").equals(detail2Element.getAttribute("License_Number")))
-                );
+			(detail1Element.getAttribute("Date_Status_Effective").equals(detail2Element.getAttribute("Date_Status_Effective")))
+                	&& (detail1Element.getAttribute("State_Code").equals(detail2Element.getAttribute("State_Code")))
+                	&& (detail1Element.getAttribute("License_Number").equals(detail2Element.getAttribute("License_Number")))
+                	);
 	}
 	
 	public static void makeFile(Document targetDocument, String targetfilename) 
@@ -184,18 +184,18 @@ public class XMLparsingAssignment {
         String inputFile1path = "E:/SAU/Java Programs/XMLparsing/src/file1.xml";
         String inputFile2path = "E:/SAU/Java Programs/XMLparsing/src/file2.xml";
         
-        System.out.println("Merging the two files.");
+        System.out.println("Creating a new merged file from two input file.");
         
         String mergedFilename = "mergedFile.xml";
         mergeTwoFiles(inputFile1path, inputFile2path, mergedFilename);
         System.out.println("Done.\n");
         
         
-        System.out.println("Writing Valid License Lines of merged file to File.");
+        System.out.println("Writing Valid License Lines of merged file to New File.");
         filterFileOnValidity(mergedFilename, true, "validLicenseFile.xml");
         System.out.println("Done.\n");
         
-        System.out.println("Write Inalid License Lines of merged file to File.");
+        System.out.println("Writing Invalid License Lines of merged file to New File.");
         filterFileOnValidity(mergedFilename, false, "invalidLicenseFile.xml");
         System.out.println("Done.\n");
         }
