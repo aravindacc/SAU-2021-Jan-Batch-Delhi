@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <h2>Employee Form</h2>
+  <form [formGroup]="registrationForm" *ngIf='!submitted' (ngSubmit)="onSubmit()">
+    <!-- <div class="form-group">
+      <label>Username</label>
+      <input [class.is-invalid]="registrationForm.controls.EmployeeName.invalid && registrationForm.controls.EmployeeName.touched" formControlName="EmployeeName" type="text" class="form-control">
+    </div> -->
+    <div class="form-group">
+      <label>Employee Name</label>
+      <input [class.is-invalid]="EmployeeName.invalid &&
+                                  EmployeeName.touched" formControlName="EmployeeName" type="text"
+        class="form-control">
+      <!-- <small [class.d-none]="EmployeeName.valid ||
+      EmployeeName.untouched" class="text-danger">Employee Name is required</small> -->
+      <div *ngIf="EmployeeName.invalid && EmployeeName.touched">
+        <small *ngIf="EmployeeName.errors?.required" class="text-danger">Employee Name is required</small>
+        <small *ngIf="EmployeeName.errors?.minlength" class="text-danger">Employee Name must be at least 3
+          characters</small>
+        <small *ngIf="EmployeeName.errors?.forbiddenName"
+          class="text-danger">{{EmployeeName.errors?.forbiddenName.value}} Employee Name not allowed</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Employee ID</label>
+      <input [class.is-invalid]="EmployeeID.invalid &&
+      EmployeeID.touched" formControlName="EmployeeID" type="text" class="form-control">
+      <div *ngIf="EmployeeID.invalid && EmployeeID.touched">
+        <small *ngIf="EmployeeID.errors?.required" class="text-danger">Employee ID is required</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Employee DOB</label>
+      <input [class.is-invalid]="EmployeeDOB.invalid &&
+      EmployeeDOB.touched" formControlName="EmployeeDOB" type="date" class="form-control">
+      <div *ngIf="EmployeeDOB.invalid && EmployeeDOB.touched">
+        <small *ngIf="EmployeeDOB.errors?.required" class="text-danger">Employee DOB is required</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Employee Age</label>
+      <input formControlName="EmployeeAge" type="number" class="form-control">
+    </div>
+    <br>
+    <button [disabled]='!registrationForm.valid' class="btn btn-primary" type="submit">{{!userId ? 'Submit' :
+      'update'}}</button>
+    <!-- <button (click)="loadApiData()" class="btn btn-secondary ml-2" type="button">Load API Data</button> -->
+  </form>
+  {{registrationForm.value | json}}
+</div>
