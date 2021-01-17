@@ -1,0 +1,38 @@
+.button {
+  box-shadow: inset 0px 1px 0px 0px #6b6262;
+  background: linear-gradient(to bottom, #a59a9a 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #070606;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  outline: 0;
+  width: 20%;
+  text-align: center;
+  margin: 1%
+}
+
+.activebutton {
+  box-shadow: inset 0px 1px 0px 0px #64e4ae;
+  background: linear-gradient(to bottom, #f70a0a 5%, #4ce7c0 100%);
+  background-color: #f30b17;
+  border-radius: 6px;
+  border: 1px solid #050505;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528ecc;
+  outline: 0;
+}

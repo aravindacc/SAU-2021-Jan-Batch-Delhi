@@ -1,0 +1,20 @@
+<h1 style="margin-left: 10%;  font-size: 50px;">Employee Form</h1>
+<form #simpleForm = "ngForm" (ngSubmit) = "addUserValue(simpleForm)" class = "employeeForm">
+  <label for="name"><b>Name</b></label>
+    <input required class="formInput" type = "text" [ngModel] = "sharingService.prefilledData.username"
+          name = "username" placeholder="Enter name"><br><br>
+
+  <label for="id"><b>Id</b></label>
+    <input  required class="formInput" type="number" [ngModel] = "sharingService.prefilledData.id"
+         name = "id" placeholder="Enter Id"><br><br>
+
+  <label for="age"><b>Age</b></label>
+    <input required class="formInput" type = "number" [ngModel] = "sharingService.prefilledData.age"
+          name = "age" placeholder="Enter age"><br><br>
+
+  <label for="date"><b>Birth Date</b></label>
+    <input required class="formInput" type="date" [ngModel] = "sharingService.prefilledData.date"
+          name = "date" placeholder="Enter date"><br><br>
+
+  <Button class = "btn">{{sharingService.buttonState}}</Button>
+</form>
