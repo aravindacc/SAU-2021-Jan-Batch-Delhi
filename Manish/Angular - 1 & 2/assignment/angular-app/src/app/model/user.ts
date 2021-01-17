@@ -1,6 +1,6 @@
 export class User {
-  id?: number;
-  name?: string;
-  username?: string;
-  email?: string;
+  id: number = NaN;
+  name: string = '';
+  username: string = '';
+  email: string = '';
 }

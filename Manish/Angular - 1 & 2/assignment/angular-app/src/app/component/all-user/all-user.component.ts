@@ -30,6 +30,7 @@ export class AllUserComponent implements OnInit {
     this.userService.deleteUser(id).subscribe(() => {
       console.log('deleted from server');
     });
+    alert(`User deleted with id ${id}`)
   }
 
   // edit user
