@@ -1,5 +1,12 @@
 # AngPro
 
+![alt text](https://i.postimg.cc/rpBQzD2d/Screenshot-344.png)
+
+
+![alt text](https://i.postimg.cc/Hs6zXZC1/Screenshot-345.png)
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
 
 ## Development server
