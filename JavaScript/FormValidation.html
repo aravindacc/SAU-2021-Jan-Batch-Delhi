@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<section class="container">
+  <div>
+    <h1 class="text-center text-capitalize text-primary mt-2">Sign-Up</h1>
+    <hr class="w-25" style="border-color: black">
+  </div>
+<div >
+<form action="#" onsubmit="return Validation()" class="form-group mx-auto w-50">
+ <div class="form-group">
+    <label for="email">Email</label>
+    <input type="Email" class="form-control" required placeholder="Enter email" id="email">
+    <span class="text-danger" id="span1"></span>
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password</label>
+    <input type="Password" class="form-control" required placeholder="Enter email" id="pwd">
+    <span class="text-danger" id="span2"></span>
+  </div>
+  <div class="form-group">
+    <label for="pwd2">Confirm Password</label>
+    <input type="Password" class="form-control" required placeholder="Confirm Password" id="pwd2">
+    <span class="text-danger" id="span3"></span>
+  </div>
+  <div class="form-group">
+    <label for="Name">Name</label>
+    <input type="text" class="form-control" required placeholder="Enter Name" id="Name">
+    <span class="text-danger" id="span4"></span>
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone No</label>
+    <input type="text" class="form-control" required placeholder="Enter Name" id="phone">
+    <span class="text-danger" id="span5"></span>
+  </div>
+  <div class="form-group">
+    <span for="gender">Gender:</span>
+    <input type="radio"  class="form-check-inline" name="gender" value="Male" >Male
+    <input type="radio" class="form-check-inline" name="gender" value="Female">Female
+    <input type="radio"  class="form-check-inline" name="gender" value="Other">Other
+    <span class="text-danger" id="span6"></span>
+  </div>
+  <div class="form-group">
+    <label for="phone">Country</label>
+    <select id="Country" required>
+    	<option class="form-control" value="India" selected="true">India</option>
+    	<option class="form-control" value="Pakistan">Pakistan</option>
+    	<option class="form-control" value="Afganistan">Afganistan</option>
+    	<option class="form-control" value="Nepal">Nepal</option>
+    	<option class="form-control" value="Sri Lanka">Sri Lanka</option>
+    </select>
+    <span class="text-danger" id="span7"></span>
+  </div>
+  <div class="form-group">
+      <button type="submit" class="btn btn-primary"> SignUp</button>
+  </div>
+</form>
+</div>
+</section>
+
+
+<script type="text/javascript">
+  
+function Validation(){
+  var email=document.getElementById('email').value;
+  var pass=document.getElementById('pwd').value;
+  var confirmPass=document.getElementById('pwd2').value;
+  var name=document.getElementById('Name').value;
+  var phone=document.getElementById('phone').value;
+
+  var flag=true;
+
+  //Email Validation
+
+  if(email==="" || email.indexOf("@")<=0 || !email.endsWith(".com")){
+    document.getElementById('span1').innerHTML="Please give a valid email ID";
+    flag=false;
+  }
+  
+  //Password Validation
+
+  if(pass==="" || pass.length <6 || pass.length >20){
+    document.getElementById('span2').innerHTML="Your Password should be greater than 5 digits and less than 20 digits";
+    flag=false;
+  }
+
+  //Confirm Password Validation
+
+  if(confirmPass!==pass){
+  	document.getElementById('span3').innerHTML="Passwords are not Matching";
+    flag=false;
+  }
+
+  //Name Validation using Regex
+
+  var regex = /^[a-zA-Z ]+$/;
+
+  if(name==="" || !(regex.test(name))){
+    document.getElementById('span4').innerHTML="Please enter a valid name";
+    flag=false;
+  }
+
+  //Phone Number Validation
+
+  var reg = /^[0-9]+$/;
+
+  if(phone.length !== 10 || !(reg.test(phone))){
+  	document.getElementById('span5').innerHTML="Please enter a valid Phone Number";
+    flag=false;
+  }	  
+
+  //Gender Radio Button Validation
+
+  var radios = document.getElementsByName('gender');
+  var genderSelected = false;
+
+    var i = 0;
+    while (!genderSelected && i < radios.length) {
+        if (radios[i].checked) genderSelected = true;
+        i++;        
+    }
+
+    if (!genderSelected)
+	{
+		document.getElementById('span6').innerHTML="Please select your Gender";
+    	flag=false;
+	}
+
+	//Selection box is by default validated
+
+	return flag;
+}
+</script>
+</body>
+</html>
