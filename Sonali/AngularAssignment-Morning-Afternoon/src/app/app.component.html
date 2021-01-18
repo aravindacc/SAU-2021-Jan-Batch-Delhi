@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <a class="navbar-brand" routerLink="display">EMPLOYEES</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="add" >ADD EMPLOYEE DATA</a>
+      <!-- <a class="nav-item nav-link" routerLink="update/:id" >UPDATE EMPLOYEE DATA</a> -->
+      <a class="nav-item nav-link" routerLink="display" >DISPLAY EMPLOYEE DATA</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+<router-outlet></router-outlet>
+</div>
