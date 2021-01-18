@@ -1,0 +1,72 @@
+<body>
+  <div class="container" style="max-width: 400px;">
+    <form id="contact"  [formGroup]="profileForm" style="margin-left: 280px; width:400px;">
+
+      <label>
+        First Name:
+        <input type="text" formControlName="FirstName" name="FirstName"  maxlength="25" size="25" >
+      </label><br>
+
+      <label>
+        Last Name:
+        <input type="text" formControlName="LastName" >
+      </label><br>
+
+      <label>
+        Employee ID:
+        <input type="text" formControlName="EmployeeId" >
+      </label><br>
+
+      <label>
+        Date of Birth:
+        <input type="date" formControlName="DOB">
+      </label><br>
+
+      <label>
+        E-mail Address:
+        <input type="text" formControlName="Email" >
+      </label><br>
+
+      <label>
+        Contact Number:
+        <input type="text" formControlName="Contact">
+      </label><br>
+
+      <label>
+        Job Profile:
+        How do we recognise you?<br>
+        <input type = "radio" formControlName="JobProfile"  name = "JobProfile" value = "Developer">Developer <br>
+        <input type = "radio" formControlName="JobProfile"  name = "JobProfile" value = "Analyst ">Analyst <br>
+        <input type = "radio" formControlName="JobProfile" name = "JobProfile" value = "Designer">Designer<br>
+      </label>
+
+      <label>
+        Address:
+        <input type="text" formControlName="Address">
+      </label><br>
+
+    <label>
+      Specify your identification proof!<br> Check all that apply<br>
+      <input type = "checkbox"  formControlName="Idproof"   name = "Idproof" value =  "Aadhar Card"> Aadhar Card <br>
+      <input type = "checkbox" formControlName="Idproof"  name = "Idproof" value = "Pan Card">Pan Card<br>
+      <input type = "checkbox" formControlName="Idproof"  name = "Idproof" value = "Voter ID">Voter ID<br>
+      <input type = "checkbox" formControlName="Idproof"  name = "Idproof" value = "Passport">Passport <br>
+      <input type = "checkbox" formControlName="Idproof"  name = "Idproof" value = "Driving License">Driving License <br>
+    </label>
+
+  <label>
+    <input style="width: 8%;
+    border: 0.5px solid #ccc;
+    background: #FFF;
+    margin: 0 0 1px;" type = "checkbox" formControlName="Agree" name = "Agree" value = "Agree">I confirm, that I have read all the terms and conditions applied and agree to the same.<br>
+  </label>
+
+    <label>
+    <button (click)="validate()" type="button">Submit</button><br>
+    </label>
+     <br>
+
+    </form>
+  </div>
+</body>
+
