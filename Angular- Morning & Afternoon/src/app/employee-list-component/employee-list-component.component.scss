@@ -1,0 +1,16 @@
+ul li{
+    padding: 2em;
+    border-style: groove;
+}
+.btn {
+background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: yellow;
+}
