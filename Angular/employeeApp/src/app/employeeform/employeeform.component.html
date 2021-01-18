@@ -1,0 +1,56 @@
+<html>
+  <script>
+     function getInputData(){
+       var name = document.getElementById("name").value;
+       var
+     }
+  </script>
+<div class="container">
+  <div [hidden]="submitted">
+    <b>
+      <h1 style="text-align: center; font-size: 50px;">Employee Form</h1>
+    </b>
+    <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name"
+               required
+               [(ngModel)]="model.name" name="name"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="Age">Age</label>
+        <input type="text" class="form-control" id="Age"
+               [(ngModel)]="model.age" name="Age">
+      </div>
+
+      <div class="form-group">
+        <label for="dob">DOB</label>
+        <input type="date" class="form-control" id="dob"
+               required
+               [(ngModel)]="model.dob" name="dob"
+               #dob="ngModel">
+        <div [hidden]="dob.valid || dob.pristine"
+             class="alert alert-danger">
+          Date of Birth is required
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success" [disabled]="!employeeForm.form.valid">Submit</button>
+      <button type="button" class="btn btn-default" (click)="newDetail(); employeeForm.reset()">RESET</button>
+      <br> <br>
+      <button type="button" class="btn"(click)="viewListOfEmployees()">View List Of Employees</button>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted" >
+    <app-routecomponent></app-routecomponent>
+  </div>
+</div>
+</html>
+
