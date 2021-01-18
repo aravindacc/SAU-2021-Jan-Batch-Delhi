@@ -1,0 +1,84 @@
+<body>
+  <div class="container">
+    <form id="contact" [formGroup]="editprofileForm" *ngIf=showedit>
+
+      <div class="form-group ">
+        <p>Enter the ID of the employee to edit the record.</p>
+        <label>
+          Employee ID:
+          <input type="text" class="form-control" formControlName="EmployeeId">
+        </label><br>
+      </div>
+
+      <br>
+      <div class="form-group ">
+        <label>
+          <input style="width: 8%; border: 0.5px solid #ccc; background: #FFF; margin: 0 0 1px;" type="checkbox" formControlName="Confirm" name="Confirm" value="Confirm"> I am sure, I want
+          to edit the record.<br>
+        </label>
+      </div>
+
+      <br>
+      <div class="form-group ">
+        <label>
+          <button class="btn btn-lg btn-block" (click)="edit()" type="button">Edit Record</button><br>
+        </label>
+      </div>
+
+      <br>
+    </form>
+  </div>
+
+
+
+  <div class="container" *ngIf=show>
+    <form id="contact" [formGroup]="profileForm" #empForm="ngForm">
+
+      <div class="form-group ">
+        <label for="firstname">
+          Name:
+          <input class="form-control" type="text" formControlName="FirstName" name="FirstName"
+            [ngModel]="emp.FirstName">
+        </label>
+      </div>
+
+
+      <div class="form-group ">
+        <label>
+          Employee ID:
+          <input class="form-control" type="text" formControlName="EmployeeId" [ngModel]="emp.EmployeeId">
+        </label>
+      </div>
+
+      <div class="form-group ">
+        <label>
+          Date of Birth:
+          <input class="form-control" type="date" formControlName="DOB" [ngModel]="emp.DOB">
+        </label>
+      </div>
+
+      <div class="form-group ">
+        <label>
+          E-mail Address:
+          <input class="form-control" type="text" formControlName="Email" [ngModel]="emp.Email">
+        </label>
+      </div>
+
+      <div class="form-group ">
+        <label>
+          Contact Number:
+          <input class="form-control" type="text" formControlName="Contact" [ngModel]="emp.Contact">
+        </label>
+      </div>
+
+      <br><br>
+      <div class="form-group ">
+        <label>
+          <button class="btn btn-lg btn-block" (click)="saveEmp()" type="button">Save Changes</button><br>
+        </label>
+      </div>
+      <br>
+
+    </form>
+  </div>
+</body>

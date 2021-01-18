@@ -1,0 +1,58 @@
+<body>
+  <div class="container">
+    <form id="contact" [formGroup]="profileForm">
+
+
+      <div class="form-group ">
+        <label>
+          Name:
+          <input type="text" formControlName="FirstName" name="FirstName" class="form-control">
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>
+          Employee ID:
+          <input type="text" formControlName="EmployeeId" class="form-control">
+        </label><br>
+      </div>
+
+      <div class="form-group">
+        <label>
+          Date of Birth:
+          <input type="date" formControlName="DOB" class="form-control">
+        </label><br>
+      </div>
+
+
+      <div class="form-group">
+        <label>
+          Contact Number:
+          <input type="text" formControlName="Contact" class="form-control">
+        </label><br>
+      </div>
+
+      <div class="form-group">
+        <label>
+          Email:
+          <input type="text" formControlName="Email" class="form-control">
+        </label><br>
+      </div>
+
+      <br>
+      <div class="form-group">
+        <label>
+          <input style="width: 8%; border: 0.5px solid #ccc; background: #FFF; margin: 0 0 1px; " type="checkbox" formControlName="Agree" name="Agree" value="Agree">I confirm, that I have read all the terms and conditions applied and agree to the same.<br>
+        </label>
+      </div>
+
+      <br>
+      <div class="form-group">
+        <label>
+          <button class="btn btn-lg btn-block" (click)="validate()" type="button">Submit</button><br>
+        </label>
+        <br>
+      </div>
+    </form>
+  </div>
+</body>

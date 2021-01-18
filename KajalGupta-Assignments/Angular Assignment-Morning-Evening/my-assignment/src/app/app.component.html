@@ -1,0 +1,44 @@
+<body>
+
+  <div class="jumbotron">
+    <h1 class="display-4 text-center">Employee Register</h1>
+    <hr>
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+        <table>
+
+          <tr>
+            <td>
+              <button class=" btn btn-lg " (click)="navigateToAddUsers()" type="button">Add Employees</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <button class=" btn btn-lg " (click)="navigateToDeleteUsers()" type="button">Delete Employees</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <button class="btn btn-lg " (click)="navigateToShowAllUsers()" type="button">Show all Employees</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <button class="btn btn-lg " (click)="navigateToEditUsers()" type="button">Edit Employee</button>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+      <div class="col-md-7">
+        <router-outlet></router-outlet>
+
+      </div>
+    </div>
+  </div>
+
+</body>
