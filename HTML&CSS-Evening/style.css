@@ -1,0 +1,19 @@
+
+
+.newspaper {
+	background-image : url(https://previews.123rf.com/images/ke77kz/ke77kz1606/ke77kz160600040/58625597-aging-paper-background-natural-old-paper-texture-for-the-design-.jpg);
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+
+}
+
+h2, h4{
+	font-weight: 700; 
+	text-decoration: underline;
+}
+
+@media(max-width: 800px){
+	
+	
+}
+
