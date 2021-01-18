@@ -4,29 +4,29 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <h3>Employee List</h3>
+        <h3>List of Employees</h3>
 
         <ul *ngFor = "let employee of employeeList; let i = index">
             <li>
                 <div>
-                    <label>Employee Name : </label>
+                    <label>Name : </label>
                     <span> {{employee.name}}</span>
                 </div>
                 <div>
-                    <label>Employee Id : </label>
+                    <label>Id : </label>
                     <span> {{employee.id}}</span>
                 </div>
                 <div>
-                    <label>Employee Age : </label>
+                    <label>Age : </label>
                     <span> {{employee.age}}</span>
                 </div>
                 <div>
-                    <label>Employee DOB : </label>
+                    <label> Date of Birth : </label>
                     <span> {{employee.dob}}</span>
                 </div>
                 <div>
                     <button (click) = "deleteItem(i)" style="margin-right: 16px" class="btn"> Delete</button>
-                    <button (click) = "redirectToEdit(i)" class="btn" style="margin-right: 16px">Change/Edit</button>
+                    <button (click) = "redirectToEdit(i)" class="btn" style="margin-right: 16px">Change</button>
                 </div>
                 
             </li>
