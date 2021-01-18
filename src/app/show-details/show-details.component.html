@@ -1,0 +1,17 @@
+<div class="container">
+<table class="table">
+    <tr *ngFor="let emp of allEmployee">
+      <td>{{emp.name}}</td>
+      <td>{{emp.address}}</td>
+      <td>{{emp.designation}}</td> 
+      <td>{{emp.contact}}</td>
+      <td>
+            <button (click)="deleteEmployee(emp.id)">Delete</button>
+      </td>
+      <td>
+            <button (click)="updateEmployee(emp.id)">Update</button>
+      </td>
+    </tr>
+
+</table>
+</div>

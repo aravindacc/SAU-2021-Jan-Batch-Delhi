@@ -1,0 +1,39 @@
+{
+  "Employee": [
+    {
+      "id": 2,
+      "name": "Ross",
+      "address": "New york",
+      "designation": "Tester1",
+      "contact": "885761234"
+    },
+    {
+      "id": 7,
+      "name": " Jatin Kumar",
+      "address": " Dwarka",
+      "designation": "Tester",
+      "contact": "457049"
+    },
+    {
+      "id": 8,
+      "name": " Himani",
+      "address": " New Delhi",
+      "designation": "SDE",
+      "contact": "09437563"
+    },
+    {
+      "id": 9,
+      "name": " Shalini",
+      "address": " Gurugram",
+      "designation": "Botanist",
+      "contact": "4732946"
+    },
+    {
+      "id": 10,
+      "name": " Rachel",
+      "address": " New York",
+      "designation": "Fashion Designer",
+      "contact": "948356324"
+    }
+  ]
+}

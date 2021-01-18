@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>Employee Form</h2>
+<div class="form">
+<div class="row">
+    <div class="col-md-6">
+        Enter your Name:<input  class="form-control" [(ngModel)]="employeeservice.currentemployee.name" >
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-6 form-group">
+    Enter Address:<input class="form-control" [(ngModel)]="employeeservice.currentemployee.address">   
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="col-md-6 form-group">
+    Enter Designation:<input class="form-control" [(ngModel)]="employeeservice.currentemployee.designation">
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-6 form-group">
+    Enter Your Contact Details:<input class="form-control" [(ngModel)]="employeeservice.currentemployee.contact">
+    </div>
+</div>
+
+<br>
+<div class="row">
+    <div class="col-md-3">
+      <button  (click)="create(employeeservice.currentemployee)" class="btn btn-success btn-lg btn-block">
+        ADD USER
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button routerLink="route" class="btn btn-success btn-lg btn-block">SHOW DETAILS</button>
+      
+    </div>
+</div>  
+</div>
+<router-outlet></router-outlet>
+
