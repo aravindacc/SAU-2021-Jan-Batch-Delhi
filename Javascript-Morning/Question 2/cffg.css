@@ -1,0 +1,17 @@
+.store{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.box{
+    background: white;
+    font-size: 50px;
+    text-align: center;
+    flex-grow: 1;
+    padding: 1%;
+    width: 2%;
+    
+}
+.press{
+    font-size: 5dp;
+}
