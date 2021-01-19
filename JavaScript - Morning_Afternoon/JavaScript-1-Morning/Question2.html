@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 2</title>
+        <style>
+            div{
+                color:black;
+                font-size: 20px;
+                margin:2px;
+            }
+			
+		</style>
+		<center><h2>Question 2</h2></center>
+    </head>
+    <body>
+        <div id="one">1</div>
+        <div id="two">2</div>
+        <div id="three">3</div>
+        <div id="four">4</div>
+        <div id="five">5</div>
+        <div id="six">6</div>
+        <div id="seven">7</div>
+        <div id="eight">8</div>
+        <div id="nine">9</div>
+        <div id="ten">10</div>
+        <div id="eleven">11</div>
+        <div id="twelve">12</div>
+        <div id="thirteen">13</div>
+        <div id="fourteen">14</div>
+        <div id="fifteen">15</div>
+        <div id="sixteen">16</div>
+        <div id="seventeen">17</div>
+        <div id="eighteen">18</div>
+        <div id="nineteen">19</div>
+        <div id="twenty">20</div>
+        <br>
+        <button onclick="highlightEven()">Highlight Even Numbers</button>
+        <br>
+        <br>
+
+        <button onclick="highlightFive()">Highlight Multiples Of Five</button>
+        <br>
+        <br>
+        <button onclick="reset()">Reset All</button>
+        <script>
+            function highlightEven(){
+            let div=document.getElementsByTagName("div");
+            for(let i=0;i<div.length;i++){
+                if((i+1)%2===0){
+                    div[i].style.color="yellow";
+                }
+                else{
+                    div[i].style.color="black";
+                }
+            }
+
+            }
+
+            function highlightFive(){
+            let div=document.getElementsByTagName("div");
+            for(let i=0;i<div.length;i++){
+                if((i+1)%5===0){
+                    div[i].style.color="aqua";
+                }
+                else{
+                    div[i].style.color="black";
+                }
+            }
+            
+            }
+
+            function reset(){
+            let div=document.getElementsByTagName("div");
+            for(let i=0;i<div.length;i++){
+                
+                    div[i].style.color="black";
+                
+            }
+            
+            }
+
+        </script>
+    </body>
+
+</html>

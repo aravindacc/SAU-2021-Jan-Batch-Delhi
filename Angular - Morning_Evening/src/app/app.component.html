@@ -1,0 +1,110 @@
+<app-header></app-header>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<form class="form-horizontal"
+    [formGroup]="employeeForm"
+    (ngSubmit)="onSubmit(); employeeForm.reset()">
+
+  <div class="panel panel-primary">
+
+
+    <!--Panel Body-->
+    <div class="panel-body">
+
+      <!--Name Field-->
+      <div class="form-group"
+      [ngClass]="{'has-error': ((employeeForm.get('name').touched ||
+                                employeeForm.get('name').dirty) &&
+                                employeeForm.get('name').errors)}">
+        <label class="col-sm-2 control-label" for="name">Name </label>
+        <div class="col-sm-8">
+            <input id="name" type="text" class="form-control" formControlName="name">
+        </div>
+            <span class="help-block"
+                *ngIf="((employeeForm.get('name').touched ||
+                      employeeForm.get('name').dirty) &&
+                      employeeForm.get('name').errors)">
+                <span *ngIf="employeeForm.get('name').errors.required">Name is required
+                </span>
+                <span *ngIf="employeeForm.get('name').errors.minlength">
+                    Name must be greater than 2 characters
+                </span>
+            </span>
+      </div>
+
+      <!--Id Field-->
+      <div class="form-group"
+      [ngClass]="{'has-error': ((employeeForm.get('id').touched ||
+                                employeeForm.get('id').dirty) &&
+                                employeeForm.get('id').errors)}">
+        <label class="col-sm-2 control-label" for="id">ID </label>
+        <div class="col-sm-8">
+          <input id="id" type="text" class="form-control" formControlName="id">
+        </div>
+        <span class="help-block"
+              *ngIf="((employeeForm.get('id').touched ||
+                      employeeForm.get('id').dirty) &&
+                      employeeForm.get('id').errors)">
+              <span *ngIf="employeeForm.get('id').errors.required">
+                ID is required
+              </span>
+        </span>
+      </div>
+
+      <!--Age Field-->
+      <div class="form-group"
+      [ngClass]="{'has-error': ((employeeForm.get('age').touched ||
+                                employeeForm.get('age').dirty) &&
+                                employeeForm.get('age').errors)}">
+        <label class="col-sm-2 control-label" for="age">Age</label>
+        <div class="col-sm-8">
+          <input id="age" type="number" class="form-control" formControlName="age">
+        </div>
+        <span class="help-block"
+              *ngIf="((employeeForm.get('age').touched ||
+                      employeeForm.get('age').dirty) &&
+                      employeeForm.get('age').errors)">
+              <span *ngIf="employeeForm.get('age').errors.required">
+                Age is required
+              </span>
+        </span>
+      </div>
+
+      <div class="form-group"
+      [ngClass]="{'has-error': ((employeeForm.get('dob').touched ||
+                                employeeForm.get('dob').dirty) &&
+                                employeeForm.get('dob').errors)}">
+        <label class="col-sm-2 control-label" for="dob">Date of birth</label>
+        <div class="col-sm-8">
+          <input id="dob" type="date" class="form-control" formControlName="dob">
+        </div>
+        <span class="help-block"
+              *ngIf="((employeeForm.get('dob').touched ||
+                      employeeForm.get('dob').dirty) &&
+                      employeeForm.get('dob').errors)">
+              <span *ngIf="employeeForm.get('dob').errors.required">
+                Date of birth is required
+              </span>
+        </span>
+      </div>
+
+    </div>
+    <div class="panel-footer alignCenter">
+      <button class="btn btn-primary" style="margin-right: 16px" type="submit" [disabled]="!employeeForm.valid">Save</button>
+      <button class="btn btn-primary" type = "reset">Reset</button>
+    </div>
+  </div>
+</form>
+
+<div style="padding:5px">
+  <ul class="nav nav-tabs">
+      <li routerLinkActive="active">
+          <a routerLink="route-list">Employee List</a>
+      </li>
+
+  </ul>
+  <br/>
+  <router-outlet></router-outlet>
+</div>
+
+

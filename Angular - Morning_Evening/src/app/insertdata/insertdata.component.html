@@ -1,0 +1,55 @@
+<div class="form" *ngIf="showform">
+<form [formGroup]="formvalue">
+  <label>
+    First Name:
+    <input type="text" formControlName="firstname">
+  </label>
+<br>
+<br>
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastname">
+  </label>
+  <br>
+  <br>
+  <label>
+    DOB :
+    <input type="date" formControlName="dob">
+  </label>
+  <br>
+  <br>
+  <label>
+    Age :
+    <input type="number" formControlName="age">
+  </label>
+  <br>
+  <br>
+  <label>
+    Phone Number :
+    <input type="number" formControlName="phone">
+  </label>
+  <br>
+  <br>
+  <label>
+    Email :
+    <input type="email" formControlName="email">
+  </label>
+  <br>
+  <br>
+  <button type="submit" (click)="submit()">Submit</button>
+</form>
+</div>
+
+<br>
+<br>
+<button type="button" (click)="nav()">Show</button>
+
+
+<div *ngIf="show">
+<br>
+<br>
+<router-outlet></router-outlet>
+<br>
+<br>
+<button type="button" (click)="Back()">Back</button>
+</div>
