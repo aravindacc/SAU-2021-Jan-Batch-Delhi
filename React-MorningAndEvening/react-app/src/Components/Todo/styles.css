@@ -1,0 +1,35 @@
+.TodoContainer {
+  padding: 20px;
+}
+
+.filterButton{
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.Header {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.TaskRow:hover .hidden {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family:Verdana, Geneva, sans-serif;
+  cursor:pointer;
+  margin-left: 10px;
+  border: none;
+
+}
+
+.TaskRow{
+  margin-top: 10px;
+  font-size: 22px;
+}  
