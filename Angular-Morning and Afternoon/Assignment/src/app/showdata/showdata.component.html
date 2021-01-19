@@ -1,0 +1,69 @@
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>DOB</th>
+    <th>Age</th>
+    <th>Phone Number</th>
+    <th>Email</th>
+    <th>Update Button</th>
+    <th>Delete Button</th>
+
+  </tr>
+
+  <tr *ngFor = "let value of details; let i = index">
+    <td>{{value.firstname}}</td>
+    <td>{{value.lastname}}</td>
+    <td>{{value.dob}}</td>
+    <td>{{value.age}}</td>
+    <td>{{value.phone}}</td>
+    <td>{{value.email}}</td>
+    <td><button type="update" (click)="openform(i)">Update</button></td>
+    <td><button type="update" (click)="deletevalue(i)">Delete</button></td>
+  </tr>
+</table>
+
+<br>
+<br>
+
+<div *ngIf="updatecheck">
+  <label>
+    First Name:
+    <input type="text" [(ngModel)]="firstname" placecholder="Leave Empty if no changes">
+  </label>
+  <br>
+  <br>
+  <label>
+    Last Name:
+    <input type="text" [(ngModel)]="lastname" placecholder="Leave Empty if no changes">
+  </label>
+  <br>
+  <br>
+  <label>
+    DOB :
+    <input type="text" [(ngModel)]="dob" placecholder="Leave Empty if no changes">
+  </label>
+  <br>
+  <br>
+  <label>
+    Age :
+    <input type="text" [(ngModel)]="age" placecholder="Leave Empty if no changes" #ctrl="ngModel">
+  </label>
+  <br>
+  <br>
+  <label>
+    Phone Number :
+    <input type="text" [(ngModel)]="phone" placecholder="Leave Empty if no changes">
+  </label>
+  <br>
+  <br>
+  <label>
+    Email :
+    <input type="text" [(ngModel)]="email" placecholder="Leave Empty if no changes">
+  </label>
+  <br>
+  <br>
+  <button type="submit" (click)="updatethevalue()">Update the value</button>
+
+</div>
+
