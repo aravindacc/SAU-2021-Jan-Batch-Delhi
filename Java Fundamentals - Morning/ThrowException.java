@@ -1,3 +1,4 @@
+//Java program to throw arithmetic exception using “throw” and “throws”
 import java.lang.*;
 import java.util.*;
 import java.io.*; 
@@ -7,7 +8,7 @@ public class ThrowException
         
         if(n==0){
             System.out.println("Number can not be Divided Exception is -");
-            throw new ArithmeticException("Divide by Zero");
+            throw new ArithmeticException("Divide by Zero");//throw Exception
         }
         else{
             System.out.println("Number can be Divided and the result is "+ (double)m/n);
