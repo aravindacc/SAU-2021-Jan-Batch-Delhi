@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+xmlns:aop="http://www.springframework.org/schema/aop" 
+xmlns:p="http://www.springframework.org/schema/p" 
+xmlns:security="http://www.springframework.org/schema/security" 
+xmlns:tx="http://www.springframework.org/schema/tx" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://www.springframework.org/schema/beans" 
+xsi:schemalocation="http://www.springframework.org/schema/beans">
+  >
+ <bean id="rectangle" class="com.au.spring.Rectangle" >
+   <property name="pointA">
+      <bean class="com.au.spring.Point">
+  		<property name="x" value="20"/>
+  		<property name="y" value="10"/>
+      </bean>
+    </property>
+   <property name="pointB">
+      <bean class="com.au.spring.Point">
+  			<property name="x" value="-20"></property>
+  			<property name="y" value="0"></property>
+      </bean>
+   </property>
+   
+   <property name="pointC">
+      <bean class="com.au.spring.Point">
+ 		<property name="x" value="20"/>
+ 		<property name="y" value="0"/>
+      </bean>
+   </property>
+      
+	<property name="pointD">
+      <bean class="com.au.spring.Point">
+  		<property name="x" value="20"/>
+  		<property name="y" value="10"/>
+      </bean>
+    </property>
+    </bean>
+    </beans>
