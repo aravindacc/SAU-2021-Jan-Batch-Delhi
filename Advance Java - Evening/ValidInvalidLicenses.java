@@ -10,7 +10,7 @@ import org.w3c.dom.Document;
 import javax.xml.transform.dom.DOMSource;
 import java.text.SimpleDateFormat;
 import java.io.*;
-public class Main {
+public class ValidInvalidLicenses {
    public static void main(String[] args) {
        try {
            //Initialize file names
