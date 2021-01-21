@@ -13,13 +13,13 @@ import java.io.*;
 public class MergeList {
    public static void main(String[] args) {
        try {
-           //Initialize file names
+           
            File tmp1 = new File("C:/Users/hp/Desktop/Accolite/Assignments/Assignments/Advance Java - Evening/x1.txt");
            File tmp2 = new File("C:/Users/hp/Desktop/Accolite/Assignments/Assignments/Advance Java - Evening/x2.txt");
 		   
            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-           //Initialize documents name
+           
            Document doc1 = dBuilder.parse(tmp1);
            Document doc2 = dBuilder.parse(tmp2);
 		   
