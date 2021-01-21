@@ -13,10 +13,10 @@ import java.io.*;
 public class ValidInvalidLicenses {
    public static void main(String[] args) {
        try {
-           //Initialize file names
            
-           File temp1 = new File("C:/Users/hp/Desktop/Accolite/Assignments/Assignments/Advance Java - Evening/x1.txt");
-           File temp2 = new File("C:/Users/hp/Desktop/Accolite/Assignments/Assignments/Advance Java - Evening/x2.txt");
+           
+           File tmp1 = new File("C:/Users/hp/Desktop/Accolite/Assignments/Assignments/Advance Java - Evening/x1.txt");
+           File tmp2 = new File("C:/Users/hp/Desktop/Accolite/Assignments/Assignments/Advance Java - Evening/x2.txt");
            
            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -24,9 +24,9 @@ public class ValidInvalidLicenses {
            Document validFile = dBuilder.newDocument();
            Document invalidFile = dBuilder.newDocument();
           
-           //Initialize documents name
-           Document doc1 = dBuilder.parse(temp1);
-           Document doc2 = dBuilder.parse(temp2);
+           
+           Document doc1 = dBuilder.parse(tmp1);
+           Document doc2 = dBuilder.parse(tmp2);
 
 
 
