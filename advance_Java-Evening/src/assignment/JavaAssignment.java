@@ -22,31 +22,6 @@ import java.time.format.DateTimeFormatter;
 
 public class JavaAssignment {
 	
-	
-	
-	public static void printFile(Document doc1, String newFile) 
-	{
-		try
-		{
-			TransformerFactory tFactory = TransformerFactory.newInstance();
-	        Transformer transformer = tFactory.newTransformer();
-	        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-
-	        DOMSource source = new DOMSource(doc1);
-	        StreamResult result = new StreamResult(new StringWriter());
-	        transformer.transform(source, result);
-
-	        Writer output = new BufferedWriter(new FileWriter(newFile));
-	        String xmlOutput = result.getWriter().toString();
-	        output.write(xmlOutput);
-	        output.close();
-		}
-		catch (Exception e) 
-		{
-
-            e.printStackTrace();
-        }
-    }
     
     public static void fileValidity (String input, boolean findValid, String newFile)
     {
@@ -75,7 +50,18 @@ public class JavaAssignment {
                 }               
             }
 
-            printFile(doc, newFile);
+		TransformerFactory tFactory = TransformerFactory.newInstance();
+	        Transformer transformer = tFactory.newTransformer();
+	        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+	        DOMSource source = new DOMSource(doc);
+	        StreamResult result = new StreamResult(new StringWriter());
+	        transformer.transform(source, result);
+
+	        Writer output = new BufferedWriter(new FileWriter(newFile));
+	        String xmlOutput = result.getWriter().toString();
+	        output.write(xmlOutput);
+	        output.close();
         }
         catch (Exception e) {
 
@@ -158,8 +144,19 @@ public class JavaAssignment {
                 	n1.getParentNode().removeChild(n1);
                 }
             }
-            
-            printFile(doc1, newFile);
+
+		TransformerFactory tFactory = TransformerFactory.newInstance();
+	        Transformer transformer = tFactory.newTransformer();
+	        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+	        DOMSource source = new DOMSource(doc1);
+	        StreamResult result = new StreamResult(new StringWriter());
+	        transformer.transform(source, result);
+
+	        Writer output = new BufferedWriter(new FileWriter(newFile));
+	        String xmlOutput = result.getWriter().toString();
+	        output.write(xmlOutput);
+	        output.close();
         }
         catch (Exception e) {
 
