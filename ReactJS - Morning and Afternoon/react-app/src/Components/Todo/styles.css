@@ -1,0 +1,12 @@
+.TodoContainer {
+  padding: 20px;
+}
+
+.Header {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
