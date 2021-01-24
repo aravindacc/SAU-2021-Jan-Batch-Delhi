@@ -1,7 +1,7 @@
 
 <br>
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/KajalGupta03/SAU-2021-Jan-Batch-Delhi">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -14,7 +14,7 @@
 <table>
 <tr>
 <td> 
-<img src="images/HomeScreen.PNG" alt="HomeScreen" >
+<img src="images/Homescreen.PNG" alt="HomeScreen" >
 </td>
 
 <td>
