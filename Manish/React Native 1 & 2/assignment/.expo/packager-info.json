@@ -1,0 +1,10 @@
+{
+  "devToolsPort": 19002,
+  "expoServerPort": 19000,
+  "packagerPort": 19000,
+  "expoServerNgrokUrl": "https://zv-jsz.mcdroid.rnproject.exp.direct",
+  "packagerNgrokUrl": "https://packager.zv-jsz.mcdroid.rnproject.exp.direct",
+  "ngrokPid": 50776,
+  "webpackServerPort": null,
+  "packagerPid": null
+}
