@@ -5,11 +5,17 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Todo's Management App</h3>
+  <h3 align="center">Todo's App</h3>
 <br>
   
 
+
+
 ## Preview
+<br>
+
+_Todo's can be added, marked completed, marked pending. Todo's can be duplicated or deleted._
+
 <br>
 <table>
 <tr>
@@ -19,7 +25,7 @@
 
 <td>
 
-* List can be filtered on the basis of the text written in search box.
+* Displaying all the todos.
   
 
 </td>
@@ -28,7 +34,7 @@
 
 <td>
 
-* List can be filtered on the basis of the text written in search box.
+* Displaying completed todo's.
 
 </td>
 <td> 
@@ -43,7 +49,7 @@
 
 <td>
 
-* List can be filtered on the basis of the text written in search box.
+* Displaying pending todo's
 
 </td>
 </tr>
