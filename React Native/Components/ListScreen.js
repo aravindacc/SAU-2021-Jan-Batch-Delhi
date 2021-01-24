@@ -10,11 +10,9 @@ const ListScreen = (props) => {
     const [searchText, setsearchText] = useState("");
     const [filterBookArray, setFilterArray] = useState([]);
 
-
-
-    componentDidMount(){
-        const url = 'http://www.json-generator.com/api/json/get/ccLAsEcOSq?indent=1'
-        fetch(url)
+    useEffect(() => {
+    const url = 'http://www.json-generator.com/api/json/get/ccLAsEcOSq?indent=1'
+    fetch(url)
             .then((response) => response.json())
             .then((responseInjson) => {
                 setBookArray(responseInjson.book_array);
@@ -23,7 +21,20 @@ const ListScreen = (props) => {
             .catch((error) => {
                 console.log(error)
             })
-    }
+    },[])
+
+//     const componentDidMount=()=>{
+//         const url = 'http://www.json-generator.com/api/json/get/ccLAsEcOSq?indent=1'
+//         fetch(url)
+//             .then((response) => response.json())
+//             .then((responseInjson) => {
+//                 setBookArray(responseInjson.book_array);
+//                 setFilterArray(responseInjson.book_array);
+//             })
+//             .catch((error) => {
+//                 console.log(error)
+//             })
+//     }
     const filterBookList = (text) => {
 
         const newArray = filterBookArray.filter(function (item) {
