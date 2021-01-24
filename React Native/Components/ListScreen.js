@@ -177,9 +177,8 @@ const ListScreen = (props) => {
 
 
             <FlatList
-                data={booksArray.slice(0, spliceCount)}
+                data={booksArray)}
                 contentContainerStyle={{ flexGrow: 1 }}
-                ListEmptyComponent={() => (<View><Text>empty</Text></View>)}
                 renderItem={renderListItem}
             />
         </View>
@@ -221,7 +220,7 @@ const styles = StyleSheet.create({
     },
     buttonStyle: {
         height: 40,
-        width: windowWidth * 0.4,
+        width: 30,
         borderColor: "blue",
         borderWidth: 1,
         borderRadius: 5,
