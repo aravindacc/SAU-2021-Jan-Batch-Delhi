@@ -1,0 +1,45 @@
+package org.example.aspect;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.*;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+
+    @Before("execution(public String getName())")
+    public void LoggingAdviceBefore() {
+        System.out.println("Giving Before logging Advice");
+
+    }
+
+    @After("execution(public String getName())")
+    public void LoggingAdviceAfter() {
+        System.out.println("Giving After logging Advice");
+
+    }
+
+    @AfterReturning("execution(public String getName())")
+    public void LoggingAdviceAfterReturning() {
+        System.out.println("Giving logging Advice After Returning");
+
+    }
+
+    @AfterThrowing("execution(public void throwsException())")
+    public void LoggingAdviceAfterThrowing() {
+        System.out.println("Giving logging Advice After throwing");
+
+    }
+
+    @Around("execution(public String getName())")
+    public Object LoggingAdviceAround(ProceedingJoinPoint obj) throws Throwable {
+        System.out.println("Before Advice: Around");
+        Object returnValue = obj.proceed();
+        System.out.println("\nAfter Advice: Around");
+        return returnValue;
+    }
+
+}
+

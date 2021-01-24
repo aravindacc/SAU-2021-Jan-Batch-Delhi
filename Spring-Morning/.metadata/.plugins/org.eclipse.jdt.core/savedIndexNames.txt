@@ -1,0 +1,8 @@
+INDEX VERSION 1.131+E:\SAU\Spring\Spring-Morning\Spring-Morning\.metadata\.plugins\org.eclipse.jdt.core
+156193043.index
+950487950.index
+1026370067.index
+1314277352.index
+2939706023.index
+3493999400.index
+1788830761.index

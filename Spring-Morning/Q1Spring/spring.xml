@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean id="employee" class="org.example.Employee">
+        <property name="employeeName" value="Sahil Prajapati"/>
+
+        <property name="employeeDetails">
+            <map>
+            	<entry key="designation" value="Intern" />
+                <entry key="father" value="xyz" />
+                <entry key="mother" value="abc" />
+                <entry key="email" value="abc@gmail.com" />
+            </map>
+        </property>
+
+        <property name="setDemo">
+            <set>
+                <value>1</value>
+                <value>1</value>
+                <value>2</value>
+                <value>1</value>
+                <value>3</value>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </set>
+        </property>
+    </bean>
+</beans>

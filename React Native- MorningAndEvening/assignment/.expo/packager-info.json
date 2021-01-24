@@ -1,0 +1,10 @@
+{
+  "devToolsPort": 19002,
+  "expoServerPort": 19000,
+  "packagerPort": 19000,
+  "expoServerNgrokUrl": "https://dn-k8u.anonymous.assignment.exp.direct",
+  "packagerNgrokUrl": "https://packager.dn-k8u.anonymous.assignment.exp.direct",
+  "ngrokPid": 19736,
+  "packagerPid": null,
+  "webpackServerPort": null
+}

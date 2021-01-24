@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <script type="text/javascript" src = "Assignment2.js"></script>
+        <link rel="stylesheet" type="text/css" href="Assignment2.css">
+</head>
+    <body>
+        <h1 align="center">Assignment2: Validating HTML Forms</h1>
+
+        <div class="wrapper" align="left">
+
+            <form onsubmit ="return validateForm()">
+
+                
+                <label for="fullname"><b>Name: </b></label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter Full Name" required><br><br><br>
+
+                <label for="fathername"><b>Father's Name: </b></label>
+                    <input type="text" id="fathername" name="fathername" placeholder="Enter Father's Name" required><br><br><br>
+
+                <label for="address"><b>Address: </b></label>
+                    <input type="text" id="address" name="address" placeholder="Enter Address" required><br><br><br>
+
+                <label for="email"><b>Email: </b></label>
+                    <input type="email" id="email" name="email" placeholder="Enter Valid Email Id" required><br><br>
+
+                <br>
+                <label><b>Choose Course:</b></label><br>
+
+                    <input type="radio" id="btech" name="course" id="course" value="btech">
+                    <label for="btech">Btech CS</label><br>
+
+                    <input type="radio" id="msc" name="course" id="course" value="msc">
+                    <label for="msc">MSc CS</label><br>
+
+                    <input type="radio" id="mca" name="course" id="course" value="mca">
+                    <label for="mca">MCA</label><br>
+
+                    <input type="radio" id="mtech" name="course" id="course" value="mtech">
+                    <label for="mtech">Mtech CS</label><br><br><br>
+
+
+                <b>Select Operating System Using:</b>
+                <select id="os" name="os">
+                    <option value="" selected disabled hidden>select</option>
+                    <option value="Windows">Windows</option>
+                    <option value="MacOS">MacOS</option>
+                    <option value="Linux">Linux</option>
+                </select>
+                <br><br>
+                
+                <input class = "btn" type="submit" value="Submit">
+            </form>
+    </div>
+    </body>
+</html>
