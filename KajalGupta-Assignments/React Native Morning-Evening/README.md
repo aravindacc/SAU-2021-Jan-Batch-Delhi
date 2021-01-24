@@ -14,7 +14,7 @@
 <table>
 <tr>
 <td> 
-<img src="images/HomeScreen.png" alt="Logo" >
+<img src="images/HomeScreen.PNG" alt="HomeScreen" >
 </td>
 
 <td>
@@ -45,7 +45,7 @@
 
 </td>
 <td>
-<img src="images/Screen2.png" alt="Logo" >
+<img src="images/Screen2.PNG" alt="Screen2" >
 </td>
 </tr>
 </table>
