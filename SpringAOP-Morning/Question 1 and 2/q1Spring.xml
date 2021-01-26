@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+  <bean id="student" class="Q1.Student">
+    <property name="subjects">
+    <set>
+         <ref bean = "subject1"/>
+         <ref bean = "subject2"/>
+         <ref bean = "subject3"/>       
+    </set>
+    </property>
+    <property name="subjectAndYear">
+    <map>
+          <entry key="2019" value-ref="subject1" />
+          <entry key="2020" value-ref="subject2" />
+          <entry key="2021" value-ref="subject3" />     
+    </map>
+    </property>
+    <property name="Subject" ref="subject"/>
+  </bean>
+  
+  <bean id="subject" class="Q1.Subject">
+     <property name="id" value="${subject.id}"/>
+     <property name="name" value="${subject.name}"/>
+  </bean>
+  
+  <bean id="subject1" class="Q1.Subject">
+     <property name="id" value="1"/>
+     <property name="name" value="ghf"/>
+  </bean>
+  
+ <bean id="subject2" class="Q1.Subject">
+     <property name="id" value="2"/>
+     <property name="name" value="lmn"/>
+  </bean>
+  <bean id="subject3" class="Q1.Subject">
+     <property name="id" value="3"/>
+     <property name="name" value="opq"/>
+  </bean>
+  
+  <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+     <property name="locations" value="pointsConfig.properties">
+     </property>
+  </bean>
+</beans>
