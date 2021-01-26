@@ -1,0 +1,40 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from StudentWSService WSDL service -->
+
+  <service name="StudentWS" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://com.hemantStudentService.com"/>
+      <parameter name="wsdlServiceElement" value="StudentWSService"/>
+      <parameter name="schemaQualified" value="http://com.hemantStudentModel.com,http://com.hemantStudentService.com"/>
+      <parameter name="wsdlServicePort" value="StudentWS"/>
+      <parameter name="className" value="com.hemantStudentService.com.StudentWSSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="StudentWS"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="deleteStudent" qname="operNS:deleteStudent" xmlns:operNS="http://com.hemantStudentService.com" returnQName="retNS:deleteStudentReturn" xmlns:retNS="http://com.hemantStudentService.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:rollNo" xmlns:pns="http://com.hemantStudentService.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="addStudent" qname="operNS:addStudent" xmlns:operNS="http://com.hemantStudentService.com" returnQName="retNS:addStudentReturn" xmlns:retNS="http://com.hemantStudentService.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:student" xmlns:pns="http://com.hemantStudentService.com" type="tns:Student" xmlns:tns="http://com.hemantStudentModel.com"/>
+      </operation>
+      <parameter name="allowedMethods" value="addStudent deleteStudent"/>
+
+      <typeMapping
+        xmlns:ns="http://com.hemantStudentModel.com"
+        qname="ns:Student"
+        type="java:com.hemantStudentModel.com.Student"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>
