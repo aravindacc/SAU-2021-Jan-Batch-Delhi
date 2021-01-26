@@ -1,0 +1,55 @@
+
+<div class ="container">
+  <form #myForm = "ngForm">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Employee Name</label>
+      <input type="text" class="form-control" name="name" aria-describedby="emailHelp"
+      [(ngModel)]="userObj.name">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Employee Id</label>
+      <input type="text" class="form-control" name="Eid" aria-describedby="emailHelp"
+      [(ngModel)]="userObj.Eid">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Employee Age</label>
+      <input type="text" class="form-control" name="age" aria-describedby="emailHelp"
+      [(ngModel)]="userObj.age">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">DOB</label>
+      <input type="text" class="form-control" name="dob"
+      [(ngModel)]="userObj.dob">
+    </div>
+
+    <button type="button" class="btn btn-primary" (click)="addUser(myForm.value)"
+    *ngIf="!isEdit">Submit</button>
+    <button type="button" class="btn btn-info" (click)="updateUser()"
+    *ngIf="isEdit">Update</button>
+
+  </form>
+  <br>
+  <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Employee Id</th>
+        <th scope="col">Employee Age</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of allUser">
+        <td>{{user.name}}</td>
+        <td>{{user.Eid}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.dob}}</td>
+        <td><button (click)="editUser(user)" class="btn btn-warning">Edit</button></td>
+        <td><button (click)="deleteUser(user)" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        
+        <title>Form</title>
+        <link rel="stylesheet" href="mycss.css">
+        <script src="Myjs.js"></script>
+        
+    </head>
+    <body>
+        <h1 style>Registration form</h1>
+
+        <div class="wrapper">
+            
+            <form  >
+
+                <b>First Name :</b>
+                <input type="text" id="fname" name="fname"><br>
+
+                <b>Last Name :</b>
+                <input type="text" id="lname" name="lname">
+
+                <br><b>Select gender :</b><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+
+                <b>Email :</b>
+                <input type="email" id="email" name="email"><br>
+
+                <b>Choose year</b><br>
+                <select id="Year" name="Year">
+                    <option value="" selected disabled hidden>Choose here</option>
+                    <option value="First">First</option>
+                    <option value="Second">Second</option>
+                    <option value="Third">Third</option>
+                    <option value="Fourth">Fourth</option>            
+                </select>
+                <br>
+                
+                <input type="submit" value="Submit" id="submit">
+            </form>
+    </div>
+    </body>
+</html>

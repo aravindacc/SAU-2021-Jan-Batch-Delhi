@@ -1,0 +1,30 @@
+body{
+    font-size: x-large;
+    background-color: #fec107;
+}
+
+.wrapper * {
+    margin: 30px; 
+    font-size: large;
+ 
+   
+    
+}
+input[type=text], input[type=email] {
+    width: 90%;
+    padding: 10px;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    max-width: 650px;
+    }
+input[type=submit], input[type=radio], select{
+    cursor: pointer;
+}
+    
+form
+{
+    border-radius: 2px;
+    background: #fff;
+    max-width: 700px;
+}

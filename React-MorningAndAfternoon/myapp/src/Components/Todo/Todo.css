@@ -1,0 +1,58 @@
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 5%;
+  color: #4D1A7F;
+}
+body{
+  background-color: blueviolet;
+}
+
+h1 {
+  padding-top: 2%;
+  text-align: center;
+  font-style: italic;
+  color: #ffffff;
+  float: left
+  ;
+ 
+  border-radius:2%;
+}
+
+.row1 {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  float: none;;
+}
+
+.trash {
+  float: right;
+  color:purple;
+  border: none;
+  transform: scale(1.5);
+}
+
+.copy {
+  float: right;
+  margin-right: 2%;
+  border: none;
+  color:green;
+  transform: scale(1.5);
+}
+
+.line {
+  text-decoration: line-through;
+}
+.row1{
+padding-top: 3%;
+   float: inline-end;
+    color: pink;
+}
+.primary{
+  color: #4D1A7F;
+}
+.container{
+  background-color :#4D1A7F;
+  height:max-content;
+  width: max-content;
+}
