@@ -23,32 +23,32 @@ public class StudentDetails {
 	StudentService studentService= new StudentService();
 	
 	@GET
-	public List<Student> getPerson() {
+	public List<Student> getStudent() {
 		return studentService.getAllPerson();
 	}
 	
 	@POST
-	public Student addPerson(Student student) {
-		return studentService.addPerson(student);
+	public Student addStudent(Student student) {
+		return studentService.addStudent(student);
 	}
 	
 	@PUT
-	@Path("/{personId}")
-	public Student updatePerson(@PathParam("personId") long id, Student student) {
+	@Path("/{studentId}")
+	public Student updateStudent(@PathParam("studentId") long id, Student student) {
 		student.setId(id);
-		return studentService.updatePerson(student);
+		return studentService.updateStudent(student);
 	}
 	
 	@DELETE
-	@Path("/{personId}")
-	public void deletePerson(@PathParam("personId") long id) {
-		studentService.removePerson(id);
+	@Path("/{studentId}")
+	public void deleteStudent(@PathParam("studentId") long id) {
+		studentService.removeStudent(id);
 	}
 	
 	
 	@GET
-	@Path("/{personId}")
-	public Student getPerson(@PathParam("personId") long id) {
-		return studentService.getPerson(id);
+	@Path("/{studentId}")
+	public Student getStudent(@PathParam("studentId") long id) {
+		return studentService.getStudent(id);
 	}
 }
