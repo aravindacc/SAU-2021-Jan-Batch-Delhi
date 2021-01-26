@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="xsd:schema">
+            <attribute name="elementFormDefault">
+                <data type="NCName"/>
+            </attribute>
+            <attribute name="targetNamespace">
+                <data type="anyURI"/>
+            </attribute>
+            <oneOrMore>
+                <ref name="element"/>
+            </oneOrMore>
+        </element>
+    </start>
+    <define name="element">
+        <element name="xsd:element">
+            <attribute name="name">
+                <data type="NCName"/>
+            </attribute>
+            <optional>
+                <attribute name="type">
+                    <data type="NMTOKEN"/>
+                </attribute>
+            </optional>
+            <optional>
+                <element name="xsd:complexType">
+                    <element name="xsd:sequence">
+                        <oneOrMore>
+                            <ref name="element"/>
+                        </oneOrMore>
+                    </element>
+                </element>
+            </optional>
+        </element>
+    </define>
+</grammar>
