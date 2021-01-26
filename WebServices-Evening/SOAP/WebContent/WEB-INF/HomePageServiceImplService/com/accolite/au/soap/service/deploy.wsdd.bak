@@ -1,0 +1,45 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from HomePageServiceImplService WSDL service -->
+
+  <service name="HomePageServiceImpl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.soap.au.accolite.com"/>
+      <parameter name="wsdlServiceElement" value="HomePageServiceImplService"/>
+      <parameter name="schemaQualified" value="http://model.soap.au.accolite.com,http://service.soap.au.accolite.com"/>
+      <parameter name="wsdlServicePort" value="HomePageServiceImpl"/>
+      <parameter name="className" value="com.accolite.au.soap.service.HomePageServiceImplSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="HomePageServiceImpl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="searchById" qname="operNS:searchById" xmlns:operNS="http://service.soap.au.accolite.com" returnQName="retNS:searchByIdReturn" xmlns:retNS="http://service.soap.au.accolite.com" returnType="rtns:Student" xmlns:rtns="http://model.soap.au.accolite.com" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://service.soap.au.accolite.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getAllStudents" qname="operNS:getAllStudents" xmlns:operNS="http://service.soap.au.accolite.com" returnQName="retNS:getAllStudentsReturn" xmlns:retNS="http://service.soap.au.accolite.com" returnType="rtns:Student" xmlns:rtns="http://model.soap.au.accolite.com" soapAction="" >
+      </operation>
+      <operation name="insertStudent" qname="operNS:insertStudent" xmlns:operNS="http://service.soap.au.accolite.com" soapAction="" >
+        <parameter qname="pns:student" xmlns:pns="http://service.soap.au.accolite.com" type="tns:Student" xmlns:tns="http://model.soap.au.accolite.com"/>
+      </operation>
+      <operation name="deleteStudent" qname="operNS:deleteStudent" xmlns:operNS="http://service.soap.au.accolite.com" returnQName="retNS:deleteStudentReturn" xmlns:retNS="http://service.soap.au.accolite.com" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://service.soap.au.accolite.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="insertStudent searchById getAllStudents deleteStudent"/>
+
+      <typeMapping
+        xmlns:ns="http://model.soap.au.accolite.com"
+        qname="ns:Student"
+        type="java:com.accolite.au.soap.model.Student"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

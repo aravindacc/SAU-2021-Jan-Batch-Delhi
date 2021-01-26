@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.soap.au.accolite.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://service.soap.au.accolite.com" xmlns:intf="http://service.soap.au.accolite.com" xmlns:tns1="http://model.soap.au.accolite.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://service.soap.au.accolite.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://model.soap.au.accolite.com"/>
+   <element name="searchById">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchByIdResponse">
+    <complexType>
+     <sequence>
+      <element name="searchByIdReturn" type="tns1:Student"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAllStudents">
+    <complexType/>
+   </element>
+   <element name="getAllStudentsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getAllStudentsReturn" type="tns1:Student"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="insertStudent">
+    <complexType>
+     <sequence>
+      <element name="student" type="tns1:Student"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="insertStudentResponse">
+    <complexType/>
+   </element>
+   <element name="deleteStudent">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteStudentResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteStudentReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.soap.au.accolite.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="Student">
+    <sequence>
+     <element name="department" nillable="true" type="xsd:string"/>
+     <element name="firstName" nillable="true" type="xsd:string"/>
+     <element name="id" nillable="true" type="xsd:string"/>
+     <element name="lastName" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="insertStudentRequest">
+
+      <wsdl:part element="impl:insertStudent" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAllStudentsResponse">
+
+      <wsdl:part element="impl:getAllStudentsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteStudentRequest">
+
+      <wsdl:part element="impl:deleteStudent" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAllStudentsRequest">
+
+      <wsdl:part element="impl:getAllStudents" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteStudentResponse">
+
+      <wsdl:part element="impl:deleteStudentResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchByIdRequest">
+
+      <wsdl:part element="impl:searchById" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchByIdResponse">
+
+      <wsdl:part element="impl:searchByIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="insertStudentResponse">
+
+      <wsdl:part element="impl:insertStudentResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="HomePageServiceImpl">
+
+      <wsdl:operation name="searchById">
+
+         <wsdl:input message="impl:searchByIdRequest" name="searchByIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:searchByIdResponse" name="searchByIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAllStudents">
+
+         <wsdl:input message="impl:getAllStudentsRequest" name="getAllStudentsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAllStudentsResponse" name="getAllStudentsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="insertStudent">
+
+         <wsdl:input message="impl:insertStudentRequest" name="insertStudentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:insertStudentResponse" name="insertStudentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteStudent">
+
+         <wsdl:input message="impl:deleteStudentRequest" name="deleteStudentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteStudentResponse" name="deleteStudentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="HomePageServiceImplSoapBinding" type="impl:HomePageServiceImpl">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="searchById">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchByIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchByIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAllStudents">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAllStudentsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAllStudentsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="insertStudent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="insertStudentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="insertStudentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteStudent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteStudentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteStudentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="HomePageServiceImplService">
+
+      <wsdl:port binding="impl:HomePageServiceImplSoapBinding" name="HomePageServiceImpl">
+
+         <wsdlsoap:address location="http://localhost:8081/SoapAssignment/services/HomePageServiceImpl"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
