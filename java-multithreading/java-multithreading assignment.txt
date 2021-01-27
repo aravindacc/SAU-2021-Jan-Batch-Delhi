@@ -1,0 +1,93 @@
+
+
+Q. Use wait() and notify() to solve producer - consumer
+problem.
+
+
+import java.util.LinkedList;
+import java.util.List;
+ 
+class Producer implements Runnable {
+ 
+    private List<Integer> li1;
+    private int totsize=5;
+ 
+    public Producer(List<Integer> li1) {
+        this.li1 = li1;
+    }
+ 
+    @Override
+    public void run() {
+        for (int i = 1; i <= 10; i++) {  
+         try {
+             produce(i);
+         } catch (InterruptedException e) {  e.printStackTrace();   }
+        }
+}
+ 
+    private void produce(int i) throws InterruptedException {
+       synchronized (li1) {
+           while (li1.size() == totsize) {
+             System.out.println("queue full, producerThread is waiting ");
+             li1.wait();
+         }
+        }
+        synchronized (li1) {  
+           System.out.println("Produced : " + i);
+           li1.add(i);
+         Thread.sleep(500);
+         li1.notify();
+        }
+    }
+}
+
+class Consumer implements Runnable {
+    private List<Integer> li1;
+    public Consumer(List<Integer> li1) {
+        this.li1 = li1;
+    }
+   
+    @Override
+    public void run() {
+        while (true) {
+         try {
+             consume();
+             Thread.sleep(100);
+         } catch (InterruptedException e) {  e.printStackTrace();   }
+        }
+    }
+ 
+    private void consume() throws InterruptedException {
+      
+       synchronized (li1) {
+         
+           while (li1.size() == 0) {
+                  System.out.println("Queue  empty, consumerThread is waiting");
+             li1.wait();
+         }
+       }
+       
+        synchronized (li1) {
+           Thread.sleep(500);
+         System.out.println("CONSUMED : "+ li1.remove(0));
+         li1.notify();
+        }
+    }
+   
+}
+ 
+
+public class Main {
+ 
+    public static void main(String args[]) {
+       List<Integer> li1 = new List<Integer>(); 
+      
+       Producer producer=new Producer(li1);
+       Consumer consumer=new Consumer(li1);
+      
+        Thread producerThread = new Thread(producer, "ProducerThread");
+        Thread consumerThread = new Thread(consumer, "ConsumerThread");
+        producerThread.start();
+        consumerThread.start();
+    }
+}
