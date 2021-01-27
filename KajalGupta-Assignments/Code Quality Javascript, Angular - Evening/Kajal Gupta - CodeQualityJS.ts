@@ -4,7 +4,7 @@
 // Also create acopy of this ts file which contains your correction(wherever possible) which corresponds to your comment left here.
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //
-// Submitted by - Kajal Gupta (kajal.gupta@accolitedigital.com)
+// Submitted by - Kajal Gupta 
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
