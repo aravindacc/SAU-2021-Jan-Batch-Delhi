@@ -1,0 +1,25 @@
+
+<body>
+ <div class="container" >
+    <div class="header">
+      <br>
+      <h1 id="title">{{title |uppercase}}</h1><br>
+      <h3>{{today| date}}</h3><br>
+      <h5>Submitted By- Saachi</h5>
+      <h5>saachi.r@accolitedigital.com</h5><br>
+     </div>
+     <div style="background-color: #7dbcdc; padding: 20px;margin-left: 305px; width:400px;">
+
+      <button class="buttons" (click)="navigateToAddUsers()" type="button">ADD EMPLOYEES</button>
+      <button class="buttons" (click)="navigateToDeleteUsers()" type="button">DELETE EMPLOYEES</button><br><br>
+      <button class="buttons" (click)="navigateToShowAllUsers()" type="button">SHOW ALL EMPLOYEES</button>
+      <button class="buttons" (click)="navigateToEditUsers()" type="button">EDIT DETAILS</button><br>
+
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+ </div>
+</body>
+
+

@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [26/Jan/2021:15:52:11 +0530] "GET /spring-mvc-assignment/calculator HTTP/1.1" 200 957 http-bio-8080-exec-1 1293
+0:0:0:0:0:0:0:1 - - [26/Jan/2021:15:52:21 +0530] "POST /spring-mvc-assignment/calculator HTTP/1.1" 200 262 http-bio-8080-exec-4 201

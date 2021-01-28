@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean id="employee" class="org.example.Employee">
+        <property name="name" value="Saachi"/>
+
+        <property name="contactDetails">
+            <map>
+                <entry key="empId" value="101" />
+                <entry key="email" value="saachi@gmail.com" />
+            </map>
+        </property>
+
+        <property name="projectId">
+            <set>
+                <value>101</value>
+                <value>203</value>
+            </set>
+        </property>
+    </bean>
+</beans>

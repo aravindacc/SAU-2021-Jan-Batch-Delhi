@@ -1,0 +1,43 @@
+.wrapper {
+    display: grid;
+    grid-gap: 1px;
+    height: 100%;
+    grid-template-columns: 1fr 1fr [main-start] 1fr 1fr [main-end] 1fr  1fr ;
+    grid-template-rows:   1fr [main-start] 1fr 1fr [main-end] 1fr ;
+    
+  }
+  
+  [class^="num"] {
+    background: rgb(179, 179, 236);
+    text-align: center;
+    font-size: 60px;
+  }
+  
+  .buttons {
+    background: rgb(204, 150, 150);
+    grid-area: main;
+    text-align: center;
+    display: inline-block ;
+  }
+
+.click{
+  border-radius: 8px;
+  background: #581c12; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer;
+}
+
+.para{
+    font-family: Verdana,Tahoma, sans-serif;
+    font-size: 10px; 
+    font-style: bold;
+    text-align: center;
+    padding: 1em;
+    line-height: 1.3em;
+    color: #581c12;
+}

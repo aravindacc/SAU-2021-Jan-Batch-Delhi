@@ -1,0 +1,26 @@
+<body>
+  <div class="container"  style="max-width: 400px;">
+    <form id="contact"  [formGroup]="deleteprofileForm" style="margin-left: 280px; width:400px;">
+      <p>Enter the ID of the employee to delete the record.</p>
+      <label>
+        Employee ID:
+        <input type="text" formControlName="EmployeeId">
+      </label><br>
+
+      <label>
+        <input style="width: 8%;
+        border: 0.5px solid #ccc;
+        background: #FFF;
+        margin: 0 0 1px;" type = "checkbox" formControlName="Confirm" name = "Confirm" value = "Confirm">I am sure, I want to delete the record.<br>
+      </label>
+
+      <label>
+        <button (click)="delete()" type="button">Delete Record</button><br>
+        </label>
+         <br>
+
+
+    </form>
+  </div>
+  </body>
+

@@ -1,0 +1,94 @@
+table {
+  border: 1px solid black;
+  table-layout: fixed;
+  width: 500px;
+}
+
+th,
+td {
+  border: solid black;
+  width: 250px;
+  height: 35px;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+}
+
+.mainheading{
+  text-align: center;
+  background-color:black;
+  color: white;
+  padding: 24px;
+}
+
+.container{
+  display: grid;
+  width: 70%;
+  position:absolute;
+  left:15%;
+  font-size: medium;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.heading{
+  text-align: center;
+}
+
+.dropDown{
+  font-size: large;
+  font-weight: bold;
+  padding-left: 450px;
+  padding-top: 20px;
+  background-color:rgb(197, 215, 233);
+}
+
+.todoSection{
+  background-color:rgb(197, 215, 233);
+  padding-left: 165px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  border-bottom: solid;
+}
+
+.addTaskSection{
+  color: black;
+  background-color: rgb(197, 215, 233);
+  padding-left: 300px;
+  padding-top: 20px;
+}
+
+.add-task-button{
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+.listSection{
+  padding-left: 160px;
+  padding-bottom: 20px;
+}
+
+.delete-button{
+  display: none;
+  position: relative;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+.duplicate-button{
+  display: none;
+  position: relative;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+.task-row:hover .delete-button {
+  display: inline-block;
+}
+
+.task-row:hover .duplicate-button {
+  display: inline-block;
+}
