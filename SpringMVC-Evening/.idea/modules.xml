@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/spring-mvc-assignment.iml" filepath="$PROJECT_DIR$/.idea/spring-mvc-assignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mvc-calculator-jsp-master/spring-mvc-calculator-jsp.iml" filepath="$PROJECT_DIR$/spring-mvc-calculator-jsp-master/spring-mvc-calculator-jsp.iml" />
+    </modules>
+  </component>
+</project>
