@@ -1,0 +1,11 @@
+************************************************
+Command to drop primary index
+************************************************
+DROP PRIMARY INDEX ON couchbasedemo;
+
+
+
+************************************************
+Command to create an index
+************************************************ 
+CREATE INDEX id_index ON couchbasedemo(id) USING GSI;
