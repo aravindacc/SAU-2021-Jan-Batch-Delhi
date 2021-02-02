@@ -1,0 +1,62 @@
+<nav class="navbar navbar-light bg-secondary">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <b><h2 style="color: white;">HOME</h2></b>
+    </a>
+  </div>
+</nav>
+<br>
+<div class ="container">
+  <form #myForm = "ngForm">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Emp Name</label>
+      <input type="text" class="form-control" name="name" aria-describedby="emailHelp"
+      [(ngModel)]="userObj.name">
+    </div>
+    <div class="mb-3"> 
+      <label for="exampleInputEmail1" class="form-label">Emp Id</label>
+      <input type="text" class="form-control" name="Eid" aria-describedby="emailHelp"
+      [(ngModel)]="userObj.Eid">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Emp Age</label>
+      <input type="text" class="form-control" name="age" aria-describedby="emailHelp"
+      [(ngModel)]="userObj.age">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">DOB</label>
+      <input type="text" class="form-control" name="dob"
+      [(ngModel)]="userObj.dob">
+    </div>
+    
+    <button type="button" class="btn btn-primary" (click)="addUser(myForm.value)"
+    *ngIf="!isEdit">Submit</button>
+    <button type="button" class="btn btn-info" (click)="updateUser()"
+    *ngIf="isEdit">Update</button>
+
+  </form>
+  <br>
+  <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Emp Name</th>
+        <th scope="col">Emp Id</th>
+        <th scope="col">Emp Age</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of allUser">
+        <td>{{user.name}}</td>
+        <td>{{user.Eid}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.dob}}</td>
+        <td><button (click)="editUser(user)" class="btn btn-warning">Edit</button></td>
+        <td><button (click)="deleteUser(user)" class="btn btn-danger">Delete</button></td>
+      </tr> 
+    </tbody>
+  </table>
+</div>
