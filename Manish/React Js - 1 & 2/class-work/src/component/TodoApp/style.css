@@ -1,0 +1,144 @@
+.header {
+  text-align: center;
+  background-color: #3700b3;
+  width: 100%;
+  margin: 0px;
+  padding: 15px;
+}
+
+.add-todo {
+  display: block;
+  width: 70%;
+  margin: 30px auto;
+  padding: 10px 30px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+.add-todo:focus {
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.buttons button:nth-child(1):active {
+  background-color: #ac3c00;
+}
+
+.buttons button:nth-child(2):hover {
+  background-color: #2980b9;
+}
+
+.buttons button:nth-child(2):active {
+  background-color: #1a5d8a;
+}
+
+.buttons button:nth-child(3):hover {
+  background-color: #c0392b;
+}
+
+.buttons button:nth-child(3):active {
+  background-color: #92291e;
+}
+
+.buttons button:nth-child(4):hover {
+  background-color: #27ae60;
+}
+
+.buttons button:nth-child(4):active {
+  background-color: #168042;
+}
+
+.buttons button {
+  background-color: #f0f0f0;
+  color: #303f9f;
+  padding: 12px 20px;
+  margin: 0px 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  transition: 0.2s ease;
+  background-color: #e65100;
+  color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.486);
+}
+
+.list {
+  background-color: #303030;
+  padding: 1px 20px;
+  margin: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.list-item {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list-item input[type='checkbox'] {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.right-buttons {
+  margin-left: auto;
+}
+
+.right-buttons button {
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  margin: 0px 8px;
+}
+
+.duplicate-bu {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.duplicate-bu:hover {
+  transition: 0.3s ease;
+  background-color: #0f9647;
+  color: #f2f2f2;
+}
+
+.duplicate-bu:active {
+  transition: 0.2s ease;
+  background-color: #0b6d34;
+  color: #f2f2f2;
+}
+
+.delete-bu {
+  font-weight: bold;
+}
+
+.delete-bu:hover {
+  transition: 0.3s ease;
+  background-color: #e74c3c;
+  color: #f2f2f2;
+}
+
+.delete-bu:active {
+  transition: 0.2s ease;
+  background-color: #942a1e;
+  color: #f2f2f2;
+}

@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+body {
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+}
+
+.container {
+  background-color: #f0f0f0;
+  color: #252525;
+  min-height: 100vh;
+  display: grid;
+}
+
+/* Heading styles */
+
+h1 {
+  text-align: center;
+  font-size: 80px;
+  margin: 0;
+}
+
+h1 i {
+  font-weight: 300;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 28px;
+}
+
+.nav-box {
+  display: flex;
+  margin: 0px 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-left {
+  margin: auto 0px;
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  padding: 10px;
+}
+
+
+nav > a {
+  display: inline-block;
+  background-color: #27ae60;
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 20px;
+}
+
+nav > a:hover {
+  transition: 0.2s ease;
+}
+
+.page-selected {
+  border-color: #1d3042;
+}
+
+/* main content styles */
+
+main {
+  display: grid;
+}
+
+section {
+  padding: 10px;
+  text-align: justify;
+}
+
+section img {
+  width: 100%;
+}
+
+.left {
+  background-color: rgb(237, 255, 237);
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.left > .one > .heading,
+.left > .two > .heading {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.left > .one > .content,
+.left > .two > .content {
+  column-count: 2;
+}
+
+.left .one {
+  max-height: 800px;
+  overflow: hidden;
+}
+
+.left .two {
+  max-height: 1000px;
+  overflow: hidden;
+  padding-top: 15px;
+}
+
+.center {
+  background-color: rgb(255, 238, 238);
+  grid-column: 3/7;
+  grid-row: 1/2;
+  display: grid;
+}
+
+.center > .one {
+  grid-row: 1/2;
+  grid-column: 1/4;
+}
+
+.center > .one > .heading {
+  font-size: 45px;
+  font-weight: 900;
+}
+
+.center > .one > .content {
+  column-count: 3;
+}
+
+.center > .two,
+.center > .four {
+  grid-column: 1/3;
+  padding: 10px;
+}
+
+.center > .two > .heading,
+.center > .four > .heading {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.center > .two > .content,
+.center > .four > .content {
+  columns: 2;
+}
+
+.center > .two {
+  grid-row: 2/3;
+}
+
+.center > .three {
+  grid-row: 2/4;
+  grid-column: 3/4;
+  padding: 10px;
+}
+
+.center > .three > .heading {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.center > .four {
+  grid-row: 3/4;
+}
+
+.center .three {
+  max-height: 800px;
+}
+
+.right {
+  background-color: rgb(241, 241, 255);
+  grid-column: 7/9;
+  grid-row: 1/3;
+}
+
+.right > .one > .heading,
+.right > .two > .heading,
+.right > .three > .heading {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.right > .one > .content,
+.right > .two > .content,
+.right > .three > .content {
+  column-count: 2;
+}
+
+.right .one {
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.right .two {
+  padding-top: 20px;
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+.right .three {
+  padding-top: 20px;
+  max-height: 790px;
+  overflow: hidden;
+}
+
+.mid {
+  grid-row: 2;
+  grid-column: 1/7;
+  background-color: rgb(239, 255, 255);
+}
+
+.mid > .one {
+  display: grid;
+}
+
+.mid > .one > img {
+  grid-row: 2;
+  grid-column: 1/4;
+  min-width: 250px;
+}
+
+.mid > .one > .heading {
+  padding-bottom: 10px;
+  grid-row: 1;
+  grid-column: 1/6;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.mid > .one > .content {
+  grid-column: 2;
+  grid-column: 4/6;
+  columns: 2;
+  padding: 10px;
+}
+
+.mid .one {
+  max-height: 350px;
+  overflow: hidden;
+}
+
+.bottom {
+  grid-row: 3;
+  grid-column: 1/9;
+  background-color: rgb(255, 253, 239);
+}
+
+.bottom > .one > .heading {
+  font-size: 40px;
+}
+
+.bottom > .one {
+  display: grid;
+}
+
+.bottom > .one > .heading {
+  grid-column: 1/9;
+}
+
+.bottom > .one > .content1 {
+  grid-column: 1/3;
+  columns: 2;
+  padding: 10px;
+}
+
+.bottom > .one > img {
+  grid-column: 3/7;
+}
+
+.bottom > .one > .content2 {
+  grid-column: 7/9;
+  columns: 2;
+  padding: 10px;
+}
+
+footer {
+  background-color: #303030;
+  padding-top: 10px;
+
+}
+
+footer ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer li {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+}
+
+footer a {
+  display: block;
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+@media Screen and (max-width: 1320px) {
+  .left > .one > .content,
+  .left > .two > .content {
+    column-count: 1;
+  }
+
+  .right > .one > .content,
+  .right > .two > .content,
+  .right > .three > .content {
+    column-count: 1;
+  }
+
+  .center > .one > .content {
+    columns: 2;
+  }
+
+  .left .two {
+    max-height: 950px;
+  }
+
+  .right .two {
+    max-height: 850px;
+  }
+
+  .right .three {
+    max-height: 800px;
+  }
+
+  .bottom .one img{
+    display: none;
+  }
+
+}
+
+@media Screen and (max-width: 920px) {
+
+  .center {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .left {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .right {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .mid {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .bottom {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .left .one .content,
+  .left .two .content {
+    columns: 2;
+  }
+
+  .right .one,
+  .right .three {
+    max-height: max-content;
+  }
+
+  .right .one .content,
+  .right .two .content,
+  .right .three .content {
+    columns: 2;
+  }
+
+  .mid .one .content,
+  .bottom .one .content1,
+  .bottom .one .content2 {
+    columns: 1;
+  }
+}
+
+@media Screen and (max-width: 480px) {
+  .center .one .content,
+  .center .two .content,
+  .center .four .content,
+  .left .two .content,
+  .left .one .content,
+  .right .one .content,
+  .right .two .content,
+  .right .three .content{
+    columns: 1;
+    padding: 15px;
+  }
+
+  .mid .one {
+    max-height: max-content;
+  }
+
+  .mid .one img {
+    grid-row: 2;
+  }
+
+  .mid .one .heading {
+    grid-row: 1;
+  }
+
+  .mid .one .content {
+    grid-row: 3;
+    grid-column: 1/4;
+    columns: 1;
+    padding: 15px;
+  }
+
+  .center .three {
+    grid-row: 4;
+    grid-column: 1;
+  }
+
+  .bottom .one .heading{
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .bottom .one .content1 {
+    grid-row: 2;
+    grid-column: 1;
+    columns: 1;
+    padding: 15px;
+  }
+  .bottom .one .content2 {
+    grid-row: 3;
+    grid-column: 1;
+    columns: 1;
+    padding: 15px;
+  }
+}

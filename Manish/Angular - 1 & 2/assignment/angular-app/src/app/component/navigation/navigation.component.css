@@ -1,0 +1,33 @@
+header {
+    height: 80px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    color: #303f9f;
+    font-size: 16px;
+    padding: 12px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.397);
+    margin: 0px 15px;
+    border-radius: 20px;
+}
+
+a:hover {
+    transition: 0.2s ease;
+    background-color: #e65100;
+    color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.486);
+}

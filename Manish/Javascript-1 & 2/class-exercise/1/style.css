@@ -1,0 +1,54 @@
+body {
+    margin: 0px;
+}
+
+button {
+    background-color: #2980b9;
+    color: #fff;
+    font-size: 1.1em;
+    outline: none;
+    border: 2px solid #2c3e50;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input {
+    margin: 10px;
+    outline: none;
+    font-size: 1.1em;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.ques1, .ques2, .ques3 {
+    padding: 30px;
+}
+
+.ques1 {
+    background-color: rgb(255, 231, 231);
+}
+
+.ques1 button {
+    background-color: #27ae60;
+}
+
+.ques2 {
+    background-color: rgb(213, 255, 213);
+}
+
+.ques3 {
+    font-size: 18px;
+    background-color: rgb(201, 201, 255);
+}
+
+.ques3 button {
+    margin-top: 20px;
+    background-color: #8e44ad;
+}
+

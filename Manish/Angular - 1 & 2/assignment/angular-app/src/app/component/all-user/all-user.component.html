@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="user-row" *ngFor="let user of users">
+        <p id="id">{{user.id}}</p> 
+        <p id="name">{{user.name}}</p>
+        <p id="username">{{user.username}}</p>
+        <p id="email">{{user.email}}</p>
+        <button id="delete" (click)="deleteUser(user.id)">X</button>
+        <button id="edit" (click)="editUser(user)">+</button>
+    </div>
+</div>
+

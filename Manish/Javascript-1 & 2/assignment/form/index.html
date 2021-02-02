@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <form action="submit" id="info-form">
+          <input required placeholder="First Name" type="text" id="fname" />
+          <input required placeholder="Last Name" type="text" id="lname" />
+          <div class="s-age">Select age group :</div>
+          <div class="age">
+            <div>
+              <input type="radio" name="age-group" id="below18" />
+              <label for="age-group">Below 18</label>
+            </div>
+
+            <div>
+              <input checked type="radio" name="age-group" id="e18to60" />
+              <label for="age-group">18 to 60</label>
+            </div>
+
+            <div>
+              <input type="radio" name="age-group" id="above60" />
+              <label for="age-group">Above 60</label>
+            </div>
+          </div>
+
+          <div class="select">
+            <select name="state" id="state">
+              <option value="na" selected>Select State</option>
+              <option value="delhi">Delhi</option>
+              <option value="haryana">Haryana</option>
+              <option value="punjab">Punjab</option>
+              <option value="gujarat">Gujarat</option>
+              <option value="kerala">Kerala</option>
+            </select>
+          </div>
+
+          <input required placeholder="Email" type="email" id="email" />
+
+          <button type="submit" id="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
