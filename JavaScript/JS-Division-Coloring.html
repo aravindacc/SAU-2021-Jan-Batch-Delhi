@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Assignment</title>
+	<style type="text/css">
+		.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+	}
+	.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+	}
+
+	.Color-Red{
+		background-color: red;
+		border: 1px solid black;
+	}
+	.Color-Yellow{
+		background-color: yellow;
+		border: 1px solid black;
+	}
+
+	</style>
+</head>
+<body>
+	<H1>J.S Assignment!</H1>
+	<div id="1">1</div>
+	<div id="2">2</div>
+	<div id="3">3</div>
+	<div id="4">4</div>
+	<div id="5">5</div>
+	<div id="6">6</div>
+	<div id="7">7</div>
+	<div id="8">8</div>
+	<div id="9">9</div>
+	<div id="10">10</div>
+	<div id="11">11</div>
+	<div id="12">12</div>
+	<div id="13">13</div>
+	<div id="14">14</div>
+	<div id="15">15</div>
+	<div id="16">16</div>
+	<div id="17">17</div>
+	<div id="18">18</div>
+	<div id="19">19</div>
+	<div id="20">20</div>
+	<button class="btn btn-outline-primary" onclick="colorEven()">Color Evens</button>
+	<button class="btn btn-outline-primary" onclick="colorFives()">Color 5's</button>
+	<button class="btn btn-outline-primary" onclick="Reset()">Reset All</button>
+
+	<script type="text/javascript">
+		
+		function colorEven(){
+			
+			for(var i=1;i<=20;i++){
+
+					if(i%2===0)
+					document.getElementById(i).classList.add("Color-Red");
+				
+					document.getElementById(i).classList.remove("Color-Yellow");
+				
+
+			}
+
+		}
+
+		function colorFives(){
+
+			for(var i=1;i<=20;i++){
+
+				if(i%5===0){
+					document.getElementById(i).classList.add("Color-Yellow");
+				}
+					document.getElementById(i).classList.remove("Color-Red");
+				
+
+			}
+
+		}
+
+		function Reset(){
+
+			for(var i=1;i<=20;i++){
+
+					document.getElementById(i).classList.remove("Color-Yellow");
+					document.getElementById(i).classList.remove("Color-Red");
+			}
+
+		}
+
+	</script>
+</body>
+</html>
