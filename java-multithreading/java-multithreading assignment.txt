@@ -80,7 +80,7 @@ class Consumer implements Runnable {
 public class Main {
  
     public static void main(String args[]) {
-       List<Integer> li1 = new List<Integer>(); 
+       List<Integer> li1 = new LinkedList<Integer>(); 
       
        Producer producer=new Producer(li1);
        Consumer consumer=new Consumer(li1);
