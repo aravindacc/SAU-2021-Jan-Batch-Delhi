@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 1</title>
+    </head>
+    <body>
+        <h1>Question 1</h1>	
+		<table>
+        <tr><th>First Name :</th><th><input type="text" id="fname"></th>
+		<th>Last Name :</th><th><input type="text" id="lname"></tr></th>
+        <tr><th>Email Address :</th><th><input type="email" id="email"></th><th></th><th></th></tr>
+        <tr><th>Contact Number :</th><th><input type="number" id="phone"></th><th></th><th></th></tr>
+        <tr><th>Address :</th><th><input type="text" id="address"></th><th></th><th></th></tr>
+        <tr><th>Birth Date :</th><th><input type="date" id="bod"></th><th></th><th></th><tr>
+		<tr><th>Gender : </th>
+        <th><input type="radio" id="male"  class="gender" value="Male" name="gender">
+        <label for="male">Male</label></th>
+		<th><input type="radio" id="female"  class="gender" value="Female" name="gender">
+        <label for="female">Female</label></th>
+		<th><input type="radio" id="trans"  class="gender" value="Transgender" name="gender">
+        <label for="female">Transgender</label></th>
+		<th><input type="radio" id="notdefine"  class="gender" value="Choose not to define" name="gender">
+        <label for="female">Choose not to specify</label></th></tr>		
+		<tr><th>Occupation :</th>
+        <th><select name="job" id="job">
+			<option name="Select">Select</option>
+            <option name="Business">Business</option>
+            <option name="Government Job">Goverment Job</option>
+            <option name="Private Job">Private Job</option>
+            <option name="House Keeper">House Keeper</option>
+             <option name="Student">Student</option>
+        </select></th><th></th><th></th></tr>
+		<tr><th><button type="button" onclick="validate()">Submit Details</button></th><th></th><th></th><th></th></tr>
+        </table>
+        <br>
+        <br>
+
+		
+        <table id="table" class="table2">
+		<tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Contact Number</th>
+            <th>Address</th>
+            <th>Birth Date</th>
+            <th>Gender</th>
+            <th>Occupation</th>
+        </tr>
+            
+            
+        </table>
+        
+		<style>
+		.table2{
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+		border-color: black;
+		}
+		
+		.table2 td, .table2 th {
+		text-align: left;
+		padding: 8px;
+		border-color: black;
+		}
+		</style>
+		
+    <script>
+	
+		let d = new Date();
+		let table = document.getElementById("table").setAttribute("max",d);
+        function capitalize(string)
+		{
+			return string.charAt(0).toUpperCase() + string.slice(1);
+		}
+        function validate(){
+            let table=document.getElementById("table");
+            try{
+            table.deleteRow(1);
+        }
+            catch(e){
+                console.log(e);
+
+            }
+        
+        let format = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        let formatname=/^[A-Za-z]+$/;
+        let formatnum=/\d/;
+        let fname=document.getElementById("fname");
+        let lname=document.getElementById("lname");
+        let email=document.getElementById("email");
+        let phone=document.getElementById("phone");
+        let address=document.getElementById("address");
+        let gender=document.getElementsByClassName("gender");
+		let bod=document.getElementById("bod");
+        let jobs=document.getElementById("job");
+        
+        let selgender="";
+        for(let i=0;i<gender.length;i++){
+                if(gender[i].checked==true){
+                    selgender=gender[i].value;
+                }
+            }
+        
+        if((fname.value==="") | ( lname.value==="") | 
+        !(email.value.includes("@")) | (email.value==="") | 
+        (phone.value.length!=10) | (phone.value==="") | (address.value==="") | 
+         (selgender==="") | (jobs.value==="") | 
+        !format.test(email.value) | (fname.value.match(formatname)===null)  | (lname.value.match(formatname)===null) | 
+        (phone.value.match(formatnum)===null))
+{
+            console.log(phone.value.length);
+			alert("Incorrect Or Incomplete Information Inserted. Kindly Recheck!");
+        }
+        else{
+            table.insertAdjacentHTML("beforeend",`<tr>
+                <td>${capitalize(fname.value)}</td>
+                <td>${capitalize(lname.value)}</td>
+                <td>${email.value}</td>
+                <td>${phone.value}</td>
+                <td>${address.value)}</td>
+                <td>${selgender}</td>
+				<td>${bod.value}</td>
+                <td>${job.value}</td>
+            </tr>`);
+            this.rownumber++;
+        }
+            
+        }
+    </script>
+    </body>
+</html>
