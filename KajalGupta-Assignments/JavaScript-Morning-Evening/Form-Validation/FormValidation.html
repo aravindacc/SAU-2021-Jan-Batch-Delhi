@@ -1,0 +1,45 @@
+<html>
+    <head>
+        
+        <title>Form Validation</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
+        
+    </head>
+    <body>
+        <h1 style="font-family: Arial, Helvetica, sans-serif;">Register</h1>
+
+        <div class="wrapper">
+            
+            <form  >
+
+                <b>First Name :</b>
+                <input type="text" id="fname" name="fname"><br>
+
+                <b>Last Name :</b>
+                <input type="text" id="lname" name="lname">
+
+                <br><b>Select gender :</b><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+
+                <b>Email :</b>
+                <input type="email" id="email" name="email"><br>
+
+                <b>City</b>
+                <select id="city" name="city">
+                    <option value="" selected disabled hidden>Choose here</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Hyderbad">Hyderbad</option>            
+                </select>
+                <br>
+                
+                <input type="submit" value="Submit" id="submit">
+            </form>
+    </div>
+    </body>
+</html>

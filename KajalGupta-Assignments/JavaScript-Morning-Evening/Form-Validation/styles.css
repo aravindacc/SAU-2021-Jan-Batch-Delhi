@@ -1,0 +1,26 @@
+body{
+    font-size: x-large;
+}
+
+.wrapper * {
+    margin: 20px; 
+    font-size: large;
+    font-family:helvetica;
+}
+input[type=text], input[type=email] {
+    width: 100%;
+    padding: 10px;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    }
+input[type=submit], input[type=radio], select{
+    cursor: pointer;
+}
+    
+form
+{
+    border-radius: 2px;
+    background: #fff;
+    max-width: 500px;
+}

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Radley');
+@import url('https://fonts.googleapis.com/css?family=Ultra');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+    --dark-color: #393027;
+    --vintage-color: #efd1a5;
+    color:var(--dark-color);
+    background: var(--vintage-color);
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    border-bottom: 3px solid black;
+    
+}
+
+article {
+	padding: 10px;
+	border-right: 1px solid black;
+}
+
+article:first-child {
+	border-left: none;
+}
+
+.row {
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+	border-bottom: 3px solid black;
+    border-left: 1px solid black;
+}
+
+.nav {
+	display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+	display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+
+.title {
+	font-weight: normal;
+	font-size: 60px;
+	letter-spacing: 8px;
+    font-family: 'Ultra', serif;
+    text-shadow: 1px 1px 0px var(--vintage-color), 3px 3px 0px var(--dark-color);
+    border-bottom: 3px solid var(--dark-color);
+}
+
+.headline {
+	margin: 30px;
+	font-size: 30px;
+	font-family: 'Ultra';
+}
+
+.hero {
+	display: block;
+	width: 100%;
+}
+
+.nav-item a {
+	text-decoration: none;
+    font-size: 30px;
+    padding-left: 30px;
+    font-weight: bold;
+    font-family: 'Ultra';
+    color: black;
+}
+
+.nav-item a:hover {
+	text-decoration: underline;
+}
+
+
+.w-25 { 
+
+	width: 25%;
+}
+
+.w-50 { 
+
+	width: 50%;
+}
+
+.w-75 { 
+
+	width: 75%;
+}
+
+.b-right {
+	border-right: 1px solid black;
+}

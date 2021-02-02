@@ -1,0 +1,33 @@
+<body>
+  <div class="container">
+    <form id="contact" [formGroup]="deleteprofileForm">
+
+      <div class="form-group ">
+        <p>Enter the ID of the employee to delete the record.</p>
+        <label>
+          Employee ID:
+          <input type="text" class="form-control" formControlName="EmployeeId">
+        </label>
+      </div>
+
+      <br>
+
+      <div class="form-group ">
+        <label>
+          <input type="checkbox" formControlName="Confirm" name="Confirm" value="Confirm"> I am sure, I want to delete
+          the record.<br>
+        </label>
+      </div>
+      <br><br>
+
+      <div class="form-group ">
+        <label>
+          <button class="btn btn-lg btn-block" (click)="delete()" type="button">Delete Record</button><br>
+        </label>
+      </div>
+      <br>
+
+
+    </form>
+  </div>
+</body>

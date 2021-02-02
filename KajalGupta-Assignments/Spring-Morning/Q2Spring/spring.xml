@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans> <!-- global- default-init-method="onInit" default-destroy-method="onCleanup" -->
+
+    <bean id="person" class="org.example.Person" init-method="onInit" destroy-method="onCleanup">
+
+    </bean>
+
+    <!-- Use of .properties file  -->
+    <bean id="StudentA" class="org.example.Student">
+        <property name="name" value="${studentA.name}"/>
+    </bean>
+
+    <bean id="StudentB" class="org.example.Student">
+        <property name="name" value="${studentB.name}"/>
+    </bean>
+
+    <!-- Own class which implements BeanFactoryPostProcessor -->
+    <bean class="org.example.MyBeanFactoryPP"> </bean>
+
+    <!-- Externalize properties -->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="studentConfig.properties">
+        </property>
+    </bean>
+
+    <!-- @Autowired annotation is a postprocessor -->
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+
+</beans>
