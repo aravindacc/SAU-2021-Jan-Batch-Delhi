@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 1</title>
+        <style>
+            .grid{
+            display:flex;
+            flex-direction:row;
+            width:100%;
+            justify-content: space-around;
+            margin-top:25px;
+            border:1px solid black;
+            padding-top:7px ;
+            padding-bottom:7px;
+            flex-wrap:wrap;
+            }
+        </style>
+    </head>
+    <body> 
+        <h1>Question 1</h1>
+        <div class="grid">
+        <div>
+            <h3>First Name :-</h3><input type="text" placeholder="First Name" id="fname" title="Only Alphabet">
+            <h3>Last Name :-</h3><input type="text" placeholder="Last Name" id="lname" title="Only Alphabet">
+            <h3>Email Address :-</h3><input type="email" placeholder="xyz@gmail.com" id="email" >
+            <h3>Contact Number :-</h3><input type="number" placeholder="10 digit Contact Number" id="phone" title="Only 10 digit phone number">
+            <h3>Address :-</h3><input type="text" placeholder="Address" id="address">
+            <h3>Gender :-</h3>
+            <input type="radio" id="male"  class="gender" value="male" name="gender">
+            <label for="male">Male</label><br>
+
+            <input type="radio" id="female"  class="gender" value="female" name="gender">
+            <label for="female">Female</label><br>
+
+            <h3>Job :-</h3>
+            <select name="job" id="job">
+                <option name="Student">Student</option>
+                <option name="IT Engineer">IT Engineer</option>
+                <option name="Mechanical Engineer">Mechanical Engineer</option>
+                <option name="Civil Engineer">Civil Engineer</option>
+                <option name="Business">Business</option>
+            </select>
+
+            <button type="button" onclick="validate()">Submit</button>
+            </div>
+        <br>
+        <br>
+
+        <div>
+            <table border=3 id="table" style="border: 3px solid black;
+            padding:10px margin:10px;" cellPadding=10>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Contact Number</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>Job</th>
+            </tr>
+            
+            
+            </table>
+        </div>
+        
+    </div>
+
+    <script>
+       
+        function validate(){
+        let table=document.getElementById("table");
+        
+		let format = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        let formatname=/^[A-Za-z]+$/;
+        let formatnum=/\d/;
+        let fname=document.getElementById("fname");
+        let lname=document.getElementById("lname");
+        let email=document.getElementById("email");
+        let phone=document.getElementById("phone");
+        let address=document.getElementById("address");
+        let gender=document.getElementsByClassName("gender");
+        let jobs=document.getElementById("job");
+        
+        let selgender="";
+        for(let i=0;i<gender.length;i++){
+                if(gender[i].checked==true){
+                    selgender=gender[i].value;
+                }
+            }
+        
+        if((fname.value==="") | ( lname.value==="") | 
+        !(email.value.includes("@")) | (email.value==="") | 
+        (phone.value.length!=10) | (phone.value==="") | (address.value==="") | 
+         (selgender==="") | (jobs.value==="") | 
+        !format.test(email.value) | (fname.value.match(formatname)===null)  | (lname.value.match(formatname)===null) | 
+        (phone.value.match(formatnum)===null) )
+{
+            console.log(phone.value.length);
+			alert("Fill all the information");
+        }
+        else{
+            table.insertAdjacentHTML("beforeend",`<tr>
+                <td>${fname.value.toUpperCase()}</td>
+                <td>${lname.value.toUpperCase()}</td>
+                <td>${email.value.toUpperCase()}</td>
+                <td>${phone.value}</td>
+                <td>${address.value.toUpperCase()}</td>
+                <td>${selgender.toUpperCase()}</td>
+                <td>${job.value.toUpperCase()}</td>
+            </tr>`);
+        }
+            
+        }
+
+        
+    </script>
+    </body>
+</html>

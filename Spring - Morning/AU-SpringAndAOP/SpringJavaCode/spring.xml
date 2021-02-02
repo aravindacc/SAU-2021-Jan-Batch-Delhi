@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans> <!-- global- default-init-method="onInit" default-destroy-method="onCleanup" -->
+
+    <bean id="rectangle" class="com.spring.au.Rectangle" >
+        <property name="pointA" ref="PointA"/>
+        <property name="pointB" ref="PointB"/>
+        <property name="pointC" ref="PointC"/>
+        <property name="pointD" ref="PointD"/>
+    </bean>
+
+    <!-- Use of .properties file  -->
+    <bean id="PointA" class="com.spring.au.Point">
+        <property name="x" value="10"/>
+        <property name="y" value="10"/>
+    </bean>
+
+
+    <bean id="PointB" class="com.spring.au.Point">
+        <property name="x" value="20"/>
+        <property name="y" value="20"/>
+    </bean>
+
+    <bean id="PointC" class="com.spring.au.Point">
+        <property name="x" value="30"/>
+        <property name="y" value="30"/>
+    </bean>
+
+    <bean id="PointD" class="com.spring.au.Point">
+        <property name="x" value="40"/>
+        <property name="y" value="40"/>
+    </bean>
+</beans>
