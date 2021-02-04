@@ -1,0 +1,43 @@
+
+
+<div class="container my-3">
+  <h1>Employee Details</h1>
+  <br>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <!-- <th scope="col">ID</th> -->
+            <th scope="col">NAME</th>
+            <th scope="col">EmployeeID</th>
+            
+            <th scope="col">DateOfBirth</th>
+            
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Zip</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+
+          </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of employee;"> 
+        <td>{{e.Name}}</td> 
+        <td>{{ e.EmployeeId }}</td> 
+        
+        <td>{{ e.DateOfBirth }}</td> 
+        
+        <td>{{e.State}}</td>
+        <td>{{e.City}}</td>
+        <td>{{e.Zip}}</td>
+        <td><button class="btn btn-dark" (click)="updateEmployee(e.id)">UPDATE</button></td>
+        <td><button class="btn btn-dark" (click)="deleteEmployee(e.id)">DELETE</button></td>
+        
+    </tr> 
+          
+    </tbody>
+  </table>
+  <br>
+  <a [routerLink] = "['/form']" routerLinkActive="active"><strong><--Back</strong></a>
+  </div>

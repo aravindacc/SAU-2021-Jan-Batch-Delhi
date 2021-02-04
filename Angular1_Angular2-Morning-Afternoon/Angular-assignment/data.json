@@ -1,0 +1,84 @@
+{
+  "employee": [
+    {
+      "Name": "Kunal chaudhary",
+      "EmployeeId": "123",
+      "Age": 12,
+      "DateOfBirth": 20,
+      "Address": "Pindra",
+      "State": "UP",
+      "City": "Varanasi",
+      "Zip": "221206",
+      "id": 7
+    },
+    {
+      "Name": "Kunal chaudhary",
+      "EmployeeId": "123",
+      "Age": 12,
+      "DateOfBirth": 20,
+      "Address": "Pindra",
+      "State": "UP",
+      "City": "Varanasi",
+      "Zip": "221206",
+      "id": 8
+    },
+    {
+      "Name": "Kunal chaudhary",
+      "EmployeeId": "123",
+      "Age": 12,
+      "DateOfBirth": 20,
+      "Address": "Pindra",
+      "State": "UP",
+      "City": "Varanasi",
+      "Zip": "221206",
+      "id": 9
+    },
+    {
+      "Name": "Kunal chaudhary",
+      "EmployeeId": "123",
+      "Age": 12,
+      "DateOfBirth": 20,
+      "Address": "Pindra",
+      "State": "UP",
+      "City": "Varanasi",
+      "Zip": "221206",
+      "id": 10
+    },
+    {
+      "Name": "Shalu",
+      "EmployeeId": "1710069",
+      "DateOfBirth": 30,
+      "State": "UP",
+      "City": "Varanasi",
+      "Zip": "221206",
+      "id": 13
+    },
+    {
+      "Name": "Nupur",
+      "EmployeeId": "1710125",
+      "DateOfBirth": 12,
+      "State": "UP",
+      "City": "Varanasi",
+      "Zip": "221206",
+      "id": 15
+    },
+    {
+      "Name": "Rahul",
+      "EmployeeId": "1710125",
+      "DateOfBirth": 26,
+      "State": "UP",
+      "City": "Varanasi",
+      "Zip": "221206",
+      "id": 16
+    },
+    {
+      "Name": "Pranav",
+      "EmployeeId": "1710632",
+      "DateOfBirth": 23,
+      "State": "UP",
+      "City": "Varanasi",
+      "Zip": "221206",
+      "id": 17
+    }
+  ]
+}

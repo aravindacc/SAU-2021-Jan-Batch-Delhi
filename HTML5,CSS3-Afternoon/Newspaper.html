@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+  <style>
+    body{
+      z-index: 1;
+    }
+    .carousel-inner .carousel-item {
+      height: 500px;
+    }
+
+    .carousel-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">World</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Twitter Moment India</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              For You
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Entertainment</a></li>
+              <li><a class="dropdown-item" href="#">Sports</a></li>
+              <li><a class="dropdown-item" href="#">Coronavirus</a></li>
+              <li><a class="dropdown-item" href="#">My City</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Hygiene Care</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <div class="container-fluid">
+  <h1>
+
+    <small class="text-muted">Latest News</small>
+  </h1>
+
+  <hr><br>
+  <!-- IMAGE CAROUSEL -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://images.hindustantimes.com/img/2021/01/13/550x309/AP19-11-2020_000114A_1610540748722_1610540792099_1610540924390.jpg"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Secret tunnel on India-Pak border reveals PM Imran Khan’s real plans</h5>
+          <p>There were 930 ceasefire violations by Pakistan in 2020, a 54% increase over the 605 instances the previous
+            year</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://c.ndtvimg.com/2020-08/iffcjvrg_supreme-court_625x300_25_August_20.jpg" class="d-block w-100"
+          alt="loading image">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>"It's Victory For Fair Play": Big Supreme Court Quotes In Farm Laws Order</h5>
+          <p>In eight rounds of talks with farmers' unions over the past month, the government had firmly ruled out
+            withdrawing the laws but had insisted that amendments were on the table.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://i.ndtvimg.com/i/2017-09/brian-acton-co-founder-whatsapp-reuters_650x400_51505270857.jpg?downsize=950:*&output-quality=80&output-format=webp"
+          class="d-block w-100" alt="Loading Image">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>‘If You Build for India, You Build for the World’: Signal Co-Founder Brian Acton on WhatsApp and Future of
+            Private Messaging</h5>
+          <p>'If you start from a position of no information, you’re automatically protecting people’s privacy.’</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+  <br>
+  <br>
+  <!-- CARD GROUP -->
+  <div class="card-group">
+    <div class="card">
+      <img
+        src="https://images.hindustantimes.com/img/2021/01/13/550x309/34acc5d0-5591-11eb-b18d-19494570fc18_1610547442248.jpg"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Champaran to Singhu: A tale of two satyagrahas</h5>
+        <p class="card-text">To assuage the protesting farmers, the Centre must suspend the Acts indefinitely, refer
+          demands to the Inter-State Council; and call a Parliament session</p>
+
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+
+    </div>
+
+    <div class="card">
+      <img
+        src="https://images.hindustantimes.com/img/2021/01/13/550x309/india-china_496851aa-7058-11e7-a55a-ab3ca1304be3_1610550091794.jpg"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Two friends in the contest, India has a tough call to make for UNHRC presidency</h5>
+        <p class="card-text">UNHRCpresident Elisabeth Tichy-Fisslberger completed her year-long term on December 31 and
+          the post was set to go to Nazhat Shameem Khan, Fiji’s top diplomat in Geneva. But China and Russia have
+          opposed her candidature.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+
+    <div class="card">
+      <img
+        src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202101/delhiwinter_1200x768.jpeg?qu8GqGcTczLhCJ7k2JAsJXdFbaYjqsp_&size=770:433"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Delhi shivers at 3.2 degree Celsius, cold wave grips other parts of North India</h5>
+        <p class="card-text">Delhi once again woke up to bone-chilling cold at 3.2 degrees Celsius, while cold wave
+          conditions have gripped other parts of North India as well.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <div class="row">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 font-italic border-bottom">
+        India Today Insight
+      </h3>
+      <!-- NEWS HEADLINE 1 -->
+      <article class="blog-post">
+        <h2 class="blog-post-title">4 more Covid-19 vaccines on cards in India. Who are these vaccine candidates and
+          their status</h2>
+        <p class="blog-post-meta">January 10, 2014 <a href="#">Mark</a></p>
+
+        <p><em>Top health official on Tuesday said four more vaccines against coronavirus are in pipeline for India. The
+            health secretary said four Covid-19 vaccines, one by Zydus Cadila, Russian vaccine Sputnik V, Biological E,
+            and Gennova, are in advanced clinical trials in India.</em></p>
+        <hr>
+        <p>While Serum Institute of India’s Covishield and Bharat Biotech’s indigenous Covaxin are the two vaccines
+          against Covid-19 that will drive the countries vaccination programme in the first phase of inoculation, the
+          Centre has that the country is looking at four more vaccines in the pipeline.</p>
+        <blockquote>
+          <p>Among this next set are vaccines whose research and development is being led by Indian companies or they
+            are already being manufactured in the country.</p>
+        </blockquote>
+        <p>Addressing a press briefing, Union Health Secretary Rajesh Bhushan said Zydus Cadila, Russia’s <a
+            href="#">Sputnik V, Biological E and Gennova are other vaccines in the pipeline</a> which are in advanced
+          clinical trials in India.</p>
+        <!-- ANOTHER CARD GROUP -->
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">World</strong>
+                <h5 class="mb-0">Made to feel like drug addict: Black doctor alleges racism at US hospital</h5>
+                <div class="mb-1 text-muted">Jan 12</div>
+
+                <a href="#" class="stretched-link">Continue reading</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img class="bd-placeholder-img" width="200" height="250"
+                  src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202012/Dr_Susan_Moore_a_1200x768.jpeg?qIEHHz4tkB10h0HQrLpOvYtI3_ysAhXi&size=770:433">
+
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success">India</strong>
+                <h5 class="mb-0">Madhya Pradesh: Bird flu detected in Kadaknath chickens headed to Dhoni's farm</h5>
+                <div class="mb-1 text-muted">Jan 11</div>
+
+                <a href="#" class="stretched-link">Continue reading</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img class="bd-placeholder-img" width="200" height="250"
+                  src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202101/kadaknath_chicken_bird_flu_0_1200x768.jpeg?nYOvLUGVr1ZZ4sqJyDZ52DzGpbi2gH7i&size=770:433">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <h2>What agitating farmers want, and why the Centre may not oblige</h2>
+        <p><em>Hundreds of thousands of farmers marching from Punjab have laid siege to entry points to Delhi. What are
+            their demands and why the Centre considers some of them untenable?</em></p>
+        <h3>Farmers' protest at the Singhu border, Nov. 30 (Hardik Chhabra)</h3>
+        
+        <img class="img-fluid"
+          src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202011/WhatsApp_Image_2020-11-30_at_7_1200x768.jpeg?gFFLxw5liQngg8nozDcN5LpnZBYgcPjK&size=770:433">
+           </article>
+          
+          <br><br>
+        <p>The scale of the November 26 protest march by 20-odd farmers’ groups of Punjab to New Delhi has perhaps taken
+          both central agencies as well as the Punjab leadership of the BJP by surprise. Members of the farmers’
+          organisations were headed for Delhi to stage a dharna in the national capital and build pressure on the
+          BJP-led Union government against what they consider as contentious provisions in the new central farm laws.
+          The agitation has seen an estimated 200,000-300,000 farmers converging at various entry points to Delhi.</p>
+        <br>
+        <p>Protests against the central farm laws began in Punjab soon after they were passed by Parliament in
+          September. Members of 31 farmer organisations of Punjab, which represent nearly one million farmers in the
+          state, have been blocking highways and railway tracks passing through the state since September 22. These laws
+          have, among other things, paved the way for farmers to sell their crops anywhere in the country—both within
+          and outside APMC (Agricultural Produce Market Committee) markets—and allows them to go for direct contracts
+          with traders and food processors.</p>
+
+        <!-- ANOTHER NEWS HEADLINE -->
+        <hr>
+        <article class="blog-post">
+          <h2 class="blog-post-title">BJP vs Mamata: Who will win the caste management game in Bengal?</h2>
+          <p class="blog-post-meta">December 14, 2021</p>
+
+          <p><em>Under the leadership of PM Narendra Modi (R) and Home Minister Amit Shah, BJP has found the caste
+              groups created by TMC’s efforts as one of the best ammunition to hit West Bengal CM Mamata Banerjee back.
+            </em></p>
+
+          <p>For long, what made West Bengal politics distinct from other states was the “class factor” and not the
+            “caste factor”. The Left, which ruled the state for a good 34 years, nurtured an electoral mobilisation
+            generated on the basis of “class”, i.e. the rich and poor or haves and have nots.</p>
+          <br>
+          <p>This ensured that unlike other states, the electorate in Bengal voted more on party rather than caste
+            loyalties. This changed in 2011 when the<a href="#">Mamata Banerjee-led Trinamool Congress</a>romped home to
+            victory, leaving the Left in tatters.</p>
+        </article><!-- /.blog-post -->
+        <br><br>
+        <!-- NAV -->
+        <nav class="blog-pagination" aria-label="Pagination">
+          <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Previous Page</a>
+          <a class="btn btn-outline-primary" href="#">Next Page</a>
+
+        </nav>
+        <br>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="p-4 mb-3 bg-light rounded">
+        <h3 class="font-italic">Today Thought</h3>
+        <p class="mb-0">“When you are able to shift your inner awareness to how you can serve others, and when you make
+          this the central focus of your life, you will then be in a position to know true miracles in your progress
+          toward prosperity.”</p>
+      </div>
+      <!-- CARD in COLUMN -->
+      <div class="p-4">
+        <h2 class="font-italic text-danger">READ THIS </h2>
+        <hr class="text-danger border-strong-2">
+        <div class="row-md-3">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <h6 class="mb-0">The Rajinikanth dilemma in Tamil Nadu politics</h6>
+              <div class="mb-1 text-muted">Jan 12</div>
+
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img class="bd-placeholder-img" width="200" height="155"
+                src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202012/rajini_pti_1200x768.jpeg?xwJJT_iE9_MF26NXFnKruTLrXupqew1g&size=770:433">
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row-md-3">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <h6 class="mb-0">Battered Congress looks at hard road ahead</h6>
+              <div class="mb-1 text-muted">Jan 10</div>
+
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img class="bd-placeholder-img" width="200" height="155"
+                src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202011/Sonia_Gandhi__PTI__1200x768.jpeg?Uf4.6qjyinzeheNy2qdFUSmf5I6rgadq&size=770:433">
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row-md-3">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <h6 class="mb-0">6 to 7 BJP MPs likely to join Trinamool Congress, claims Bengal Minister</h6>
+              <div class="mb-1 text-muted">Jan 14</div>
+
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img class="bd-placeholder-img" width="200" height="155"
+                src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202101/IMG_20210112_154340_1200x768.jpeg?d85PZJMOZDNg2myQWfqEdP1LViOiPetK&size=770:433">
+
+
+            </div>
+          </div>
+        </div>
+        <div class="row-md-3">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <h6 class="mb-0">Omkara to Tandav, what makes Saif Ali Khan the only Khan unafraid to take risks</h6>
+              <div class="mb-1 text-muted">Jan 10</div>
+
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img class="bd-placeholder-img" width="200" height="155"
+                src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202101/saif_0-647x363_1_1200x768.jpeg?emGpYXMLsmis549xN4H7ad_S.TT0Gqwa&size=770:433">
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row-md-3">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <h6 class="mb-0">Declassified White House document says strong India would act as counterbalance to China
+              </h6>
+              <div class="mb-1 text-muted">Jan 10</div>
+
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img class="bd-placeholder-img" width="200" height="155"
+                src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202101/2021-01-11T145400Z_348787612_R_1200x768.png?MExlwKdk9k9ynimLGOxjh6MNkWktTIgG&size=770:433">
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="p-4">
+        <h4 class="font-italic text-primary">Connect With Us</h4>
+        <hr>
+        <ol class="list-unstyled">
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Telegram</a></li>
+        </ol>
+      </div>
+      <div>
+        <img class="m-2" width="400" height="300"
+          src="https://tpc.googlesyndication.com/simgad/4464845824282638071?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qlRemsWA1K1YbwmOsnf3edckph4lQ">
+      
+          <img class="m-2" width="400" height="300"
+          src="https://tpc.googlesyndication.com/simgad/12164663183076880623">
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+</body>
+
+</html>

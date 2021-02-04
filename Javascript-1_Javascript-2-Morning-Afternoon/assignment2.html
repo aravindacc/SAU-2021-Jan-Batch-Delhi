@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="1">1</div>
+    <div id="2">2</div>
+    <div id="3">3</div>
+    <div id="4">4</div>
+    <div id="5">5</div>
+    <div id="6">6</div>
+    <div id="7">7</div>
+    <div id="8">8</div>
+    <div id="9">9</div>
+    <div id="10">10</div>
+    <div id="11">11</div>
+    <div id="12">12</div>
+    <div id="13">13</div>
+    <div id="14">14</div>
+    <div id="15">15</div>
+    <div id="16">16</div>
+    <div id="17">17</div>
+    <div id="18">18</div>
+    <div id="19">19</div>
+    <div id="20">20</div>
+    <br><br>
+    <button id="h1">Highlight Even</button>
+    <button id="h2">Highight Multiple of 5</button>
+    <button id="h3">Reset</button>
+    <script>
+        arr_of_tags = []
+         for(let i=1;i<=20;i++){
+            var tag = document.getElementById(i);
+            arr_of_tags.push(tag);
+         }
+     document.getElementById("h1").addEventListener("click",() => {
+        for(let i=0;i<arr_of_tags.length;i++){
+             const val = arr_of_tags[i].innerText;
+                arr_of_tags[i].style.background = "white";
+         }
+         for(let i=0;i<arr_of_tags.length;i++){
+             const val = arr_of_tags[i].innerText;
+             if(parseInt(val)%2==0){
+                arr_of_tags[i].style.background = "yellow";
+             }
+         }
+     })
+     document.getElementById("h2").addEventListener("click",() => {
+        for(let i=0;i<arr_of_tags.length;i++){
+             const val = arr_of_tags[i].innerText;
+                arr_of_tags[i].style.background = "white";
+         }
+         for(let i=0;i<arr_of_tags.length;i++){
+             const val = arr_of_tags[i].innerText;
+             if(parseInt(val)%5==0){
+                arr_of_tags[i].style.background = "red";
+             }
+         }
+     })
+     document.getElementById("h3").addEventListener("click",() => {
+        for(let i=0;i<arr_of_tags.length;i++){
+             const val = arr_of_tags[i].innerText;
+                arr_of_tags[i].style.background = "white";
+         }
+     })
+    </script>
+    
+</body>
+</html>

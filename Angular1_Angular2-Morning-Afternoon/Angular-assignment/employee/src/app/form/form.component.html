@@ -1,0 +1,49 @@
+<div class="container my-3">
+    <h1>Employee Registration Page</h1>
+    <br>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="row g-3">
+    <div class="col-md-6">
+      <label  class="form-label"><strong>Name</strong></label>
+      <input formControlName="Name" type="text" class="form-control" id="Name">
+    </div>
+    <div class="col-md-6">
+      <label  class="form-label"><strong>Employee-Id</strong></label>
+      <input formControlName="EmployeeId" type="text" class="form-control" id="EmployeeId">
+    </div>
+    <div class="col-md-6">
+      <label  class="form-label"><strong>Date Of Birth</strong></label>
+      <input formControlName="DateOfBirth" type="number" class="form-control" id="DateOfBirth">
+    </div>
+   
+    <div class="col-md-6">
+      <label  class="form-label"><strong>City</strong></label>
+      <input formControlName="City" type="text" class="form-control" id="City">
+    </div>
+    <div class="col-md-4">
+      <label  class="form-label"><strong>State</strong></label>
+      <input formControlName="State" type="text" class="form-control" id="State">
+    </div>
+    <div class="col-md-2">
+      <label class="form-label"><strong>Zip</strong></label>
+      <input formControlName="Zip" type="text" class="form-control" id="Zip">
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+         <strong> Check me out</strong>
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+  {{registrationForm.value | json}}
+  
+  
+  <a [routerLink] = "['/home']" routerLinkActive="active"><strong>See Employee Details</strong></a>
+  
+  </div>
+ 
+  
