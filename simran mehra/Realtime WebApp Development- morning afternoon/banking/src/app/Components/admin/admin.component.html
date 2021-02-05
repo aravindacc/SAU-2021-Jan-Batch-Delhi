@@ -1,0 +1,19 @@
+<div style="text-align: center;">
+  <h2> Daily-Weekly Deposit </h2>
+  <button (click)="weekReportFunc()">daily deposit</button>
+  <h2> All Currencies deposited by users </h2>
+  <button (click)="userReportFunc()">user report</button>
+  <h2> User info with fake currency </h2>
+  <button (click)="fakeReportFunc()">fake user</button>
+
+  <div *ngIf="userReport">
+      <app-employee-details></app-employee-details>
+  </div>
+  <div *ngIf="weekReport">
+      <app-daily-weekly-deposit></app-daily-weekly-deposit>
+  </div>
+  <div *ngIf="fakeReport">
+      <app-fake-user></app-fake-user>
+  </div>
+</div>
+  
