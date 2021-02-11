@@ -1,0 +1,47 @@
+<div class="text-align: center">
+<div *ngIf="loggedIn" style="text-align: center;">
+    <h2>Existing user- LOGIN</h2>
+    <h2>New user- REGISTER and then LOGIN</h2>
+    <Button type="button" (click)="showLogin()">Login</Button>
+    <Button type="button" (click)="showReg()">Register</Button>
+    <br>
+    <br>
+    <div *ngIf="login">
+    <input type="email" name="email" [(ngModel)]="email" placeholder="Email">
+    <br>
+    <br>
+    <input type="password" name="password" [(ngModel)]="password" placeholder="Password">
+    <br>
+    <br>
+    <button type="button" (click)="loginfunc()">Login</button>
+    </div>
+    
+    <div *ngIf="register">
+    <input type="text" name="name" [(ngModel)]="name" placeholder="Name">
+    <br>
+    <br>
+    <input type="email" name="email" [(ngModel)]="email" placeholder="Email">
+    <br>
+    <br>
+    <input type="password" name="password" [(ngModel)]="password" placeholder="Password">
+    <br>
+    <br>
+    <button type="button" (click)="regfunc()">Register</button>
+    
+    </div>
+    </div>
+    <div *ngIf="admin">
+    <router-outlet></router-outlet>
+    </div>
+    
+    
+    <div *ngIf="transaction">
+    <h1>Transaction</h1>
+    <input type="number" name="amount" [(ngModel)]="amount" placeholder="only Rs.500 or Rs.1000 accepted">
+    <br>
+    <br>
+    <input type="number" name="cnum" [(ngModel)]="cnum" placeholder="currency number">
+    
+    <button type="button" (click)="submit()">Submit</button>
+    </div>
+</div>   

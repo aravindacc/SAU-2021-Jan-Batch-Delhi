@@ -1,0 +1,43 @@
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 25px;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  border-style: groove;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo {
+  margin: 0.2rem;
+  display: flex;
+}
+.todo li {
+  flex: 1;
+}
+.trash-btn,
+.complete-btn,
+.duplicate-btn {
+  color: black;
+  border-style: groove;
+}
+.todo-item {
+  padding: 0rem 1rem;
+}
+.completed {
+  text-decoration: line-through;
+}

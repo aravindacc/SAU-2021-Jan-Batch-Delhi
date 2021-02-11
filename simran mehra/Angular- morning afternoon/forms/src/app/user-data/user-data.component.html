@@ -1,0 +1,22 @@
+<h1>List Of Employees</h1>
+<table>
+  <tr>
+    <th>Employee Name</th>
+    <th>Employee ID</th>
+    <th>Employee DOB</th>
+    <th>Employee Age</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let item of registerData">
+    <td>{{item.EmployeeName}}</td>
+    <td>{{item.EmployeeID}}</td>
+    <td>{{item.EmployeeDOB}}</td>
+    <td>{{item.EmployeeAge}}</td>
+    <td>
+      <button type="button" (click)="onEdit(item)">Edit</button>&nbsp;
+      <button type="button" (click)="onDelete(item)">Delete</button>
+    </td>
+  </tr>
+</table>
+<br>
+<button type="button" (click)="addEmployee()">Add Employee Details</button>

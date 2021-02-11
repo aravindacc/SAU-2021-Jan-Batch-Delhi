@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="form.js">
+        </script>
+    </head>
+    <body>
+        <form style="background-color:aquamarine; display: flex; flex-direction: column;" method="post" action="" autocomplete="on" onsubmit="return validateform()">
+            <h1>LOGIN FORUM</h1>
+            <h3>Please fill your details</h1>
+            <label  style="flex-direction: row;" for="fname">First name:</label>
+            <input  style="width: 100px;flex-direction: row;" type="text" id="fname" name="fname" ">
+            <label  for="lname">Last name:</label>
+            <input style="width: 100px;" type="text" id="lname" name="lname" ><br><br>
+
+
+            <div>Select Gender :
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <br><br>
+                
+            </div>
+           
+
+            <label for="dob">DOB:</label>
+            <input style ="width: 200px;"type="date" id="dob" name="dob">
+            <br><br>
+        
+
+            <label for="email">Enter your email:</label>
+            <input style ="width: 200px;" type="email" id="email" name="email" autocomplete="off">
+            <br><br>
+
+            <label for="phone">Enter a phone number:</label>
+            <input style ="width: 200px;" type="tel" id="phone" name="phone" placeholder="1234567890" pattern="[0-9]{3}[0-9]{4}[0-9]{3}" required>
+            <br><br>
+
+            <label for="browsers">Select the browser you are using :</label>
+            <select style ="width: 200px;" id="browsers" name="browser">
+            <option value="" selected disabled hidden>Select browser</option>
+            <option value="Internet Explorer">Internet Explorer</option>
+            <option value="Firefox">Firefox</option>
+            <option value="Chrome">Chrome</option>
+            <option value="Opera">Opera</option>
+            <option value="Safari">Safari</option>
+            </select><br><br>
+
+            <button style ="width: 200px;" type="button" onclick="return validateform()">submit</button>
+        </form>    
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<div class="text-align:center;">
+  <h1>Daily-Weekly Deposit</h1>
+  <table class="table">
+    <tr>
+      <th>User ID</th>
+      <th>Email</th>
+      <th>Amount</th>
+      <th>Currency Number</th>
+      <th>isFake</th>
+    </tr>
+    <tr *ngFor="let i of user">
+      <td>{{i.id}}</td>
+      <td>{{i.email}}</td>
+      <td>{{i.amount}}</td>
+      <td>{{i.currency_id}}</td>
+      <td>{{i.isfake}}</td>
+    </tr>
+  </table>
+</div>
+
