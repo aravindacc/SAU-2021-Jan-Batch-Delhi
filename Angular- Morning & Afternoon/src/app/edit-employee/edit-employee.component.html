@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div>
+    <label>Name : </label>
+    <input type = "text" [(ngModel)]="name" #ctrl="ngModel">
+</div>
+<div>
+    <label>Id : </label>
+    <input type = "text" [(ngModel)]="id" #ctrl="ngModel">
+</div>
+<div>
+    <label>Age : </label>
+    <input type = "number" [(ngModel)]="age" #ctrl="ngModel">
+</div>
+<div>
+    <label> Date of Birth : </label>
+    <input type = "date" [(ngModel)]="dob" #ctrl="ngModel">
+</div>
+<div>
+    <button (click) = "saveItem()" class="btn"><i class="fa fa-save"></i> Save</button>
+</div>

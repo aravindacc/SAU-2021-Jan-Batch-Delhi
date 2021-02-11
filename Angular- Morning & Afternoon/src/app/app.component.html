@@ -1,0 +1,74 @@
+
+
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+/>
+
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit(); employeeForm.reset()">
+  <div class="form-group">
+    <label>First Name :</label>
+    <input
+      id="name"
+      type="text"
+      required="true"
+      class="form-control"
+      placeholder="Enter name"
+      formControlName="name"
+    />
+  </div>
+  <div class="form-group">
+    <label>ID :</label>
+    <input
+      id="id"
+      type="text"
+      required="true"
+      class="form-control"
+      placeholder="Enter ID"
+      formControlName="id"
+    />
+  </div>
+
+  <div class="form-group">
+    <label>Age :</label>
+    <input
+      id="age"
+      type="number"
+      required="true"
+      class="form-control"
+      placeholder="Enter age"
+      formControlName="age"
+    />
+  </div>
+  <div class="form-group">
+    <label>Date Of Birth :</label>
+    <input
+      id="dob"
+      type="date"
+      required="true"
+      class="form-control"
+      placeholder="Enter DOB"
+      formControlName="dob"
+    />
+  </div>
+  <button
+    class="btn btn-primary"
+    type="submit"
+    [disabled]="!employeeForm.valid"
+  >
+    Submit
+  </button>
+</form>
+
+<div style="padding: 5px">
+  <ul class="nav nav-tabs">
+    <li routerLinkActive="active">
+      <a routerLink="route-list">Employee List</a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="edit-employee">Edit Employee</a>
+    </li>
+  </ul>
+  <br />
+  <router-outlet></router-outlet>
+</div>
