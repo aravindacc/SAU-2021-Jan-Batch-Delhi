@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise 2</title>
+</head>
+<script>
+    function swapCases()
+    {
+        var str=document.getElementById('inputString').value;
+        var result='';
+        for(var it=0 ; it < str.length ; it++)
+        {
+             if( str[it] == str[it].toUpperCase() )
+            {
+                result+=str[it].toLowerCase();
+            } 
+            else
+            {
+                result+=str[it].toUpperCase();
+            }
+        }
+        document.getElementById('outputString').value=result;
+    }
+</script>
+
+<style>
+    .grid
+    {
+        margin-top:50px ;
+        display:grid;
+        grid-row-gap: 25px;
+    }
+</style>
+
+
+<body>
+    <div class='grid'>
+        <div class="row" style="place-self: center;">
+            <h2 class="display-2"><strong>Swap your String Cases</strong></h2>
+        </div>
+        <div class="row" style="place-self: center;">
+            <input type="text" id="inputString" class="form-control" placeholder="Enter Your String">
+        </div>
+
+        <div class="row" style="place-self: center;">
+            <input type="text" id="outputString" class="form-control" placeholder="Result String" readonly>
+        </div>
+
+        <div class="row" style="place-self: center;">
+            <button type="button" class="btn btn-primary"  onclick=swapCases() >Convert</button>
+        </div>
+    </div>
+    
+</body>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</html>

@@ -1,0 +1,5 @@
+<div *ngFor="let user of userList">
+<app-user-list-component  [currentUser]=user>
+</app-user-list-component>
+</div>
+<p *ngIf="userList.length==0" style=" display:flex; justify-content: center; color:teal"> No Users Yet </p>

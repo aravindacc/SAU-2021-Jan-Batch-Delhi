@@ -1,0 +1,28 @@
+.listElement
+{
+  padding:10px 5px;
+  border-bottom: 1px solid black  ;
+}
+.grid
+{
+  display: grid;
+  grid-template-columns:70% 30%;
+}
+
+button
+{
+  padding:5px;
+  background-color: transparent;
+  color: teal;
+  border:1px solid teal;
+  border-radius:5px;
+}
+
+button:hover
+{
+  padding:5px;
+  background-color: teal;
+  color: black;
+  border:1px solid transparent;
+  border-radius:5px;
+}

@@ -1,0 +1,3 @@
+org\jatin\bean\User.class
+org\jatin\Controller\userController.class
+org\jatin\Service\UserService.class

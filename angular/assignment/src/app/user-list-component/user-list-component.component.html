@@ -1,0 +1,10 @@
+<div class="listElement">
+  <div class="grid">
+    <p >{{currentUser.name}}</p>
+    <div style="display:flex ; justify-content: space-around; align-items: center; ">
+      <button (click)="editCurrent()">edit</button>
+      <button (click)="deleteCurrent()"  style="place-self: right;">X</button>
+    </div>
+  </div>
+  <app-show-details *ngIf=showEditDetails [details]=currentUser (updated)="hideUpdateComponent($event)" ></app-show-details>
+</div>

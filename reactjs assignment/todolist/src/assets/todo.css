@@ -1,0 +1,71 @@
+.hidden
+{
+    display:none;
+}
+.TaskRow
+{
+    display:flex;
+    border-bottom:1px solid teal;
+    flex-direction: row;
+    align-items: center;
+    height:60px;
+}
+.TaskRow:hover .hidden
+{
+    display: inline-block;
+}
+
+
+
+.todoInput
+{
+    border-radius: 20px;
+    border:0px;
+    box-shadow:5px 5px grey;
+    margin:10px;
+    outline: transparent;
+    padding:20px;
+}
+
+.todoInput:hover 
+{
+    border-radius: 20px;
+    border:0px;
+    margin:10px;
+    padding:20px;
+    box-shadow:5px 5px teal;
+}
+
+button
+{
+    margin:10px;
+    padding:10px 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    outline:transparent;
+    border:1px solid teal;
+    color:teal;
+}
+
+button:hover{
+    color:white;
+    margin:10px;
+    padding:10px 20px;
+    border-radius: 10px;
+    background-color: teal;
+    border:1px solid teal;
+}
+
+
+.TodoContainer
+{
+ display:grid;
+ grid-auto-columns: auto;
+ justify-content: center;
+}
+
+.filterButtoncontainer
+{
+    display :grid;
+    grid-template-columns: auto auto auto auto;
+}

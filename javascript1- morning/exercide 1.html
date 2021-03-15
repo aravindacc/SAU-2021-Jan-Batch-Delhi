@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise 1</title>
+</head>
+
+<script>
+    function showalert()
+    {
+        window.alert("hello world");
+    }
+
+    function redirect()
+    {
+        window.alert('Thanks for visiting this page');
+        window.open('https://www.google.com')
+    }
+
+
+    function calculate()
+    {
+        let firstnum=document.getElementById('firstNum').value;
+        let secondNum=document.getElementById('secondNum').value;
+        let result= parseInt(firstnum) + parseInt(secondNum)
+        document.getElementById('result').value=result;
+    }
+</script>
+<style>
+    .grid
+    {
+        margin-top: 100px;
+        display:grid;
+        grid-row-gap: 50px;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div class="grid">
+        <div class="row" style="place-self: center;">
+            <div class ="column" >
+                <Strong>Do a alert : </Strong>
+                 <button name="alert" onclick=showalert() class="btn btn-outline-danger  " >alert</button>
+            </div>
+        </div>
+
+        <div class="row" style="place-self: center;">
+            <div class="column">     
+                <Strong>Redirect to Google : </Strong>
+                <button name="redirect" class="btn btn-outline-primary " onclick=redirect() >Redirect</button>
+            </div>
+        </div>
+        <div class="row">
+            <input type='text' class="form-control my-2"  placeholder="First Number" id='firstNum'>
+            <input type='text' class="form-control my-2" placeholder="Second Number" id='secondNum'>
+            <input type='text' class="form-control my-2" placeholder="Result" id='result' readonly>
+            <button onclick=calculate() class="btn btn-outline-success my-4 ">calculate sum</button>
+        </div>
+        
+    </div>
+</body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</html>

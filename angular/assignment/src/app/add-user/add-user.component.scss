@@ -1,0 +1,46 @@
+.gridColumn
+{
+  display:grid;
+  grid-column-gap: 20px;
+  grid-row-gap:30px;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+
+
+input{
+  padding:10px;
+  box-shadow: 2px 4px rgb(207, 206, 202);
+  border: 0px;
+  border-radius:10px;
+}
+
+input:focus
+{
+
+  padding:10px;
+  box-shadow: 2px 4px teal;
+  border: 0px;
+  outline:none;
+  border-radius:10px;
+}
+
+button
+{
+  padding: 15px;
+  background-color: transparent;
+  color:teal;
+  border:1px solid teal;
+  border-radius: 10px;
+}
+
+
+button:hover
+{
+  padding: 15px;
+  background-color: teal;
+  color:black;
+  border:1px solid teal;
+  border-radius: 10px;
+}
+

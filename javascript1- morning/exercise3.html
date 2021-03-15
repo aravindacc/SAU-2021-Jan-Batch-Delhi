@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise 3</title>
+</head>
+<script>
+    function validate()
+    {
+        var firstName=document.getElementById('firstName').value;
+        var lastName=document.getElementById('lastName').value;
+        var email=document.getElementById('useremail').value;
+        var age=document.getElementById('age').value;
+        var genderElement=document.getElementsByName("gender");
+        var gender;
+	var shouldPrint=true;
+        //console.log(genderElement.length)
+        for(let i=0 ; i< genderElement.length;i++)
+        {
+            if(genderElement[i].checked)
+            {
+                gender=genderElement[i].value;
+            }
+        }
+        
+        if(firstName.length==0)
+        {
+		shouldPrint=false;
+           document.getElementById("firstNameHint").style.display="block";
+        }else{
+            document.getElementById("firstNameHint").style.display="none";
+        }
+
+
+        if(lastName.length==0)
+        {
+		shouldPrint=false;
+            document.getElementById("lastNameHint").style.display="block";
+        }else{
+            document.getElementById("lastNameHint").style.display="none";
+        }
+
+        if(email.length==0)
+        {
+		shouldPrint=false;
+            document.getElementById("emailHint").style.display="block";
+        }else{
+
+            document.getElementById("emailHint").style.display="none";
+
+            var reg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+            if (reg.test(email) == false) 
+            {
+		shouldPrint=false;
+                document.getElementById("validEmailIdHint").style.display="block";
+            }
+            else
+            {
+                document.getElementById("validEmailIdHint").style.display="none";
+            }
+
+
+        }
+
+
+        if(!parseInt(age))        {
+		shouldPrint=false;
+           document.getElementById("ageHint").style.display="block";
+        }else{
+            document.getElementById("ageHint").style.display="none";
+        }
+
+
+        if(gender==undefined)
+        {
+		shouldPrint=false;
+            document.getElementById("genderHint").style.display="block";
+        }else{
+            document.getElementById("genderHint").style.display="none";
+        }
+
+
+
+        var result ={
+            "first-name":firstName,
+            "last-name":lastName,
+            "gender":gender,
+            "age":age,
+            "email":email
+        }
+	if(shouldPrint)
+	{console.log(result);}
+    }
+</script>
+<body>
+        <div class="flex">
+	    <h1>Details Form:</h1>
+            <div class="form-group">
+                <input tye="text" id="firstName"  class=" my-2 form-control" placeholder="First Name">
+                <span style="display:none;font-size: small;color: red;" id="firstNameHint">  First Name is required</span>
+            </div>
+            <div class="form-group">
+                <input tye="text" id="lastName" class=" my-2 form-control" placeholder="Last Name">
+                <span style="display:none;font-size: small;color: red;" id="lastNameHint">  Last Name is required</span>
+            </div>
+            <div>
+                <input type="email" id="useremail" class=" my-2 form-control" placeholder="yourmail@example.com">
+                <span style="display:none;font-size: small;color: red;" id="emailHint"> Email is required </span>
+                <span style="display:none;font-size: small;color: red;" id="validEmailIdHint"> Provide a Valid Email </span>
+            </div>
+            <div class="form-group my-2">
+                <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other"><label for="other">Other</label>
+                <span style="display:none;font-size: small;color: red;" id="genderHint"> Please choose a gender </span>
+            </div>
+            <div class="form-group my-2">
+                <select class="form-control" id="age">
+                    <option default>Age</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                </select>
+                <span style="display:none;font-size: small;color: red;" id="ageHint"> Please choose a valid age</span>
+            </div>
+            <div class="form-group my-2">
+                <button type="button" onclick=validate()  value="submit" class="btn btn-outline-success">Submit</button>
+            </div>
+        </div>
+</body>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<style>
+    .flex
+    {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+</style>
+
+</html>
