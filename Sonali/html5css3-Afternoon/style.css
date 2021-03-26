@@ -1,0 +1,130 @@
+body{
+    background-image: url('chopta.jpg');
+    background-size: cover;
+    background-size: 1500px 325px;
+    background-repeat: no-repeat;
+    
+    
+}
+.headerfooter
+{
+    border-bottom: 7px dotted brown;
+}
+.useofflex{
+    list-style-type:circle;
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (max-width: 550px) {
+    .useofflex {
+        flex-direction: column;
+        }
+    }
+ul li{
+    font-size: large;
+    font-weight: 600;
+}
+.uttarakhand{
+        padding-top: 20px;
+        padding-left: 70px;
+    
+}
+h1{
+    color: #440606be;
+    font-size: 70px;
+    font-weight: bolder;
+    text-shadow: 4px 5px 5px whitesmoke;
+}
+
+.experience{
+    
+    padding-left: 300px;
+    padding-top: 150px;
+    
+}
+.textontop{
+    font-weight: bold;
+    font-size: 50px;
+    color: rgb(247, 247, 232);
+    font-style: italic;
+    line-height: 30px;
+    text-shadow: 1px 1px 1px yellow;
+}
+
+.useofgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.circlepics{
+    width: 150px;
+    height: 150px;
+}
+.redcolor{
+    color: red;
+}
+.bottomofcircle{
+    font-size: 30px;
+    margin-left: 0px;
+}
+.grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto ;
+        grid-gap: 4px;
+        padding: 0px;
+}
+.grid-container > div {
+background-color: rgba(255, 255, 255, 0.8);
+text-align: center;
+padding: 20px 0;
+font-size: 17px;
+}
+
+.item1{
+    text-align:justify;
+line-height: 25px;
+}
+.item3 {
+grid-row-start: 2;
+grid-row-end: 4;
+
+}
+.item2 {
+grid-column-start: 2;
+grid-column-end: 4;
+text-align:justify;
+line-height: 25px;
+}
+.item6{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align:justify;
+}
+.gridimages
+{
+    width:350px;
+    height: 350px;
+
+}
+.aboutplaces
+{
+text-align:justify;
+font-weight: 500;
+
+}
+
+.firstLetterOfPlaces
+{
+font-size:25px;
+font-weight:700;
+text-shadow: 2px 2px 2px brown;
+color: brown;
+}
+.tagline
+{
+    font-size: 70px;
+    font-style: italic;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: tomato;
+    text-shadow: 3px 3px 3px red;
+}

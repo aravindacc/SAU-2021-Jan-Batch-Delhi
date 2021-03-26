@@ -1,0 +1,18 @@
+{
+
+    "compileOnSave": false,
+    
+    "compilerOptions": {
+
+     "baseUrl": "src",
+    "paths": {
+    
+    "@selectors/*": ["selectors/*"],
+    
+    "@utils/*": ["utils/*"]
+    
+    }
+    
+    }
+    
+}

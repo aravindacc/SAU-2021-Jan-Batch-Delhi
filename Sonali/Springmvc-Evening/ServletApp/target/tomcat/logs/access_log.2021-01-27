@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [27/Jan/2021:19:20:21 +0530] "GET / HTTP/1.1" 200 610 http-bio-8080-exec-2 185
+0:0:0:0:0:0:0:1 - - [27/Jan/2021:19:20:38 +0530] "POST /calculator/enter HTTP/1.1" 200 103 http-bio-8080-exec-3 140
+0:0:0:0:0:0:0:1 - - [27/Jan/2021:19:20:49 +0530] "POST /calculator/enter HTTP/1.1" 200 102 http-bio-8080-exec-4 8
+0:0:0:0:0:0:0:1 - - [27/Jan/2021:19:25:44 +0530] "POST /calculator/enter HTTP/1.1" 200 132 http-bio-8080-exec-6 29
+0:0:0:0:0:0:0:1 - - [27/Jan/2021:19:26:49 +0530] "GET /calculator HTTP/1.1" 200 610 http-bio-8080-exec-9 4
+0:0:0:0:0:0:0:1 - - [27/Jan/2021:19:26:54 +0530] "GET /calculator/enter HTTP/1.1" 405 1045 http-bio-8080-exec-9 9
+0:0:0:0:0:0:0:1 - - [27/Jan/2021:19:27:00 +0530] "GET /calculator HTTP/1.1" 200 610 http-bio-8080-exec-9 3
